@@ -1,6 +1,8 @@
 import os
 #os.system("pip install pyrogram && pip install tgcrypto && pip install pyromod && clear")
-
+from pyrogram import filters, Client
+from AnonX import app
+import asyncio
 from pyrogram import Client, filters, idle
 from pyromod import listen
 from pyrogram.enums import ParseMode, ChatMemberStatus 
