@@ -484,6 +484,3 @@ async def DelMessage(c:Client,m:CallbackQuery):
 	else:
 		await m.message.delete()
 
-	
-print("run...")	
-app.run()
