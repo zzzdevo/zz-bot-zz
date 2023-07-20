@@ -1,7 +1,8 @@
 from pyrogram import Client , filters
 from pyrogram.types import (Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, ChatPrivileges)
 from pyrogram.enums import ChatMemberStatus
-
+from pyrogram import filters, Client
+from AnonX import app
 
 
 async def PROMOTE_OWNER(c:Client,m:Message):
