@@ -60,11 +60,20 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
         ],
         [
+
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
-            )
-        ],
-    ]
+            text="‹ زیادم بکە بۆ گرووپەکەت ›",
+            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+
+             ),
+             InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+             ),
+             InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
+             ),
+             InlineKeyboardButton(text="𖢅 خاوەنی بۆت 𖢅", user_id=config.OWNER_ID),
+        )
+    ],
+]
     return buttons
 
 
