@@ -61,14 +61,10 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-            text="‹ بۆتەکە زیاد بکە بۆ گروپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-           ) 
-        ],
-        [
-            InlineKeyboardButton(
                 text="• کەناڵی بۆت •", url="https://t.me/MGIMT"
-            )
+            ),
+            InlineKeyboardButton(
+                text="• گرووپی بۆت •", url="https://t.me/IQSUPP"
         ],
     ]
     return buttons
@@ -124,14 +120,10 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-            text="‹ بۆتەکە زیاد بکە بۆ گروپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-           ) 
-        ],
-        [
-            InlineKeyboardButton(
                 text="• کەناڵی بۆت •", url="https://t.me/MGIMT"
-            )
+            ),
+            InlineKeyboardButton(
+                text="• گرووپی بۆت •", url="https://t.me/IQSUPP"
         ],
     ]
     return buttons
@@ -159,14 +151,10 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-            text="‹ بۆتەکە زیاد بکە بۆ گروپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-           ) 
-        ],
-        [
-            InlineKeyboardButton(
                 text="• کەناڵی بۆت •", url="https://t.me/MGIMT"
-            )
+            ),
+            InlineKeyboardButton(
+                text="• گرووپی بۆت •", url="https://t.me/IQSUPP"
         ],
     ]
     return buttons
@@ -191,14 +179,10 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-            text="‹ بۆتەکە زیاد بکە بۆ گروپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-           ) 
-        ],
-        [
-            InlineKeyboardButton(
                 text="• کەناڵی بۆت •", url="https://t.me/MGIMT"
-            )
+            ),
+            InlineKeyboardButton(
+                text="• گرووپی بۆت •", url="https://t.me/IQSUPP"
         ],
     ]
     return buttons
@@ -352,14 +336,10 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-            text="‹ بۆتەکە زیاد بکە بۆ گروپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            ) 
-        ],
-        [
-            InlineKeyboardButton(
                 text="• کەناڵی بۆت •", url="https://t.me/MGIMT"
-            )
+            ),
+            InlineKeyboardButton(
+                text="• گرووپی بۆت •", url="https://t.me/IQSUPP"
         ],
     ]
     return buttons
