@@ -27,11 +27,12 @@ from AnonX.utils.database import (
 from AnonX.utils.decorators.language import languageCB
 from AnonX.utils.formatters import seconds_to_min
 from AnonX.utils.inline import (
-                                panel_markup_1,
-                                panel_markup_2,
-                                panel_markup_3,
-                                stream_markup,
-                                telegram_markup)
+    stream_markup,
+    stream_markup_timer,
+    telegram_markup,
+    telegram_markup_timer,
+    close_keyboard,
+)
 from AnonX.utils.stream.autoclear import auto_clean
 from AnonX.utils.thumbnails import gen_thumb
 
@@ -69,7 +70,7 @@ async def unban_assistant_(_, CallbackQuery):
     a = await app.get_chat_member(int(chat_id), app.id)
     if not a.can_restrict_members:
         return await CallbackQuery.answer(
-            "تأكد من اعطائي صلاحية الحظر لالغاء حظر المستخدم.",
+            "ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴜɴʙᴀɴ ᴜsᴇʀs ɪɴ ᴛʜɪs ᴄʜᴀᴛ.",
             show_alert=True,
         )
     else:
@@ -81,7 +82,7 @@ async def unban_assistant_(_, CallbackQuery):
                 show_alert=True,
             )
         return await CallbackQuery.edit_message_text(
-            "تم الغاء حظر السحاب المساعد بنجاح.\n\n يمكمك الاستمتاع الان..."
+            "ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴜɴʙᴀɴɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.\n\nᴛʀʏ ᴘʟᴀʏɪɴɢ ɴᴏᴡ..."
         )
 
 
@@ -164,7 +165,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         )
     elif command == "Skip":
         check = db.get(chat_id)
-        txt = f"➻ تم تخطي البث 🥺\n│ \n└ʙʏ : {mention} 🥀"
+        txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {mention} 🥀"
         popped = None
         try:
             popped = check.pop(0)
@@ -173,7 +174,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
             if not check:
                 await CallbackQuery.edit_message_text(
-                    f"➻ تم تخطي البث 🥺\n│ \n└ʙʏ : {mention} 🥀",
+                    f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {mention} 🥀",
                     reply_markup=close_keyboard
                 )
                 await CallbackQuery.message.reply_text(
@@ -186,7 +187,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         except:
             try:
                 await CallbackQuery.edit_message_text(
-                    f"➻تم تخطي البث 🥺\n│ \n└ʙʏ : {mention} 🥀",
+                    f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {mention} 🥀",
                     reply_markup=close_keyboard
                 )
                 await CallbackQuery.message.reply_text(
@@ -375,7 +376,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_played - duration_to_skip) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"» البوت ليس قادر على البحث لامن المده تتجاوز.\n\nالمده الحاليه :** {bet}** دقيقه بعيد عن **{duration}** دقيقه.",
+                    f"» ʙᴏᴛ ɪs ᴜɴᴀʙʟᴇ ᴛᴏ sᴇᴇᴋ ʙᴇᴄᴀᴜsᴇ ᴛʜᴇ ᴅᴜʀᴀᴛɪᴏɴ ᴇxᴄᴇᴇᴅs.\n\nᴄᴜʀʀᴇɴᴛʟʏ ᴩʟᴀʏᴇᴅ :** {bet}** ᴍɪɴᴜᴛᴇs ᴏᴜᴛ ᴏғ **{duration}** ᴍɪɴᴜᴛᴇs.",
                     show_alert=True,
                 )
             to_seek = duration_played - duration_to_skip + 1
@@ -386,7 +387,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             ) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"» البوت ليس قادر على البحث لامن المده تتجاوز.\n\nالمده الحاليه :** {bet}** دقيقه بعيد عن **{duration}** دقيقه.",
+                    f"» ʙᴏᴛ ɪs ᴜɴᴀʙʟᴇ ᴛᴏ sᴇᴇᴋ ʙᴇᴄᴀᴜsᴇ ᴛʜᴇ ᴅᴜʀᴀᴛɪᴏɴ ᴇxᴄᴇᴇᴅs.\n\nᴄᴜʀʀᴇɴᴛʟʏ ᴩʟᴀʏᴇᴅ :** {bet}** ᴍɪɴᴜᴛᴇs ᴏᴜᴛ ᴏғ **{duration}** ᴍɪɴᴜᴛᴇs.",
                     show_alert=True,
                 )
             to_seek = duration_played + duration_to_skip + 1
