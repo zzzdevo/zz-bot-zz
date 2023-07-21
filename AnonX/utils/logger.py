@@ -1,25 +1,25 @@
 from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
 from AnonX import app
 from AnonX.utils.database import is_on_off
-from pyrogram.types import Message
+
 
 async def play_logs(message, streamtype):
     if await is_on_off(LOG):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
-            chatusername = "محادثه خاصه"
-        logger_text = f"""
-**{MUSIC_BOT_NAME} مسجل التشغيل**
+            chatusername = "**چاتی تایبەت**"
+        logger_text = f"""**[ᯓ 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - ئاماری پەخشکردن](https://t.me/MGIMT)\n••┉┉┉┉┉┉┉••🝢••┉┉┉┉┉┉┉••\n
 
-**الدردشه:** {message.chat.title} [`{message.chat.id}`]
-**المعرف:** @{message.from_user.username}
-**الايدي:** `{message.from_user.id}`
-**رابط الدردشه:** {chatusername}
+**گرووپ:** {message.chat.title} [`{message.chat.id}`]
+**ناو:** {message.from_user.mention}
+**یوزەر:** @{message.from_user.username}
+**ناسنامە:** `{message.from_user.id}`
+**بەستەر چات:** {chatusername}
 
-**تم البحث بواسطة:** {message.text}
+**گەڕان کرا لەلایەن:** {message.text}
 
-**نوع المشغل:** {streamtype}"""
+**جۆری پەخشکردن:** {streamtype}"""
         if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
