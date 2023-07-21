@@ -57,23 +57,19 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+            )
         ],
         [
-
             InlineKeyboardButton(
-            text="‹ زیادم بکە بۆ گرووپەکەت ›",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-
-             ),
-             InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
-             ),
-             InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
-             ),
-             InlineKeyboardButton(text="𖢅 خاوەنی بۆت 𖢅", user_id=config.OWNER_ID),
-        )
-    ],
-]
+                text="‹ زیادم بکە بۆ گرووپەکەت ›",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
+        ],
+    ]
     return buttons
 
 
@@ -123,12 +119,17 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="‹ زیادم بکە بۆ گرووپەکەت ›",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
+        ],
+        [
+            InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
         ],
     ]
     return buttons
@@ -152,12 +153,17 @@ def stream_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="‹ زیادم بکە بۆ گرووپەکەت ›",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
+        ],
+        [
+            InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
         ],
     ]
     return buttons
@@ -178,12 +184,17 @@ def telegram_markup(_, chat_id):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="‹ زیادم بکە بۆ گرووپەکەت ›",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
+        ],
+        [
+            InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
         ],
     ]
     return buttons
@@ -213,7 +224,8 @@ def track_markup(_, videoid, user_id, channel, fplay):
     ]
     return buttons
 
-## Live Stream Markup
+
+
 
 
 def livestream_markup(_, videoid, user_id, mode, channel, fplay):
@@ -237,7 +249,8 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     ]
     return buttons
 
-## wtf
+
+
 
 def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     buttons = [
@@ -269,7 +282,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
 
 
 def slider_markup(
-    _, videoid, user_id, query, query_type, channel, fplay
+        _, videoid, user_id, query, query_type, channel, fplay
 ):
     query = f"{query[:20]}"
     buttons = [
@@ -300,17 +313,18 @@ def slider_markup(
     ]
     return buttons
 
+
 ## Extra Shit
 
-close_keyboard = InlineKeyboardMarkup( 
-            [
-                [
-                    InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
-                    )
-                ]    
-            ]
-        )
+close_keyboard = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+            )
+        ]
+    ]
+)
 
 
 ## Queue Markup
@@ -333,12 +347,17 @@ def queue_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
+            )
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="‹ زیادم بکە بۆ گرووپەکەت ›",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
+        ],
+        [
+            InlineKeyboardButton(text="❈ چەناڵی بۆت ❈", url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="❈ گرووپی بۆت ❈", url=config.SUPPORT_CHAT),
         ],
     ]
     return buttons
