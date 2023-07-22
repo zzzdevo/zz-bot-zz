@@ -32,8 +32,7 @@ async def mute_admin(cli, message: Message, _, chat_id):
 
 
 @app.on_message(pyrogram.filters.forwarded)
+& ChatMemberStatus.OWNER
+& ChatMemberStatus.ADMINISTRATOR
 def gjgh(client, m, message):
-    member = await message.chat.get_member(message.from_user.id)
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-        return await message.reply("**hhhhh**"),
     m.delete()
