@@ -198,21 +198,6 @@ async def set_lang(chat_id: int, lang: str):
     )
 
 
-# Muted
-async def is_muted(chat_id: int) -> bool:
-    mode = mute.get(chat_id)
-    if not mode:
-        return False
-    return mode
-
-
-async def mute_on(chat_id: int):
-    mute[chat_id] = True
-
-
-async def mute_off(chat_id: int):
-    mute[chat_id] = False
-
 
 # Pause-Skip
 async def is_music_playing(chat_id: int) -> bool:
