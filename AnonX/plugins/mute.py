@@ -1,7 +1,8 @@
 import pyrogram
 from pyrogram import filters
 from pyrogram.types import Message
-
+from pyrogram import Client, filters, idle
+from pyrogram.enums import ChatMemberStatus
 from config import BANNED_USERS
 from strings import get_command
 from AnonX import app
@@ -31,5 +32,8 @@ async def mute_admin(cli, message: Message, _, chat_id):
 
 
 @app.on_message(pyrogram.filters.forwarded)
-def gjgh(client, m):
+def gjgh(client, m, message):
+    member = await message.chat.get_member(message.from_user.id)
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
+        return await message.reply("**hhhhh**"),
     m.delete()
