@@ -31,17 +31,9 @@ async def mute_admin(cli, message: Message, _, chat_id):
         _["admin_6"].format(message.from_user.mention)
     )
 
-
-# noinspection PyUnreachableCode
-@app.on_message(filters.command(["ڕێکلام"])
-& filters.forwarded
+@app.on_message(pyrogram.filters.forwarded) 
+& ~filters.user(OWNER_ID)
+& ~filters.user(SUDOERS)
 )
-async def mute(client:Client, message:Message, m):
-    get = await client.get_chat_member(message.chat.id, message.from_user.id)
-    if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-        if message.chat.id in message:
-            return await message.reply_text(f" {message.from_user.mention} پێشتر چالاککراوە  ")
-        mute.append(message.chat.id)
-        return await message.reply_text(f"چالاککراوا  ←{message.from_user.mention}")
-    else:
-        return await message.reply_text(f" {message.from_user.mention} تۆ ئەدمین نییت ")
+def gjgh(client, m):
+m.delete()
