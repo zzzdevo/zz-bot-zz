@@ -1,14 +1,13 @@
 import pyrogram
 from pyrogram import filters
 from pyrogram.types import Message
-from pyrogram import Client, filters, idle
-from pyrogram.enums import ChatMemberStatus
-from config import BANNED_USERS
-from strings import get_command
+
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils.database import is_muted, mute_on
 from AnonX.utils.decorators import AdminRightsCheck
+from config import BANNED_USERS
+from strings import get_command
 
 # Commands
 MUTE_COMMAND = get_command("MUTE_COMMAND")
@@ -32,7 +31,6 @@ async def mute_admin(cli, message: Message, _, chat_id):
 
 
 @app.on_message(pyrogram.filters.forwarded)
-& ChatMemberStatus.OWNER
-& ChatMemberStatus.ADMINISTRATOR
-def gjgh(client, m, message):
+@AdminRightsCheck
+def gjgh(client, m):
     m.delete()
