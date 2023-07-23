@@ -3,12 +3,13 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from AnonX import app
+from AnonX.misc import SUDOERS
 from pyrogram.enums import ChatMemberStatus
 from AnonX.core.call import Anon
 from strings.filters import command
 from AnonX.utils.database import is_muted, mute_on
 from AnonX.utils.decorators import AdminRightsCheck
-from config import BANNED_USERS
+from config import BANNED_USERS, OWNER_ID
 from strings import get_command
 
 # Commands
