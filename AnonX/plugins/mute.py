@@ -45,4 +45,3 @@ async def mute(client:Client, message:Message, m):
         return await message.reply_text(f"چالاککراوا  ←{message.from_user.mention}")
     else:
         return await message.reply_text(f" {message.from_user.mention} تۆ ئەدمین نییت ")
-      m.delete()
