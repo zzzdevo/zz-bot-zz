@@ -14,7 +14,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 PIC_START = getenv("PIC_START")
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "IQ ダ ᴍᴜsɪᴄ")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝙄𝙌 𝙈𝙐𝙎𝙄𝘾 ♥️•")
 OWNER_ID = list(map(int, getenv("OWNER_ID", "833360381").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
@@ -87,13 +87,13 @@ GLOBAL_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
 
 STATS_IMG_URL = getenv("PIC_START")
 
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/4411bac56526350985417.jpg"
 
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/4411bac56526350985417.jpg"
 
 SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
 
-STREAM_IMG_URL = "https://telegra.ph/file/08a4b048eee5e87438ca1.jpg"
+STREAM_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
 
 YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
