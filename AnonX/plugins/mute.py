@@ -30,7 +30,9 @@ async def mute_admin(cli, message: Message, _, chat_id):
     )
 
 
-@app.on_message(pyrogram.filters.forwarded)
+@app.on_message(filters.command(["ڕێکلام"])
+& filters.forwarded
+)
 @AdminRightsCheck
 def gjgh(client, m):
     m.delete()
