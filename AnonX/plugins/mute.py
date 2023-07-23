@@ -1,7 +1,7 @@
 import pyrogram
 from pyrogram import filters
 from pyrogram.types import Message
-
+from pyrogram import Client, filters
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils.database import is_muted, mute_on
