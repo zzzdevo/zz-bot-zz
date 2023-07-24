@@ -16,7 +16,7 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 
 
 
-@app.on_message(command(["سەرۆک گرووپ"]) & filters.group)
+@app.on_message(command(["سەرۆکی گرووپ"]) & filters.group)
 async def gak_owne(client: Client, message: Message):
       if len(message.command) >= 2:
          return 
