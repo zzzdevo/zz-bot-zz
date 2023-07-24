@@ -1,7 +1,6 @@
 from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
 from AnonX import app
 from AnonX.utils.database import is_on_off
-from pyrogram.types import Message
 
 async def play_logs(message, streamtype):
     if await is_on_off(LOG):
