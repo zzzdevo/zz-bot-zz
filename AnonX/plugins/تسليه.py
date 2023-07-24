@@ -122,10 +122,10 @@ def call_random_member(client:Client, message:Message):
     random_member = random.choice(members)
     random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
     random_message = random.choice([
-        f"ووين ككارس لنا واجد نرجو فيك 😾 {random_member_mention}",
-        f"• يـا قمـري ❤️‍🔥 {random_member_mention}",
-        f"حبي فوتك من الخاص وتعال 🤔 {random_member_mention}",
-        f"• يـا راس السطل تعال {random_member_mention}",
-        f"• انت ليش قمر هكي 🌚♥ {random_member_mention}"
+        f"**لە مانڴ جوانتریت🌚♥️{random_member_mention}",
+        f"** جوانی تۆ بەهیچ شێوازێك باس ناکرێت{random_member_mention}",
+        f"**خۆشەویستی لە دڵی هەموواندا🍭💘 {random_member_mention}",
+        f"**دەڵێی هەنگوینی وەرە با بتخۆم😂♥{random_member_mention}",
+        f"**شار بە جوانی تۆی سەرسامبوو{random_member_mention}"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
