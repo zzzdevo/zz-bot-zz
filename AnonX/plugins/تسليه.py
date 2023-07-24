@@ -88,10 +88,10 @@ def call_random_member(client:Client, message:Message):
     random_member = random.choice(members)
     random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
     random_message = random.choice([
-         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n يجب أن تحاول ثلاث مرات قبل اليأس **",
-         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n أعطي كل يوم فرصة لتصبح أفضل يوم في حياتك**",
-         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n لحكمة هي معرفة متى تتجاهل**",
-         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n الصبر هو المفتاح إلى كلَّ قفل غامض**",
+         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\nپێویستە سێ جار هەوڵبدەیت پێش ئەوەی نائومێدبیت**",
+         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\nهەموو ڕۆژێك هەلێك بدە، بۆ ئەوەی ببێتە باشترین ڕۆژی ژیانت**",
+         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\nدانایی دەزانێت کەی کەسەکان پشتگوێ بخەیت**",
+         f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\nئارامگرتن کلیلی قفڵێکی بەهێزە**",
          f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n أنت مسؤول عن ماتشعر به، ولكنك لست مسؤولًا عن ما يفعله الآخرون**",
          f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n حكمتي تقول: دع الغضب يقتلع من قلبك السعادة كما تقتل الفحم النار من طريقه**",
          f"**-اليــك اقتبــاس اليـوـم ❤️\n│ لـ {random_member_mention}\n إذا لم تكن تعيش بالطريقة التي تريدها، يجب عليك أن تغيرها**",
