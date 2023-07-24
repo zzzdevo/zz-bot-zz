@@ -60,7 +60,7 @@ async def idljjopen(client:Client, message:Message):
     else:
         return await message.reply_text(f"**يا {message.from_user.mention} انت لست مشرفا هنا**")
 ##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]  
-@app.on_message(command(['زوجني','ز']))
+@app.on_message(command(['ززززززززززززز','ززززززززززز']))
 def iddd(client:Client, message:Message):
     chat_id = message.chat.id
     if chat_id in iddof:
