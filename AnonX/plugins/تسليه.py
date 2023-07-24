@@ -76,7 +76,7 @@ def iddd(client:Client, message:Message):
         f"• اخترت لك هذا الشخص \n {random_member_mention} \n **"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
-@app.on_message(command(['اقتباس','ق']))
+@app.on_message(command(['وتە']))
 def call_random_member(client:Client, message:Message):
     chat_id = message.chat.id
     members = [
@@ -88,26 +88,26 @@ def call_random_member(client:Client, message:Message):
     random_member = random.choice(members)
     random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
     random_message = random.choice([
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nپێویستە سێ جار هەوڵبدەیت پێش ئەوەی نائومێدبیت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهەموو ڕۆژێك هەلێك بدە، بۆ ئەوەی ببێتە باشترین ڕۆژی ژیانت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nدانایی دەزانێت کەی کەسەکان پشتگوێ بخەیت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئارامگرتن کلیلی قفڵێکی بەهێزە**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nتۆ بەرپرسیاریت لەوەی کە هەست بەچی دەکەیت، بەڵام تۆ بەرپرس نیت لەوەی ئەوانی تر دەیکەن**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئەگەر بەو شێوەیە ناژیت کە دەتەوێت، دەبێت بیگۆڕیت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nبراوەکان نهێنی ڕاهێنانیان باس ناکەن ئەوان بەرەو ئامانجی گەورە دەڕۆن**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهیچ شتێک لە ژیاندا لە خۆشەویستی و بەختەوەری باشتر نییە**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nکاتێك با دەگۆڕێت، پێویستە ئاڕاستەی دەریاکە ڕێکبخەین لەجیاتی ئەوەی گەشت بوەستێنین**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nژیان وەك شەپۆل وایە، تۆ تەنها پێویستە هاوسەنگی خۆت بدۆزیتەوە بۆ ئەوەی نوقم نەبیت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئەو درەختەی کە لە بادا چەماوەتەوە، ئەو درەختەیە کە لە زریاندا دەشکێت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\n ئاواتی من ئەوەیە کە گۆشەی مەترسیداری تێدابێت هیچ شتێك ناتوانێت بەبێ بەرەنگاربوونەوە گەشەبکات**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nناتوانیت تاریکی لەبیربکەیت پێویستە مۆمێك دروست بکەیت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nدووری تامێکی هەیە کە لە ئازارەوە دێت بۆ ئەو کەسەی کە لە خۆشەویستیدا نەدۆڕاوە**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nشتەکان لەسەر بنەمای تێپەڕبوونی بە باروودۆخ دیاری ناکرێت بەڵکو لەسەر بنەمای وەڵامەکانی ئەو باروودۆخە دیاری دەکرێت**",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهەڵبژاردن، لە کۆتاییدا، ڕێگایەک کە لە بەرژەوەندی تۆدا نەبوو ڕێگای تر بەجێبھێڵە کە نەدۆزراوەتەوە",
-         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهیچ شتێکی باشت نەبوو بۆ ئەوەی بیڵێیت، بۆیە بێدەنگ بە**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nپێویستە سێ جار هەوڵبدەیت پێش ئەوەی نائومێدبیت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهەموو ڕۆژێك هەلێك بدە، بۆ ئەوەی ببێتە باشترین ڕۆژی ژیانت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nدانایی دەزانێت کەی کەسەکان پشتگوێ بخەیت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئارامگرتن کلیلی قفڵێکی بەهێزە🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nتۆ بەرپرسیاریت لەوەی کە هەست بەچی دەکەیت، بەڵام تۆ بەرپرس نیت لەوەی ئەوانی تر دەیکەن🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئەگەر بەو شێوەیە ناژیت کە دەتەوێت، دەبێت بیگۆڕیت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nبراوەکان نھێنی ڕاهێنانیان باس ناکەن ئەوان بەرەو ئامانجی گەورە دەڕۆن🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهیچ شتێک لە ژیاندا لە خۆشەویستی و بەختەوەری باشتر نییە🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nکاتێك با دەگۆڕێت، پێویستە ئاڕاستەی دەریاکە ڕێکبخەین لەجیاتی ئەوەی گەشت بوەستێنین🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nژیان وەك شەپۆل وایە، تۆ تەنها پێویستە هاوسەنگی خۆت بدۆزیتەوە بۆ ئەوەی نوقم نەبیت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nئەو درەختەی کە لە بادا چەماوەتەوە، ئەو درەختەیە کە لە زریاندا دەشکێت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\n ئاواتی من ئەوەیە کە گۆشەی مەترسیداری تێدابێت هیچ شتێك ناتوانێت بەبێ بەرەنگاربوونەوە گەشەبکات🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nناتوانیت تاریکی لەبیربکەیت پێویستە مۆمێك دروست بکەیت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nدووری تامێکی هەیە کە لە ئازارەوە دێت بۆ ئەو کەسەی کە لە خۆشەویستیدا نەدۆڕاوە🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nشتەکان لەسەر بنەمای تێپەڕبوونی بە باروودۆخ دیاری ناکرێت بەڵکو لەسەر بنەمای وەڵامەکانی ئەو باروودۆخە دیاری دەکرێت🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهەڵبژاردن، لە کۆتاییدا، ڕێگایەک کە لە بەرژەوەندی تۆدا نەبوو ڕێگای تر بەجێبھێڵە کە نەدۆزراوەتەوە🖤•**",
+         f"**-ئەم وتەیە بۆتۆیە♥•\n│ بـۆ {random_member_mention}\nهیچ شتێکی باشت نەبوو بۆ ئەوەی بیڵێیت، بۆیە بێدەنگ بە🖤•**",
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
-@app.on_message(command(['نداء','ن']))
+@app.on_message(command(['وەسف','و']))
 def call_random_member(client:Client, message:Message):
     chat_id = message.chat.id
     members = [
@@ -120,9 +120,12 @@ def call_random_member(client:Client, message:Message):
     random_member_mention = f"[{random_member.user.first_name}](tg://user?id={random_member.user.id})"
     random_message = random.choice([
         f"**لە مانڴ جوانتریت🌚♥️{random_member_mention}",
-        f"** جوانی تۆ بەهیچ شێوازێك باس ناکرێت{random_member_mention}",
+        f"**جوانی تۆ بەهیچ شێوازێك باس ناکرێت{random_member_mention}",
         f"**خۆشەویستی لە دڵی هەموواندا🍭💘 {random_member_mention}",
         f"**دەڵێی هەنگوینی وەرە با بتخۆم😂♥{random_member_mention}",
-        f"**شار بە جوانی تۆی سەرسامبوو{random_member_mention}"
+        f"**شار بە جوانی تۆ سەرسامبوو😏💚{random_member_mention}",
+        f"**دانشە خوئری😂🤭{random_member_mention}",
+        f"**دەڵێی فیلی😔😹{random_member_mention}",
+         f"**سوک مەبە کوڕم سوکی صه😳{random_member_mention}"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
