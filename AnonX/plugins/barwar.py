@@ -22,7 +22,7 @@ async def calculate_age(client:Client, message:Message):
     try:
         birth_date = datetime.datetime.strptime(message.text.split(" ")[2], "%d-%m-%Y")##### ماتروح تتعب بدل ماتخمط السورسات ياخول
     except:
-        await message.reply_text(f"•⎆┊**{message.from_user.mention} ببورە بە هەڵە نوسیووتە پێویستە بەم جۆرە بینووسیت (تەمەنم 5-4-2002)‌💔•**")
+        await message.reply_text(f"•⎆┊**ئەزیزم {message.from_user.mention} ببورە بە هەڵە نوسیووتە پێویستە بەم جۆرە بینووسیت (تەمەنم 2-1-2000)‌💔•**")
         return
 
     alyawm = datetime.datetime.today()
@@ -34,4 +34,4 @@ async def calculate_age(client:Client, message:Message):
         next_birthday = datetime.datetime(alyawm.year+1, birth_date.month, birth_date.day)
     remaining_days = (next_birthday - alyawm).days
 
-    await message.reply_text(f"•⎆┊**پیرۆزە {message.from_user.mention} • تەمەنت → {age} ساڵ\n\n • تەمەنت بە مانگ → {months} مانگ \n\n • تەمەنت بە ڕۆژ → {days} ڕۆژ\n\n • ڕۆژی لەدایکبوونت دوای → {remaining_days} ڕۆژ \n\n بانگمان بکە کیان😂♥•")
+    await message.reply_text(f"•⎆┊**پیرۆزە {message.from_user.mention} • تەمەنت → {age} ساڵ**\n\n** • تەمەنت بە مانگ → {months} مانگ **\n\n** • تەمەنت بە ڕۆژ → {days} ڕۆژ**\n\n** • ڕۆژی لەدایکبوونت دوای → {remaining_days} ڕۆژ **\n\n** بانگمان بکە کیان😂♥•**")
