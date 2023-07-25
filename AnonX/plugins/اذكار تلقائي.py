@@ -19,13 +19,13 @@ async def lllock(client, message):
     haya = (833360381)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-         rotba = "الادمن"
+         rotba = "ئەدمین"
     elif get.status in [ChatMemberStatus.OWNER]:
-         rotba = "المالك"
+         rotba = "سەرۆك"
     elif message.from_user.id in haya:
-         rotba= "مّمٌَـبـ ـࢪمـج السوࢪس" 
+         rotba= "گەشەپێدەر" 
     elif message.from_user.id in dev:
-         rotba = "مطور اساسي"
+         rotba = "خاوەنی بۆت"
   
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
       if message.chat.id in iddof:
@@ -42,13 +42,13 @@ async def idljjopen(client, message):
     haya = (833360381)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-         rotba = "الادمن"
+         rotba = "ئەدمین"
     elif get.status in [ChatMemberStatus.OWNER]:
-         rotba = "المالك"
+         rotba = "سەرۆك"
     elif message.from_user.id in haya:
-         rotba= "مّمٌَـبـ ـࢪمـج السوࢪس" 
+         rotba= "گەشەپێدەر" 
     elif message.from_user.id in dev:
-         rotba = "مطور اساسي"
+         rotba = "پڕۆگرامساز"
     
    
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
