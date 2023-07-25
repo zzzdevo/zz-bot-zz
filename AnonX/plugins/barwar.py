@@ -22,7 +22,7 @@ async def calculate_age(client:Client, message:Message):
     try:
         birth_date = datetime.datetime.strptime(message.text.split(" ")[2], "%d-%m-%Y")##### ماتروح تتعب بدل ماتخمط السورسات ياخول
     except:
-        await message.reply_text(f"•⎆┊**ئەزیزم {message.from_user.mention} ببورە بە هەڵە نوسیووتە پێویستە بەم جۆرە بینووسیت (تەمەنم 2-1-2000)‌💔•**")
+        await message.reply_text(f"•⎆┊ئەزیزم {message.from_user.mention} ببورە تۆ فەرمانی هەڵەت نوسیووە، ئاوا بینووسە (تەمەنم 1-1-2000) **")
         return
 
     alyawm = datetime.datetime.today()
