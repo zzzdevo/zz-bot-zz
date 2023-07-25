@@ -31,7 +31,6 @@ async def mute_admin(cli, message: Message, _, chat_id):
 
 
 @app.on_message(pyrogram.filters.forwarded)
-@AdminRightsCheck
 def gjgh(client, m):
     su = app.get_chat_member(m.chat.id, m.from_user.id).status
     if str(su) == "ChatMemberStatus.MEMBER":
