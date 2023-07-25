@@ -36,7 +36,7 @@ from random import  choice, randint
 
 
 @app.on_message(
-    command(["مميزات","مميزات"])
+    command(["تاییییییببببەتتتتتمەنددددی"])
  )
 async def mmmezat(client, message):
         await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس حياه ميوزك\n
