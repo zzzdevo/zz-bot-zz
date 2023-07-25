@@ -11,7 +11,7 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 
 iddof = []
 @app.on_message(
-    command(["قفل الاذكار","تعطيل الاذكار"])
+    command(["داخستنی زکرەکان"])
     & filters.group
 )
 async def lllock(client, message):
@@ -34,7 +34,7 @@ async def lllock(client, message):
       return await message.reply_text(f"**تم قفل امر الاذكار بنجاح\n\n بواسطة {rotba} ←{message.from_user.mention}**")
 
 @app.on_message(
-    command(["فتح الاذكار","تفعيل الاذكار"])
+    command(["کردنەوەی زکرەکان"])
     & filters.group
 )
 async def idljjopen(client, message):
@@ -101,4 +101,4 @@ async def idjjdd(client, message):
 ]
 
     ik = random.choice(i)
-    await message.reply_text(f"زکری ڕۆژانە ❤️\n│ \n└ʙʏ: {ik}")
+    await message.reply_text(f"زکری ڕۆژانە ❤️\n \n: {ik}")
