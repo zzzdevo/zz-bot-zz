@@ -16,7 +16,7 @@ from AnonX import app
 from random import  choice, randint
 
 @app.on_message(
-    command(["م1"])
+    command(["ممممممممممم1111"])
  )
 async def mmmezat(client, message):
         await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم اوامر الفتح والقفل في بوت {MUSIC_BOT_NAME} ميوزك\n
