@@ -1,142 +1,149 @@
-# import os
-# os.system("pip install tgcrypto && pip install pyromod && clear")
-# from strings.filters import command
-# from pyrogram import Client, filters, idle
-# from pyrogram.enums import ParseMode, ChatMemberStatus 
-# from AnonX import app
-# from config import LOG_GROUP_ID
-# from pyrogram.types import Message
+import json
+from AnonX import app
+from pyrogram import Client, filters, idle
+import asyncio
+from pyromod import listen
 
-  
-# LOG =(LOG_GROUP_ID) 
-
-# def get_rd(text, id):
-#     chat_id = str(id)
-#     text = text
-#     with open("getrdod.txt", "r+") as f:
-#        x = f.readlines()
-#        final = f"{chat_id}#{text}"
-#        for a in x:
-#          if final in a:
-#             return int(a.split(f"{final}ZAIDRD")[1].replace("\n",""))
-#     return False
+try:
+    open("rd.json", "r")
+except:
+    with open("rd.json", "w") as f:
+        f.write("{}")
+da = json.load(open("rd.json", "r"))
 
 
-# def add_rd(text, id, rd) -> bool:
-#     chat_id = str(id)
-#     with open("getrdod.txt", "a+") as f:
-#        x = f.readlines()
-#        for a in x:
-#          if f"{chat_id}#{text}" in a:
-#            return False
-#        f.write(f"{chat_id}#{text}ZAIDRD{rd}\n")
-#     return True
+def save(data):
+    with open("rd.json", "w", encoding='utf-8') as f:
+        json.dump(data, f, indent=6, ensure_ascii=False)
+        f.close()
 
 
-# def del_rd(x):
-#    word = str(x).replace("\n","")
-#    with open("getrdod.txt", "r+") as fp:
-#       lines = fp.readlines()
-#    with open("getrdod.txt", "w+") as fp:
-#           for line in lines:
-#             line = line.replace("\n","")
-#             if word != line:
-#               fp.write(line+"\n")
-#           return
+def ck(c):
+    try:
+        da[c]
+    except KeyError:
+        da[c] = {}
+        save(da)
 
 
-
-# def del_rdod(id) -> bool:
-#     chat_id = str(id)
-#     gps = open("getrdod.txt").read()
-#     if chat_id not in gps:
-#       return False
-#     with open("getrdod.txt", "r+") as fp:
-#       lines = fp.readlines()
-#     with open("getrdod.txt", "w+") as fp:
-#           for line in lines:
-#             line = line.replace("\n","")
-#             if chat_id not in line:
-#               fp.write(line+"\n")
-#           return
-
-
-# def get_rdod(chat_id):
-#    with open("getrdod.txt", "r+") as f:
-#        lines = f.readlines()
-#    text = "• الردود بهذه المجموعة : \n"
-#    for line in lines:
-#      if str(chat_id) in line:
-#        a = line.split("#")[1]
-#        b = a.split("ZAIDRD")[0]
-#        text += f"{b}\n"
-#    if text == "• الردود بهذه المجموعة : \n": return False
-#    else: return f"**{text}**"
-       
-# async def get_rtba(chat_id: int, user_id: int) -> bool:
-#     get = await app.get_chat_member(chat_id, user_id)
-#     if not get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-#       return False
-#     else: return True
-    
-
-
-# @app.on_message(command(["اضف رد"]))
-# async def adf_rd(app,message:Message):
-#     get = await get_rtba(message.chat.id, message.from_user.id)
-#     if not get: return await message.reply("• هذا االأمر لا يخصك")
-#     ask1 = await app.ask(
-#     message.chat.id, "ارسل كلمة الرد", reply_to_message_id=message.id, filters=filters.text & filters.user(message.from_user.id))
-#     text = ask1.text
-#     ask2 = await app.ask(
-#     message.chat.id, "ارسل جواب الرد", reply_to_message_id=ask1.id, filters=filters.user(message.from_user.id))
-#     copy = await ask2.copy(LOG)
-#     rd = copy.id
-#     a = add_rd(text, message.chat.id, rd)
-#     if a: return await ask2.reply("تم اضافة الرد بنجاح")
-#     else: return await ask2.reply("حدث خطأ")
+@app.on_message(filters.regex("^زیادکردنی چات$"))
+async def t(client, m):
+    cid = str(m.chat.id)
+    ck(cid)
+    t = await m.chat.ask('• ارسل الان الكلمه لاضافتها في الردود', filters=filters.text & filters.user(m.from_user.id),
+                         reply_to_message_id=m.id)
+    if t.text in da[cid]:
+        await app.send_message(cid, "الرد مضاف من قبل !", reply_to_message_id=t.id)
+    else:
+        tt = await m.chat.ask("• حسناً يمكنك اضافة\n( نص,صوره,فيديو,متحركه,بصمه,اغنيه,ملف )",
+                              filters=filters.user(t.from_user.id), reply_to_message_id=t.id)
+        if tt.text:
+            da[cid][t.text] = f"text&{tt.text}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.photo:
+            da[cid][t.text] = f"photo&{tt.photo.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.video:
+            da[cid][t.text] = f"video&{tt.video.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.animation:
+            da[cid][t.text] = f"animation&{tt.animation.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.voice:
+            da[cid][t.text] = f"voice&{tt.voice.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.audio:
+            da[cid][t.text] = f"audio&{tt.audio.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        elif tt.document:
+            da[cid][t.text] = f"document&{tt.document.file_id}"
+            save(da)
+            await tt.reply(f'• تم اضافه الرد بأسم ↤︎ ({t.text}) .', quote=True)
+        else:
+            await tt.reply(f"• تسطيع ارسال\n( نص,صوره,فيديو,متحركه,بصمه,اغنيه,ملف ) فقط !", quote=True)
 
 
-# @app.on_message(command(["مسح رد"]))
-# async def delete_rd(app,message:Message):
-#    get = await get_rtba(message.chat.id, message.from_user.id)
-#    if not get: return await message.reply("• هذا االأمر لا يخصك")
-#    ask = await app.ask(
-#      message.chat.id, "ارسل الرد الآن", filters=filters.text & filters.user(message.from_user.id), reply_to_message_id=message.id)
-#    a = get_rd(ask.text, message.chat.id)
-#    if not a:
-#      return await ask.reply("الرد غير موجود")
-#    x = f"{message.chat.id}#{ask.text}ZAIDRD{a}"
-#    b = del_rd(x)
-#    await ask.reply("• تم مسح الرد")
-   
+@app.on_message(filters.regex("^چاتەکان$"))
+async def t(client, m):
+    global t
+    r = ""
+    i = 0
+    cid = str(m.chat.id)
+    ck(cid)
+    if da[cid] != {}:
+        for a, b in da[cid].items():
+            tp = b.split("&", 1)
+            if tp[0] == "text":
+                t = "نص"
+            elif tp[0] == "photo":
+                t = "صوره "
+            elif tp[0] == "video":
+                t = "فيديو "
+            elif tp[0] == "animation":
+                t = "متحركه"
+            elif tp[0] == "voice":
+                t = "بصمه "
+            elif tp[0] == "audio":
+                t = "صوت"
+            elif tp[0] == "document":
+                t = "ملف"
+            i += 1
+            r += f'{i} => {a} ~ {t}\n'
+        await m.reply(r)
+    else:
+        await m.reply("لا توجد ردود مضافة !")
 
 
-# @app.on_message(command(["مسح الردود"]))
-# async def delrdood(app,message:Message):
-#    get = await get_rtba(message.chat.id, message.from_user.id)
-#    if not get: return await message.reply("• هذا االأمر لا يخصك")
-#    a = del_rdod(message.chat.id)
-#    print(a)
-#    if not a : return await message.reply("• تم مسح الردود هنا")
-#    else: return await message.reply("• لاتوجد ردود هنا")
+@app.on_message(filters.regex("^سڕینەوەی چاتەکان$"))
+async def t(client, m):
+    cid = str(m.chat.id)
+    ck(cid)
+    if da[cid] != {}:
+        da[cid] = {}
+        save(da)
+        await m.reply("تم حذف الردود.")
+    else:
+        await m.reply("لا توجد ردود مضافة !")
 
 
+@app.on_message(filters.regex("^سڕینەوەی چات$"))
+async def t(client, m):
+    cid = str(m.chat.id)
+    ck(cid)
+    t = await m.chat.ask('• ارسل الان الكلمه لحذفها من الردود', filters=filters.text & filters.user(m.from_user.id),
+                         reply_to_message_id=m.id)
+    if t.text in da[cid]:
+        da[cid].pop(t.text)
+        save(da)
+        await t.reply("تم حذف الرد.")
+    else:
+        await t.reply("الرد غير موجود بالفعل !")
 
-# @app.on_message(command(["الردود"]))
-# async def get_rdodd(app,message:Message):
-#     get = await get_rtba(message.chat.id, message.from_user.id)
-#     if not get: return await message.reply("• هذا االأمر لا يخصك")
-#     a = get_rdod(message.chat.id)
-#     if not a: return await message.reply("• لا توجد ردود هنا")
-#     else: return await message.reply(a)
 
-
-# @app.on_message(filters.text & filters.group, group=1)
-# async def gettt_rd(app, message:Message):
-#    a = get_rd(message.text, message.chat.id)
-#    if a: return await app.copy_message(message.chat.id, LOG, a, reply_to_message_id=message.id)
-#    else: return 
-   
-   
-
+@app.on_message(filters.text)
+async def t(client, m):
+    cid = str(m.chat.id)
+    if cid in da:
+        for a, b in da[cid].items():
+            tp = b.split("&", 1)
+            if m.text == a:
+                if tp[0] == "text":
+                    await m.reply(tp[1])
+                elif tp[0] == "photo":
+                    await m.reply_photo(tp[1])
+                elif tp[0] == "video":
+                    await m.reply_video(tp[1])
+                elif tp[0] == "animation":
+                    await m.reply_animation(tp[1])
+                elif tp[0] == "voice":
+                    await m.reply_voice(tp[1])
+                elif tp[0] == "audio":
+                    await m.reply_audio(tp[1])
+                elif tp[0] == "document":
+                    await m.reply_document(tp[1])
