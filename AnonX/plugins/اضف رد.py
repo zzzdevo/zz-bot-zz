@@ -3,7 +3,7 @@ import json
 from AnonX import app
 from strings.filters import command
 from pyrogram import Client, filters, idle
-import asyncio
+from pyromod import listen
 from pyrogram.types import Message
 
 try:
