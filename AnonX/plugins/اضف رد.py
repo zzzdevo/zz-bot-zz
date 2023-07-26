@@ -1,6 +1,5 @@
 import asyncio
 import json
-import pyromod
 from AnonX import app
 from strings.filters import command
 from pyrogram import Client, filters, idle
