@@ -1,5 +1,3 @@
-
-
 import asyncio
 
 import os
@@ -16,10 +14,10 @@ from AnonX import app
 from random import  choice, randint
 
 @app.on_message(
-    command(["ممممممممممم1111"])
+    command(["ف1"])
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم اوامر الفتح والقفل في بوت {MUSIC_BOT_NAME} ميوزك\n
+        await message.reply_text(f"""**[ᯓ فەرمانی بۆتی زیرەکی گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**بەخێربێی ئەزیزم{message.from_user.mention}**في قسم اوامر الفتح والقفل في بوت {MUSIC_BOT_NAME} ميوزك\n
 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼
 **قفل / تعطيل + الامر**
 
