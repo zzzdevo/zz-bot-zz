@@ -125,7 +125,9 @@ def call_random_member(client:Client, message:Message):
         f"**دەڵێی هەنگوینی وەرە با بتخۆم{random_member_mention}😂♥•**",
         f"**شار بە جوانی تۆ سەرسامبوو{random_member_mention}🙊🥰•**",
         f"**دانشە خوئری{random_member_mention}😂🤭•**",
-        f"**دەڵێی فیلی{random_member_mention}😔😂•*",
-         f"**افف کە قشتی کئان{random_member_mention}💘•**"
+        f"**دەڵێی فیلی{random_member_mention}😔😂•**",
+         f"**افف کە قشتی کئان{random_member_mention}💘•**",
+         f"**بڕەك کەلامزی بخۆ با قورس بیت{random_member_mention}🥰😂😂•**",
+         f"**زۆڕ ناشڕینیی {random_member_mention}😂😳•**"
     ])
     client.send_message(chat_id, random_message, reply_to_message_id= message.id)
