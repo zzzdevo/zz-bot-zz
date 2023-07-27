@@ -115,7 +115,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["قورئانی پیرۆز"])
+    command(["ق"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(3, 104)
@@ -140,7 +140,7 @@ async def ihd(client: Client, message: Message):
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/78cefd067cff33d79edb7.jpg",
-        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - پەخشی قورئان🧑🏻‍💻🖤](t.me/MGIMT)**\n**بەخێربێی ئەزیزم {message.from_user.mention} بۆ بەشی پەخشکردنی قورئانی پیرۆز تایبەت بە سەرچاوەی زیرەك**\n بۆ پەخشکردنی بنووسە : قورئان + ناوی سوڕەت ♥⚡**""",
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - پەخشی قورئان🧑🏻‍💻🖤](t.me/MGIMT)**\n\n**بەخێربێی ئەزیزم {message.from_user.mention} بۆ بەشی پەخشکردنی قورئانی پیرۆز تایبەت بە سەرچاوەی زیرەك**\n بۆ پەخشکردنی بنووسە : قورئان + ناوی سوڕەت ♥⚡**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -149,7 +149,7 @@ async def huhh(client: Client, message: Message):
                  ],[
                 
                     InlineKeyboardButton(
-                        "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌", url=f"https://t.me/HL_BG"),
+                        "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌", url=f"https://t.me/MGIMT"),
                 ],
 
             ]
