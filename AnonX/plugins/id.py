@@ -42,11 +42,9 @@ async def iddlock(client:Client, message:Message):
      
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
         if message.chat.id in iddof:
-            return await message.reply_text(f"**{message.from_user.mention}\n ئایدی پێشتر لەکارخراوە•**")
+            return await message.reply_text(f"**{message.from_user.mention}\n ئایدی پێشتر داخراوە♥️❎•**")
         iddof.append(message.chat.id)
-        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی ئایدی لەکارخرا\n\n لەلایەن {rotba} ←{message.from_user.mention}•**")
-    else:
-        return await message.reply_text(f"**{message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
+        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی ئایدی داخسترا\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️❎•**")
 
 @app.on_message(
     command(["کردنەوەی ئایدی"])
@@ -68,9 +66,9 @@ async def idljjopen(client, message):
         return await message.reply_text(f"**{message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")       
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
       if not message.chat.id in iddof:
-        return await message.reply_text(f"**{message.from_user.mention}\nئایدی پێشتر چالاککراوە•**")
+        return await message.reply_text(f"**{message.from_user.mention}\nئایدی پێشتر کراوەتەوە♥️✅•**")
       iddof.remove(message.chat.id)
-      return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی ئایدی چالاککرا\n\n لەلایەن {rotba} ←{message.from_user.mention}•**")
+      return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی ئایدی کرایەوە\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️✅•**")
  
    
 
@@ -143,7 +141,7 @@ async def lllock(client, message):
       if message.chat.id in iddof:
         return await message.reply_text(f"** {message.from_user.mention}\n پێشتر داخراوە🎈•**")
       iddof.append(message.chat.id)
-      return await message.reply_text(f"**فەرمانی وێنەکەم داخسترا\n\n لەلایەن {rotba} ←{message.from_user.mention}•**")
+      return await message.reply_text(f"**فەرمانی وێنەکەم داخسترا\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️❎•**")
     
 @app.on_message(
     command(["کردنەوەی وێنە"])
@@ -166,9 +164,9 @@ async def idljjopen(client, message):
    
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
       if not message.chat.id in iddof:
-        return await message.reply_text(f"**{message.from_user.mention}  پێشتر کراوەتەوە🎈•**")
+        return await message.reply_text(f"**{message.from_user.mention} پێشتر کراوەتەوە🎈•**")
       iddof.remove(message.chat.id)
-      return await message.reply_text(f"**فەرمانی وێنەکەم کرایەوە\n\n لەلایەن {rotba} ←{message.from_user.mention}•**")
+      return await message.reply_text(f"**فەرمانی وێنەکەم کرایەوە\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️✅•**")
  
 
 
@@ -213,7 +211,7 @@ async def rotba(client, message):
         rotba= "سەرۆك"
     else:
          rotba = "ئەندام"
-    await message.reply_text(f"**ڕۆڵی تۆیە لەم گرووپە\n\nڕۆڵت ← « {rotba} »**")
+    await message.reply_text(f"**ڕۆڵی تۆیە لەم گرووپە\n\nڕۆڵت ← « {rotba} »♥️**")
        
 
 bio = []
@@ -226,4 +224,4 @@ async def idjjdd(client, message:Message):
     if message.chat.id in bio:
       return
     usr = await client.get_chat(message.from_user.id)
-    await message.reply_text(f"**ئەوە بایۆیی تۆیە\n │ \n: {usr.bio}**")
+    await message.reply_text(f"**ئەوە بایۆیی تۆیە\n│ \n└ʙʏ: {usr.bio}**")
