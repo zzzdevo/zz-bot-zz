@@ -12,7 +12,7 @@ pillow
 psutil
 py-tgcalls
 pykeyboard
-pyromod==2.0.0
+pyromod
 pyrogram == 2.0.56
 python-dotenv
 pyyaml
