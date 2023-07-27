@@ -6,8 +6,8 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 stiklok =[]
 
 @app.on_message(
-    filters.command(["داخستنی ستیکەر"])
- 
+     command(["داخستنی ستیکەر"])
+     & filters.group
    
 )
 async def block_stickers(client:Client, message:Message):
@@ -24,8 +24,8 @@ async def block_stickers(client:Client, message:Message):
     
 
 @app.on_message(
-    filters.command(["کردنەوەی ستیکەر"])
- 
+     command(["کردنەوەی ستیکەر"])
+  ن  & filters.group
    
 )
 async def block_stickers(client:Client, message:Message):
