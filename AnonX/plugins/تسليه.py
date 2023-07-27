@@ -1,5 +1,3 @@
-
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
 import asyncio
 import random
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
@@ -10,7 +8,6 @@ from config import OWNER_ID
 from pyrogram.enums import ParseMode, ChatMemberStatus
 
 
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
 
 
 iddof = []
@@ -25,19 +22,20 @@ async def iddlock(client:Client, message:Message):
    
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in dev:
-        rotba = "مطـور اساسي"
+        rotba = "پڕۆگرامساز"
     if get.status in [ChatMemberStatus.OWNER]:
-        rotba= "المــــألك"
+        rotba= "سەرۆك"
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-        rotba= "أدمـــن"
+        rotba= "ئەدمین"
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and dev:
         if message.chat.id in iddof:
-            return await message.reply_text(f"**يا {message.from_user.mention}\n الالعاب مقفله من قبل**")
+            return await message.reply_text(f"**{message.from_user.mention}\n وەڵامدانەوە پێشتر داخراوە♥️❎•**")
         iddof.append(message.chat.id)
-        return await message.reply_text(f"**تم قفل الالعاب بنجاح\n\nبواسطة {rotba} ←{message.from_user.mention}**")
+        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی وەڵامدانەوە داخرا\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️❎•**")
     else:
-        return await message.reply_text(f"**يا {message.from_user.mention} انت لست مشرفا هنا**")
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
+        return await message.reply_text(f"** {message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
+
+         
 @app.on_message(
     command(["کردنەوەی وەڵامدانەوە"])
     & filters.group
@@ -47,18 +45,18 @@ async def idljjopen(client:Client, message:Message):
     
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in dev:
-        rotba = "مطـور اساسي"
+        rotba = "پڕۆگرامساز"
     if get.status in [ChatMemberStatus.OWNER]:
-        rotba= "المــــألك"
+        rotba= "سەرۆك"
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
-        rotba= "أدمـــن"
+        rotba= "ئەدمین"
     if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR] and  dev:
         if not message.chat.id in iddof:
-            return await message.reply_text(f"**يا {message.from_user.mention}\n الالعاب مفتوحه من قبل**")
+            return await message.reply_text(f"**{message.from_user.mention}\n وەڵامدانەوە پێشتر کراوەتەوە♥️✅•**")
         iddof.remove(message.chat.id)
-        return await message.reply_text(f"**تم فتح الالعاب بنجاح\n\nبواسطة {rotba} ←{message.from_user.mention}**")
+        return await message.reply_text(f"**بە سەرکەوتوویی فەرمانی وەڵامدانەوە کرایەوە\n\n لەلایەن {rotba} ←{message.from_user.mention}♥️✅•**")
     else:
-        return await message.reply_text(f"**يا {message.from_user.mention} انت لست مشرفا هنا**")
+        return await message.reply_text(f"** {message.from_user.mention} تۆ ئەدمین نیت لێرە💔•**")
 ##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]  
 @app.on_message(command(['ززززززززززززز','ززززززززززز']))
 def iddd(client:Client, message:Message):
