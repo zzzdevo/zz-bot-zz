@@ -115,7 +115,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["قورئان"])
+    command(["قورئانی پیرۆز"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(3, 104)
@@ -133,23 +133,23 @@ async def ihd(client: Client, message: Message):
                      )
 
 @app.on_message(
-   command(["قرأن"])
+   command(["قورئان"])
    
     
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/4c0e63af8a410d9a53fa0.jpg",
-        caption=f"""**𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**\nمرحبا بك عزيزي {message.from_user.mention} في قسم تشغيل القرأن الخاص بسورس حياه\nلتتمكن من استخدام اوامر القرأن اكتب \n سورة + اسم السورة بالاسفل👇\n**𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
+        photo=f"https://telegra.ph/file/78cefd067cff33d79edb7.jpg",
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - پەخشی قورئان🧑🏻‍💻🖤](t.me/MGIMT)**\n**بەخێربێی ئەزیزم {message.from_user.mention} بۆ بەشی پەخشکردنی قورئانی پیرۆز تایبەت بە سەرچاوەی زیرەك**\n بۆ پەخشکردنی بنووسە : قورئان + ناوی سوڕەت ♥⚡**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "᳒ᯓ𓆩𓏺᭙ɦᎥ᥉ƙᥱᥡ ˹َّّ", url=f"https://t.me/bp_bp"), 
+                        "﮼محمد˹َّّ", url=f"https://t.me/IQ7amo"), 
                  ],[
                 
                     InlineKeyboardButton(
-                        "★𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼⚡", url=f"https://t.me/HL_BG"),
+                        "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌", url=f"https://t.me/HL_BG"),
                 ],
 
             ]
