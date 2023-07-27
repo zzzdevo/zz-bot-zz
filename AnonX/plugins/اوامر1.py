@@ -17,7 +17,7 @@ from random import  choice, randint
     command(["ف1"])
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**[ᯓ فەرمانی داخستن و کردنەوە 🧑🏻‍💻🖤](t.me/MGIMT)**\n**بەخێربێی ئەزیزم{message.from_user.mention}بۆ بەشی داخستن و کردنەوەی فەرمان{MUSIC_BOT_NAME}**\n••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••\n
+        await message.reply_text(f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - فەرمانی بۆت🧑🏻‍💻🖤](t.me/MGIMT)**\n\n **بەخێربێی ئەزیزم{message.from_user.mention}بۆ بەشی داخستن و کردنەوەی فەرمان{MUSIC_BOT_NAME}**\n••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••\n
 ⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌
 
 ** کردنەوەی + فەرمان 👾✅**
@@ -36,7 +36,7 @@ async def mmmezat(client, message):
 
 **نموونە : کردنەوەی ئایدی یان داخستنی ئایدی♥🧩**
 
-@IQ7amo - 🖤👾باشترین بۆتی گۆرانی و پاراستن و وەڵامدانەوە
+**@IQ7amo - 🖤👾باشترین بۆتی گۆرانی و پاراستن و وەڵامدانەوە**
 **""",
 
 
