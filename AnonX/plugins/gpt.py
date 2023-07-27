@@ -34,16 +34,16 @@ def gpt(text) -> str:
         return None
 
 def reply_gpt(client, message:Message):
-    text = message.text.split("زیرەکی دەستکرد")[1]
+    text = message.text.split("iq")[1]
     reply_text = gpt(text)
     chat_id = message.chat.id
     if message.reply_to_message is not None:
         message_id = message.reply_to_message.id
     else:
         message_id = None
-    client.send_message(chat_id=chat_id, text=reply_text + "\n\n\n@IQ7amo نوێترین ڤێرژنی زیرەکی دەستکرد لەلایەن گەشەپێدەر", reply_to_message_id=message_id)
+    client.send_message(chat_id=chat_id, text=reply_text + "\n\n\n**@IQ7amo نوێترین ڤێرژنی زیرەکی دەستکرد لەلایەن گەشەپێدەر**", reply_to_message_id=message_id)
 
-@app.on_message(command("زیرەکی دەستکرد"))
+@app.on_message(command("iq"))
 def reply(client, message:Message):
     message.reply_text(f"•⎆┊** بەخێربێیت ئەزیزم {message.from_user.mention}\n\nبۆ بەکارهێنانی ئەم فەرمانە فەرمان بنووسە لەگەڵئەو  پرسیارەکەی دەتەوێت♥·**")
     reply_gpt(client, message)
