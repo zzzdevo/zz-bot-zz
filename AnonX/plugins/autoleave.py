@@ -69,7 +69,7 @@ async def auto_end():
                 try:
                     await app.send_message(
                         chat_id,
-                        "**» غادر البوت المكالمه بسبب عدم تواجد ناس في المكالمه .**",
+                        "**» بۆت دەرچوو لە تێل چونکە کەسی لێ نەبوو**",
                     )
                 except:
                     continue
