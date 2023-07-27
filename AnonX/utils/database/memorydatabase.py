@@ -1,13 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
-
 import config
 from config import PRIVATE_BOT_MODE
 from AnonX.core.mongo import mongodb
@@ -21,7 +11,6 @@ langdb = mongodb.language
 authdb = mongodb.adminauth
 videodb = mongodb.anonvideocalls
 onoffdb = mongodb.onoffper
-suggdb = mongodb.suggestion
 autoenddb = mongodb.autoend
 
 
@@ -42,7 +31,6 @@ cleanmode = []
 nonadmin = {}
 vlimit = []
 maintenance = []
-suggestion = {}
 autoend = {}
 
 
@@ -76,35 +64,6 @@ async def autoend_off():
     user = await autoenddb.find_one({"chat_id": chat_id})
     if user:
         return await autoenddb.delete_one({"chat_id": chat_id})
-
-
-# SUGGESTION
-
-
-async def is_suggestion(chat_id: int) -> bool:
-    mode = suggestion.get(chat_id)
-    if not mode:
-        user = await suggdb.find_one({"chat_id": chat_id})
-        if not user:
-            suggestion[chat_id] = True
-            return True
-        suggestion[chat_id] = False
-        return False
-    return mode
-
-
-async def suggestion_on(chat_id: int):
-    suggestion[chat_id] = True
-    user = await suggdb.find_one({"chat_id": chat_id})
-    if user:
-        return await suggdb.delete_one({"chat_id": chat_id})
-
-
-async def suggestion_off(chat_id: int):
-    suggestion[chat_id] = False
-    user = await suggdb.find_one({"chat_id": chat_id})
-    if not user:
-        return await suggdb.insert_one({"chat_id": chat_id})
 
 
 # LOOP PLAY
@@ -196,7 +155,6 @@ async def set_lang(chat_id: int, lang: str):
     await langdb.update_one(
         {"chat_id": chat_id}, {"$set": {"lang": lang}}, upsert=True
     )
-
 
 # Muted
 async def is_muted(chat_id: int) -> bool:
