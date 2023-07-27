@@ -114,6 +114,34 @@ async def yas(client, message):
                          )
 
 
+
+@app.on_message(
+   command(["زیرەکی دەستکرد"])
+   
+    
+)
+async def huhh(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/3123f5336cb10b95f6c0d.jpg",
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - زیرەکی دەستکرد🧑🏻‍💻🖤](t.me/MGIMT)**\n\n**بەخێربێی ئەزیزم {message.from_user.mention} بۆ بەشی زیرەکی دەستکرد تایبەت بە سەرچاوەی زیرەك**\n** بۆ بەکارهێنانی بنووسە : iq + پرسیارەکەت ♥⚡**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                                        InlineKeyboardButton(
+                        "﮼محمد˹َّّ", url=f"https://t.me/IQ7amo"), 
+                 ],[
+                
+                    InlineKeyboardButton(
+                        "⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌", url=f"https://t.me/MGIMT"),
+                ],
+
+            ]
+
+        ),
+
+    )
+
+
 @app.on_message(
     command(["ق"])
 )
