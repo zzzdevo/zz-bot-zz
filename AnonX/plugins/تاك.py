@@ -41,7 +41,7 @@ async def gak_owne(client: Client, message: Message):
 @app.on_message(command(["ناوم","ناو"]) & filters.group )
 async def vgdg(client: Client, message: Message):
     await message.reply_text(
-        f"""•⎆┊** ناوت 🔥♥**»» {message.from_user.mention()}""") 
+        f"""•⎆┊** ناوت 🔥♥**»»  {message.from_user.mention()}""") 
 
         
 
@@ -49,7 +49,7 @@ array = []
 @app.on_message(command(["@all", "بانگکردن","تاگ"]) & ~filters.private)
 async def nummmm(client: app, message):
   if message.chat.id in array:
-     return await message.reply_text(f"•⎆┊**تاگکردن دەستی پێکرد♥**\n\n** لەلایەن ← ✧ ¦{message.from_user.mention}**")
+     return await message.reply_text(f"•⎆┊**تاگکردن دەستی پێکرد♥**\n\n** لەلایەن ← ✧ ¦{message.from_user.mention}•**")
   dev = (OWNER_ID)
   haya = (1818734394,833360381)
   get = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -63,9 +63,9 @@ async def nummmm(client: app, message):
          rotba = "ئەدمین"     
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in  [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-    await message.reply(f"•⎆┊**ببورە تۆ ئەدمین نیت🗿 {message.from_user.mention}**")
+    await message.reply(f"•⎆┊**ببورە تۆ ئەدمین نیت🗿 {message.from_user.mention}•**")
     return
-  await message.reply_text(f"•⎆┊**تاگکردن دەستی پێکرد♥🪐** \n\n** لەلایەن ← {rotba}✧ ¦{message.from_user.mention} **\n\n**بۆ کۆتایی هێنانی تاگ بنووسە وەستانی تاگ یان /cancel ♥🧩**")
+  await message.reply_text(f"•⎆┊**تاگکردن دەستی پێکرد♥🪐** \n\n** لەلایەن ← {rotba}✧ ¦{message.from_user.mention} **\n\n**بۆ کۆتایی هێنانی تاگ بنووسە وەستانی تاگ یان /cancel ♥🧩•**")
   i = 0
   txt = ""
   zz = message.text
@@ -118,14 +118,12 @@ async def stop(client, message):
          rotba = "گەشەپێدەر"           
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in  [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-    await message.reply(f"•⎆┊**ببورە تۆ ئەدمین نیت🗿 {message.from_user.mention}**")
+    await message.reply(f"•⎆┊**ببورە تۆ ئەدمین نیت🗿 {message.from_user.mention}•**")
     return
   if message.chat.id not in array:
-     await message.reply(f"•⎆┊**تاگکردن وەستاوە ئەزیزم♥ {message.from_user.mention}**")
+     await message.reply(f"•⎆┊**تاگکردن وەستاوە ئەزیزم♥ {message.from_user.mention}•**")
      return 
   if message.chat.id in array:
     array.remove(message.chat.id)
-    await message.reply(f"•⎆┊**تاگکردن وەستێنرا **\n\n **لەلایەن ← {rotba}✧ ¦{message.from_user.mention}**")
+    await message.reply(f"•⎆┊**تاگکردن وەستێنرا **\n\n **لەلایەن ← {rotba}✧ ¦{message.from_user.mention}•**")
     return
-
-
