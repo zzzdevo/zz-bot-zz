@@ -25,7 +25,7 @@ async def block_stickers(client:Client, message:Message):
 
 @app.on_message(
      command(["کردنەوەی ستیکەر"])
-  ن  & filters.group
+     & filters.group
    
 )
 async def block_stickers(client:Client, message:Message):
