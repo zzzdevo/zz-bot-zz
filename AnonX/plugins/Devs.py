@@ -9,9 +9,9 @@ import random
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/363cc511ca671568370ea.jpg",
+        photo=f"https://telegra.ph/file/bd98a0645138a96e63b23.jpg",
         caption=f"""**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - فەرمانی بۆتی گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••\n
-**⎙ بۆ پەخشکردن :(gorani,m,play,g,p,پلەی,گ) + ناوی گۆرانی **
+**⎙ بۆ پەخشکردن :(gorani,play,پلەی) + ناوی گۆرانی **
 **⎙ بۆ وەستاندنی کاتی پەخشکردن :(وەستانی کاتی,وسبە,pause) **
 **⎙ بۆ دەستپێکردنەوەی پەخشکردن :(دەستپێکردنەوە,د,resume) **      
 **⎙ بۆ کۆتایی هێنان بە پەخشکردن :(end,stop,ڕاگرتن,وەستان) **  
@@ -41,7 +41,7 @@ async def huhh(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,31)
     url = f"https://t.me/IQMUC/{rl}"
-    await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**✦▁ ▂ ▉ ▄ ▅ ▆ ▇** گۆرانی** ▅ ▆ ▇ █ ▉ ▂ ▁**\n** @IQMUC - کەناڵی گۆرانی♥•**",
+    await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**✦▁ ▂ ▉ ▄ ▅ ▆ ▇▅ ▆ ▇ █ ▉ ▂ ▁**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -68,3 +68,20 @@ async def ihd(client: Client, message: Message):
     )
 
              
+@app.on_message(
+    command(["ق"])
+)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(3, 104)
+    url = f"https://t.me/IQQUR/{rl}"
+    await client.send_voice(message.chat.id, url, caption="¦** قورئانی پیرۆز➧♥️**",
+                           reply_markup=InlineKeyboardMarkup(
+                               [
+                                   [
+                                       InlineKeyboardButton(
+                                           message.from_user.first_name,
+                                           url=f"https://t.me/{message.from_user.username}")
+                                   ],
+                               ]
+                           )
+                     )
