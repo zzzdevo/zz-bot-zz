@@ -199,7 +199,7 @@ async def start_comm(client, message: Message, _):
                             text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="• قناة السورس •", url="https://t.me/HL_BG"
+                            text="• کەناڵی بۆت•", url="https://t.me/MGIMT"
                         ),
                     ],
                 ]
