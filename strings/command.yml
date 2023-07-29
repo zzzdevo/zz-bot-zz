@@ -15,7 +15,7 @@ STATS_COMMAND : ["stats", "ئامار"]
 LANGUAGE_COMMAND : ["lang", "language", "زمان"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "/play", "/vplay", "cplay", "g", "گ", "پلەی", "ڤ", "پ کەناڵ", "ڤیدیو","gorani","vid","سوڕەتی","سورەتی","سورەت","سوڕەت"]
+PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "/play", "/vplay", "cplay", "g", "گ", "پلەی", "ڤ", "پ کەناڵ", "ڤیدیو","gorani","ڤیدیۆ","سوڕەتی","سورەتی","سورەت","سوڕەت"]
 PLAY_COMMAND_chh : ["ڤیدیۆ", "کەناڵ", "پەخشی کەناڵ", "/cplay","cplay","vplay","/vplay"]
 STOP_COMMAND_chh : ["وەستان","ڕاگرتن","stop","Stop","/stop"]
 PLAYMODE_COMMAND : ["playmode", "دۆخی پەخش", "/playmode"]
