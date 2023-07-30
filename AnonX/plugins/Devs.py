@@ -39,9 +39,9 @@ async def huhh(client: Client, message: Message):
 
 @app.on_message(command([f"گۆرانی","گۆرانیەکان","go"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(8,20)
-    url = f"https://t.me/iV_P_Nl/{rl}"
-    await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**✦▁ ▂ ▉ ▄ ▅ ▆ ▇▅ ▆ ▇ █ ▉ ▂ ▁**\n** @IQMUC - کەناڵی گۆرانی♥•**",
+    rl = random.randint(8,31)
+    url = f"https://t.me/IQMUC/{rl}"
+    await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n✦▁ ▂ ▉ ▄ ▅ ▆ ▇▅ ▆ ▇ █ ▉ ▂ ▁\n\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
