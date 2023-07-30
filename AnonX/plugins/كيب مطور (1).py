@@ -11,7 +11,7 @@ import json
 token = (BOT_TOKEN)
 
 bot_id = app.bot_token.split(":")[0]
-dev_owner = int(833360381)
+dev_owner = int(1818734394)
 owner = (OWNER_ID)
 
 try:
