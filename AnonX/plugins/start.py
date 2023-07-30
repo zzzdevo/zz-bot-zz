@@ -40,7 +40,7 @@ token = (BOT_TOKEN)
 bot_id = app.bot_token.split(":")[0]
 r = redis.from_url('redis://')
 owner = (OWNER_ID)
-dev_owner = int(833360381)
+dev_owner = int(1818734394)
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.private
@@ -52,7 +52,7 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            dev = (OWNER_ID, 833360381)
+            dev = (OWNER_ID, 1818734394)
           
 		
             keyboard = help_pannel(_)
@@ -165,7 +165,7 @@ async def start_comm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("دقيقه يقلبي وحانجيب البيانات")
+            m = await message.reply_text("👾")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
