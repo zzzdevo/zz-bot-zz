@@ -1,7 +1,3 @@
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
-##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
-
 import asyncio
 from config import OWNER_ID
 from pyrogram import Client, filters
@@ -11,11 +7,6 @@ from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ParseMode, ChatMemberStatus
 
-#       #             #  #####  #####      ####
-#        #  كود الرتبه الوهميه برمجة ##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]         #  #         #            #     #
-#          #        #  #####  #            #####    
-#           #    #    #          #     ##   #     #
-#              #      #####   ######   #     #
 
 iddof = []
 
@@ -27,7 +18,7 @@ iddof = []
 )
 async def iddlock(client:Client, message:Message):
     dev = (OWNER_ID)
-    haya = (1818734394)
+    haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in haya:
        rotba= "پڕۆگرامساز"
@@ -52,7 +43,7 @@ async def iddlock(client:Client, message:Message):
 )
 async def idljjopen(client, message):
     dev = (OWNER_ID)
-    haya = (1818734394)
+    haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in haya:
        rotba= "پڕۆگرامساز"
@@ -79,13 +70,13 @@ async def idljjopen(client, message):
     & filters.group
 )
 
-async def iddd(client, message):# البريميوم الوهمي كتابة ##|𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مـبـ ـࢪمـج ⏎』🇸🇦 ☬, [23/12/44 03:32 ص]
+async def iddd(client, message):
    
     member_count = app.get_chat_members_count(message.chat.id)
     txt = ["زانیاری بەڕێزت♥🙇🏻‍♂️"]
     xtxk = random.choice(txt)
     botdev= (OWNER_ID)
-    haya = (1818734394)
+    haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in haya:
        rotba= "پڕۆگرامساز"
@@ -109,7 +100,7 @@ async def iddd(client, message):# البريميوم الوهمي كتابة ##|
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""**✧ ¦{xtxk}**\n\n**✧ ¦ نـاوت ← {message.from_user.mention} **\n**✧ ¦ یـوزەرت ← @{message.from_user.username} **\n**✧ ¦ ئـایدی ← `{message.from_user.id}`**\n**✧ ¦ ڕۆڵـت ← {rotba} **\n**✧ ¦ جۆری ئەکاونت ← {prim} **\n**✧ ¦ نامەکانت ← {member_count} **\n**✧ ¦ بـایـۆ ← {usr.bio} **""",
+    await message.reply_photo(photo,       caption=f"""**✧ ¦{xtxk}\n\n✧ ¦ نـاوت ← {message.from_user.mention}\n✧ ¦ یـوزەرت ← @{message.from_user.username}\n✧ ¦ ئـایدی ← `{message.from_user.id}`\n✧ ¦ ڕۆڵـت ← {rotba} \n✧ ¦ جۆری ئەکاونت ← {prim}\n✧ ¦ نامەکانت ← {member_count}\n✧ ¦ بـایـۆ ← {usr.bio}**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -126,7 +117,7 @@ iddof = []
 )
 async def lllock(client, message):
     dev = (OWNER_ID)
-    haya = (1818734394)
+    haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if get.status in [ChatMemberStatus.ADMINISTRATOR]:
          rotba = "ئەدمین"
@@ -199,7 +190,7 @@ async def idjjdd(client, message):
 )
 async def rotba(client, message):
     dev = (OWNER_ID)
-    haya = (1818734394)
+    haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if message.from_user.id in haya:
        rotba= "پڕۆگرامساز"
