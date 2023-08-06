@@ -8,23 +8,23 @@ def setting_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="کوالێتی دەنگ", callback_data="AQ"
+                text="ᴀᴜᴅɪᴏ ǫᴜᴀʟɪᴛʏ", callback_data="AQ"
             ),
             InlineKeyboardButton(
-                text="کوالێتی ڤیدێۆ", callback_data="VQ"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="بەکارهێنەری ڕێپێدراو", callback_data="AU"
-            ),
-            InlineKeyboardButton(
-                text="دۆخی پاککردنەوە", callback_data="CM"
+                text="ᴠɪᴅᴇᴏ ǫᴜᴀʟɪᴛʏ", callback_data="VQ"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="• گرووپی بۆت •", url=f"https://t.me/IQSUPP",
+                text="ᴀᴜᴛʜ ᴜsᴇʀs", callback_data="AU"
+            ),
+            InlineKeyboardButton(
+                text="ᴄʟᴇᴀɴ ᴍᴏᴅᴇ", callback_data="CM"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="• sᴜᴩᴩᴏʀᴛ •", url=f"{SUPPORT_GROUP}",
             ),
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], callback_data="close"
@@ -87,7 +87,7 @@ def video_quality_markup(
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["ST_B_11"].format("✅")
+                text=_["ST_B_11"].format("➻")
                 if low == True
                 else _["ST_B_11"].format(""),
                 callback_data="LQV",
@@ -95,7 +95,7 @@ def video_quality_markup(
         ],
         [
             InlineKeyboardButton(
-                text=_["ST_B_12"].format("✅")
+                text=_["ST_B_12"].format("➻")
                 if medium == True
                 else _["ST_B_12"].format(""),
                 callback_data="MQV",
@@ -103,7 +103,7 @@ def video_quality_markup(
         ],
         [
             InlineKeyboardButton(
-                text=_["ST_B_13"].format("✅")
+                text=_["ST_B_13"].format("➻")
                 if high == True
                 else _["ST_B_13"].format(""),
                 callback_data="HQV",
