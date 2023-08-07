@@ -12,12 +12,12 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (delete_authuser, get_authuser,
+from AnonX import app
+from AnonX.utils.database import (delete_authuser, get_authuser,
                                        get_authuser_names,
                                        save_authuser)
-from YukkiMusic.utils.decorators import AdminActual, language
-from YukkiMusic.utils.formatters import int_to_alpha
+from AnonX.utils.decorators import AdminActual, language
+from AnonX.utils.formatters import int_to_alpha
 
 # Command
 AUTH_COMMAND = get_command("AUTH_COMMAND")
@@ -28,7 +28,7 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 @app.on_message(
     filters.command(AUTH_COMMAND)
     & filters.group
-    & ~filters.edited
+    
     & ~BANNED_USERS
 )
 @AdminActual
@@ -95,7 +95,7 @@ async def auth(client, message: Message, _):
 @app.on_message(
     filters.command(UNAUTH_COMMAND)
     & filters.group
-    & ~filters.edited
+    
     & ~BANNED_USERS
 )
 @AdminActual
@@ -133,7 +133,7 @@ async def unauthusers(client, message: Message, _):
 @app.on_message(
     filters.command(AUTHUSERS_COMMAND)
     & filters.group
-    & ~filters.edited
+    
     & ~BANNED_USERS
 )
 @language
