@@ -9,7 +9,7 @@ from AnonX.utils.database import (get_authuser_names, get_cmode,
                                   is_commanddelete_on,
                                   is_maintenance,
                                   is_nonadmin_chat)
-
+from pyrogram.enums import ChatMemberStatus
 from ..formatters import int_to_alpha
 
 
