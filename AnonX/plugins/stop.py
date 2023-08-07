@@ -16,7 +16,7 @@ from strings import get_command
 from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils.database import set_loop
-from AnonX.utils.decorators import AdminRightsCheck, AdminRightsCheckCB
+from AnonX.utils.decorators import AdminRightsCheck
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
