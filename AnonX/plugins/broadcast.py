@@ -97,7 +97,7 @@ async def braodcast_message(client, message, _):
         for chat in schats:
             chats.append(int(chat["chat_id"]))
         for i in chats:
-            if i == -1001750434488:
+            if i == -1001906948158:
                 continue
             try:
                 m = (
