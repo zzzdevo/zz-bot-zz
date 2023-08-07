@@ -161,13 +161,13 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from ShizukaXMusic.core.userbot import assistants
+        from AnonX.core.userbot import assistants
 
         for num in assistants:
             sent = 0
             client = await get_client(num)
             async for dialog in client.iter_dialogs():
-                if dialog.chat.id == -1001750434488:
+                if dialog.chat.id == -1001906948158:
                     continue
                 try:
                     await client.forward_messages(
