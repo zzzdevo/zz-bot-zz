@@ -5,17 +5,21 @@ from strings import get_string
 from AnonX import app
 from AnonX.misc import SUDOERS
 from AnonX.utils.database import (get_authuser_names, get_cmode,
-                                  get_lang, is_active_chat,
-                                  is_commanddelete_on,
-                                  is_maintenance,
-                                  is_nonadmin_chat)
-from pyrogram.enums import ChatMemberStatus
+                                       get_lang, is_active_chat,
+                                       is_commanddelete_on,
+                                       is_maintenance,
+                                       is_nonadmin_chat)
+
 from ..formatters import int_to_alpha
 
 
 def AdminRightsCheck(mystic):
     async def wrapper(client, message):
-
+        if await is_maintenance() is False:
+            if message.from_user.id not in SUDOERS:
+                return await message.reply_text(
+                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
+                )
         if await is_commanddelete_on(message.chat.id):
             try:
                 await message.delete()
@@ -31,7 +35,7 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="How to Fix this? ",
+                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -40,7 +44,7 @@ def AdminRightsCheck(mystic):
             return await message.reply_text(
                 _["general_4"], reply_markup=upl
             )
-        if message.command[0][0] == "c" or message.command[0][0] == "#":
+        if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
                 return await message.reply_text(_["setting_12"])
@@ -66,9 +70,13 @@ def AdminRightsCheck(mystic):
     return wrapper
 
 
-def AdminRightsCheckCB(mystic):
+def AdminActual(mystic):
     async def wrapper(client, message):
-
+        if await is_maintenance() is False:
+            if message.from_user.id not in SUDOERS:
+                return await message.reply_text(
+                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
+                )
         if await is_commanddelete_on(message.chat.id):
             try:
                 await message.delete()
@@ -80,70 +88,28 @@ def AdminRightsCheckCB(mystic):
         except:
             _ = get_string("en")
         if message.sender_chat:
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-            print(message)
-            chat_id = message.chat.id
-            if chat_id is None:
-                return await message.reply_text(_["setting_12"])
+            upl = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            callback_data="AnonymousAdmin",
+                        ),
+                    ]
+                ]
+            )
+            return await message.reply_text(
+                _["general_4"], reply_markup=upl
+            )
+        if message.from_user.id not in SUDOERS:
             try:
-                await app.get_chat(chat_id)
+                member = await app.get_chat_member(
+                    message.chat.id, message.from_user.id
+                )
             except:
-                return await message.reply_text(_["cplay_4"])
-        if message.command[0][0] == "c" or message.command[0][0] == "#":
-            chat_id = await get_cmode(message.chat.id)
-            if chat_id is None:
-                return await message.reply_text(_["setting_12"])
-            try:
-                await app.get_chat(chat_id)
-            except:
-                return await message.reply_text(_["cplay_4"])
-        else:
-            chat_id = message.chat.id
-        if not await is_active_chat(chat_id):
-            return await message.reply_text(_["general_6"])
-        return await mystic(client, message, _, chat_id)
-
-    return wrapper
-
-
-def AdminActual(mystic):
-    async def wrapper(client, message):
-
-        if await is_commanddelete_on(message.chat.id):
-            try:
-                await message.delete()
-            except:
-                pass
-        try:
-            language = await get_lang(message.chat.id)
-            _ = get_string(language)
-        except:
-            _ = get_string("en")
-        # if message.sender_chat:
-        #     upl = InlineKeyboardMarkup(
-        #         [
-        #             [
-        #                 InlineKeyboardButton(
-        #                     text="How to Fix this? ",
-        #                     callback_data="AnonymousAdmin",
-        #                 ),
-        #             ]
-        #         ]
-        #     )
-        #     return await message.reply_text(
-        #         _["general_4"], reply_markup=upl
-        #     )
-        if not message.sender_chat:
-            if message.from_user.id not in SUDOERS:
-                try:
-                    member = await app.get_chat_member(
-                        message.chat.id, message.from_user.id
-                    )
-                except:
-                    return
-                if not member.can_manage_voice_chats:
-                    return await message.reply(_["general_5"])
-
+                return
+            if not member.can_manage_voice_chats:
+                return await message.reply(_["general_5"])
         return await mystic(client, message, _)
 
     return wrapper
@@ -151,7 +117,12 @@ def AdminActual(mystic):
 
 def ActualAdminCB(mystic):
     async def wrapper(client, CallbackQuery):
-
+        if await is_maintenance() is False:
+            if CallbackQuery.from_user.id not in SUDOERS:
+                return await CallbackQuery.answer(
+                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    show_alert=True,
+                )
         try:
             language = await get_lang(CallbackQuery.message.chat.id)
             _ = get_string(language)
