@@ -109,7 +109,7 @@ async def iddd(client, message):# البريميوم الوهمي كتابة ##|
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""**✧ ¦{xtxk}\n\n✧ ¦ نـاوت ← {message.from_user.mention}\n✧ ¦ یـوزەرت ← @{message.from_user.username}\n✧ ¦ ئـایدی ← `{message.from_user.id}`\n✧ ¦ ڕۆڵـت ← {rotba} \n✧ ¦ جۆری ئەکاونت ← {prim}\n✧ ¦ بـایـۆ ← {usr.bio}**""",
+    await message.reply_photo(photo,       caption=f"""**✧ ¦{xtxk}\n\n✧ ¦ نـاوت ← {message.from_user.mention}\n✧ ¦ یـوزەرت ← @{message.from_user.username}\n✧ ¦ ئـایدی ← `{message.from_user.id}`\n✧ ¦ ڕۆڵـت ← {rotba} \n✧ ¦ جۆری ئەکاونت ← {prim}\n✧ ¦ نامەکانت ← {member_count}\n✧ ¦ بـایـۆ ← {usr.bio}**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -119,12 +119,16 @@ async def iddd(client, message):# البريميوم الوهمي كتابة ##|
             ]
         ),
     )
+
+
+# noinspection PyRedeclaration
 iddof = []
 @app.on_message(
     command(["داخستنی وێنە"])
     & filters.group
 )
 async def lllock(client, message):
+    global rotba
     dev = (OWNER_ID)
     haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -148,6 +152,7 @@ async def lllock(client, message):
     & filters.group
 )
 async def idljjopen(client, message):
+    global rotba
     dev = (OWNER_ID)
     haya = (833360381,1818734394)
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
