@@ -7,13 +7,13 @@ gitpython
 hachoir
 heroku3
 lyricsgenius
-motor == 3.0.0
-pillow
+motor==3.0.0
+pillow==9.5.0
 psutil
-py-tgcalls
+py-tgcalls==0.8.6
 pykeyboard
-pyromod == 2.0.0
-pyrogram == 2.0.56
+pyromod==2.0.0
+pyrogram==2.0.56
 python-dotenv
 pyyaml
 requests
@@ -25,4 +25,3 @@ yt-dlp
 youtube-search
 youtube-search-python
 telegraph
-
