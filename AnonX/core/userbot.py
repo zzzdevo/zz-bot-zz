@@ -147,7 +147,7 @@ class Userbot(Client):
             await self.four.start()
             try:
                await self.five.join_chat("IQSUPP")
-                await self.five.join_chat("MGIMT")
+               await self.five.join_chat("MGIMT")
             except:
                 pass
             assistants.append(4)
