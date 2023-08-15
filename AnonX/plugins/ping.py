@@ -2,11 +2,11 @@ from datetime import datetime
 
 from pyrogram import filters
 from pyrogram.types import Message
-from strings.filters import command
+
 from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
 from strings import get_command
 from AnonX import app
-from AnonX.core.call import Anon
+from AnonX.core.call import Mukesh
 from AnonX.utils import bot_sys_stats
 from AnonX.utils.decorators.language import language
 from AnonX.utils.inline.play import close_keyboard
@@ -16,7 +16,7 @@ PING_COMMAND = get_command("PING_COMMAND")
 
 
 @app.on_message(
-    command(PING_COMMAND)
+    filters.command(PING_COMMAND)
 )
 @language
 async def ping_com(client, message: Message, _):
@@ -25,7 +25,7 @@ async def ping_com(client, message: Message, _):
         caption=_["ping_1"],
     )
     start = datetime.now()
-    pytgping = await Anon.ping()
+    pytgping = await Mukesh.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
