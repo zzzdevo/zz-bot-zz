@@ -18,7 +18,7 @@ txt = [
 ]
 
 
-@app.on_message(command(["سلاو", "Slaw"])
+@app.on_message(command(["سلاو", "Slaw", "slaw"])
 )
 async def cutt(client: Client, message: Message):
     a = random.choice(txt)
