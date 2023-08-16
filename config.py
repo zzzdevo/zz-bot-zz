@@ -79,24 +79,24 @@ START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/a3352a2148f8ca6
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "PIC_START",
+    "https://telegra.ph/file/a3352a2148f8ca63da280.jpg",
 )
 
-PLAYLIST_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 
-GLOBAL_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+GLOBAL_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
 
-STATS_IMG_URL = getenv("PIC_START")
+STATS_IMG_URL = "https://te.legra.ph/file/c9aeb9e8a1690c2838915.jpg"
 
-TELEGRAM_AUDIO_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
-TELEGRAM_VIDEO_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
-SOUNCLOUD_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
 
-STREAM_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
 
-YOUTUBE_IMG_URL = "https://graph.org/file/4411bac56526350985417.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
 SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
 
@@ -129,12 +129,12 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = getenv("PIC_START")
+            PING_IMG_URL = "https://telegra.ph/file/a3352a2148f8ca63da280.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = getenv("PIC_START")
+            START_IMG_URL = "https://telegra.ph/file/a3352a2148f8ca63da280.jpg"
 if MONGO_DB_URI != None:
     MONGO_DB_URI = MONGO_DB_URI.strip()
 if MONGO_DB_URI == "":
