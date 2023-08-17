@@ -37,10 +37,10 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command(["گۆرانی"])
+@app.on_message(command([f"گۆرانی"])
 )
 async def ihd(client: Client, message: Message):
-    rl = random.randint(23,40)
+    rl = random.randint(16,47)
     url = f"https://t.me/IQMUC/{rl}"
     await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
