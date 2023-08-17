@@ -1,7 +1,7 @@
 import random
 import string
 from ast import ExceptHandler
-
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
                             Message)
@@ -31,10 +31,10 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
 @app.on_message(
-    filters.command(PLAY_COMMAND)
+    command(PLAY_COMMAND)
     & filters.group
-  
-    & ~BANNED_USERS
+    & ~BANNED_USERS   
+   
 )
 @PlayWrapper
 async def play_commnd(
@@ -326,7 +326,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Mukesh.stream_call(url)
+                await Anon.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
                     "ᴛʜᴇʀᴇ's ᴀɴ ᴇʀʀᴏʀ ɪɴ ᴛʜᴇ ʙᴏᴛ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴛᴏ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴀs sᴏᴏɴ ᴀs ᴩᴏssɪʙʟᴇ."
