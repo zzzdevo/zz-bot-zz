@@ -88,7 +88,7 @@ async def ihd(client: Client, message: Message):
   )
 
 @app.on_message(
-    command([f"ڤیدیۆ ,"ئیدیت","edit"])
+    command([f"ڤیدیۆ"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(69, 135)
