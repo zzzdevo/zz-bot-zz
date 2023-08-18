@@ -86,3 +86,21 @@ async def ihd(client: Client, message: Message):
             ]
        )
   )
+
+@app.on_message(
+    command([f"ڤیدیۆ ,"ئیدیت","edit"])
+)
+async def ihd(client: Client, message: Message):
+    rl = random.randint(69, 135)
+    url = f"https://t.me/xv7amo/{rl}"
+    await client.send_video(message.chat.id, url, caption="**¦ @xv7amo - کەناڵی ڤیدیۆ♥•**",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                         message.from_user.first_name,
+                                 url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+       )
+  )
