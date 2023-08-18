@@ -74,7 +74,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/vtvit/botmusic",
+        "value": "https://github.com/zzzdevo/zz-bot-zz",
         "required": true
       },
       "UPSTREAM_BRANCH": {
