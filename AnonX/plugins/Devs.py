@@ -37,12 +37,12 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command(["گۆرانی","go","گۆرانیەکان"])
+@app.on_message(command(["گۆرانی"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(16,47)
     url = f"https://t.me/IQMUC/{rl}"
-    await client.send_voice(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n\n** @IQMUC - کەناڵی گۆرانی♥•**",
+    await client.send_voice(message.chat.id,url,caption="** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -88,7 +88,7 @@ async def ihd(client: Client, message: Message):
   )
 
 @app.on_message(
-    command(["ڤیدیۆ","ئیدیت","edit"])
+    command(["ڤیدیۆ"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(9, 35)
