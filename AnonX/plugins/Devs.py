@@ -87,12 +87,13 @@ async def ihd(client: Client, message: Message):
        )
   )
 
-@app.on_message(command(["ڤ"])
+@app.on_message(command([f"ڤیدیۆ","v","ڤ"])
 )
 async def ihd(client: Client, message: Message):
-    rl = random.randint(4, 36)
-    url = "https://t.me/mzzay/{rl}"
-    await client.send_video(message.chat.id, url, caption="**¦ @mzzy - کەناڵی ڤیدیۆ♥•**",
+    rl = random.randint(15, 32)
+    u = await client.get_messages("mzzay",rl)
+    if u.video:
+     await client.send_video(message.chat.id, u.video.file_id, caption="¦ @mzzay - کەناڵی ڤیدیۆ♥️•",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -102,4 +103,4 @@ async def ihd(client: Client, message: Message):
                 ],
             ]
        )
-  )
+       )
