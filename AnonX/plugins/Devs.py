@@ -39,12 +39,13 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command([f"گۆرانیەکان" ,"گۆرانی", "گ"])
+@app.on_message(command([f"گۆرانی", "g", "گ"])
 )
-async def ihd(client: Client, message: Message):
+async def voice(client: Client, message: Message):
     rl = random.randint(16,47)
-    url = "https://t.me/IQMUC/{rl}"
-    await client.send_voice(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
+    u = await client.get_messages("IQMUC",rl)
+    if u.voice:
+    await client.send_voice(message.chat.id, u.voice.file_id, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -74,7 +75,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(
     command(["ق"])
 )
-async def ihd(client: Client, message: Message):
+async def voice(client: Client, message: Message):
     rl = random.randint(3, 104)
     url = f"https://t.me/IQQUR/{rl}"
     await client.send_voice(message.chat.id, url, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 قورئان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ قورئانی پیرۆز➧♥️\n@IQQUR - کەناڵی قورئان**",
@@ -91,7 +92,7 @@ async def ihd(client: Client, message: Message):
 
 @app.on_message(command([f"ڤیدیۆ", "v", "ڤ"])
 )
-async def ihd(client: Client, message: Message):
+async def video(client: Client, message: Message):
     rl = random.randint(14, 25)
     u = await client.get_messages("IQVIDE",rl)
     if u.video:
