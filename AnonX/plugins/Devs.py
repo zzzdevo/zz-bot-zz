@@ -90,7 +90,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(command(["ڤ"])
 )
 async def ihd(client: Client, message: Message):
-    rl = random.randint(80, 136)
+    rl = random.randint(4, 36)
     url = "https://t.me/mzzay/{rl}"
     await client.send_video(message.chat.id, url, caption="**¦ @mzzy - کەناڵی ڤیدیۆ♥•**",
     reply_markup=InlineKeyboardMarkup(
