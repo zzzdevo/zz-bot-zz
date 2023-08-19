@@ -43,9 +43,8 @@ async def huhh(client: Client, message: Message):
 )
 async def voice(client: Client, message: Message):
     rl = random.randint(16,47)
-    u = await client.get_messages("IQMUC",rl)
-    if u.voice:
-    await client.send_voice(message.chat.id, u.voice.file_id, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
+    url = f"https://t.me/IQMUC/{rl}"
+    await client.send_voice(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
