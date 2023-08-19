@@ -10,7 +10,7 @@ import random
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/bd98a0645138a96e63b23.jpg",
-        caption=f"""**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - فەرمانی بۆتی گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••\n
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - فەرمانی بۆتی گۆرانی🧑🏻‍💻🖤](t.me/MGIMT)**\n**••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••**\n
 **⎙ بۆ پەخشکردن :(gorani,play,پلەی) + ناوی گۆرانی **
 **⎙ بۆ وەستاندنی کاتی پەخشکردن :(وەستانی کاتی,وسبە,pause) **
 **⎙ بۆ دەستپێکردنەوەی پەخشکردن :(دەستپێکردنەوە,د,resume) **      
@@ -42,7 +42,7 @@ async def huhh(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(16,47)
     url = "https://t.me/IQMUC/{rl}"
-    await client.send_voice(message.chat.id,url,caption="** @IQMUC - کەناڵی گۆرانی♥•**",
+    await client.send_voice(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -57,7 +57,7 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rs = random.randint(39,148)
     url = f"https://t.me/GTTUTY/{rs}"
-    await client.send_photo(message.chat.id,url,caption="**[ᯓ 𝗦𝗢𝗨𝗥𝗖𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 وێنەکان](t.me/MGIMT)**\n••┉┉┉┉┉••🝢••┉┉┉┉┉••\n**¦ وێنەکە دیاریکرا ♥•**",
+    await client.send_photo(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 وێنەکان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n**¦ وێنەکە دیاریکرا ♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -75,7 +75,7 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(3, 104)
     url = f"https://t.me/IQQUR/{rl}"
-    await client.send_voice(message.chat.id, url, caption="¦** قورئانی پیرۆز➧♥️\n@IQQUR - کەناڵی قورئان**",
+    await client.send_voice(message.chat.id, url, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 قورئان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n**¦ قورئانی پیرۆز➧♥️\n@IQQUR - کەناڵی قورئان**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -93,7 +93,7 @@ async def ihd(client: Client, message: Message):
     rl = random.randint(14, 25)
     u = await client.get_messages("IQVIDE",rl)
     if u.video:
-     await client.send_video(message.chat.id, u.video.file_id, caption="¦ @xv7amo - کەناڵی ڤیدیۆ♥️•",
+     await client.send_video(message.chat.id, u.video.file_id, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 ڤیدیۆ](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n**¦ @xv7amo - کەناڵی ڤیدیۆ♥️•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
