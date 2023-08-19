@@ -39,7 +39,7 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command([f"گۆرانی", "گ", "گۆرانی"])
+@app.on_message(command([f"گۆرانی"])
 )
 async def voice(client: Client, message: Message):
     rl = random.randint(16,47)
