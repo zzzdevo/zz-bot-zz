@@ -37,7 +37,7 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command(["گۆرانی"])
+@app.on_message(command([f"گۆرانیاکان","گۆرانی","go"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(16,47)
@@ -87,9 +87,7 @@ async def ihd(client: Client, message: Message):
        )
   )
 
-@app.on_message(
-    command(["ڤیدیۆ"])
-)
+@app.on_message(filters.regex("^ڤیدیۆ$"))
 async def ihd(client: Client, message: Message):
     rl = random.randint(9, 35)
     url = f"https://t.me/mzzay/{rl}"
