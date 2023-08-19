@@ -41,7 +41,7 @@ async def huhh(client: Client, message: Message):
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(16,47)
-    url = f"https://t.me/IQMUC/{rl}"
+    url = "https://t.me/IQMUC/{rl}"
     await client.send_voice(message.chat.id,url,caption="** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -87,12 +87,12 @@ async def ihd(client: Client, message: Message):
        )
   )
 
-@app.on_message(command([f"v" ,"ڤیدیۆ", "ڤ"])
+@app.on_message(command(["ڤ"])
 )
 async def ihd(client: Client, message: Message):
     rl = random.randint(80, 136)
-    url = f"https://t.me/xv7amo/{rl}"
-    await client.send_video(message.chat.id, url, caption="**¦ @xv7amo - کەناڵی ڤیدیۆ♥•**",
+    url = "https://t.me/mzzay/{rl}"
+    await client.send_video(message.chat.id, url, caption="**¦ @mzzy - کەناڵی ڤیدیۆ♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
