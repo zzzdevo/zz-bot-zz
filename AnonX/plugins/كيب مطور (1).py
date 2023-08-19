@@ -105,11 +105,11 @@ OwnerM = ReplyKeyboardMarkup([
 [("اضف قناة اشتراك اجباري"),("اضافه معرف المطور"),("اضافه قناه المطور")],
 [("حذف قناه الاشتراك"),("حذف معرف المطور"),("حذف قناه المطور")],
 [("الغاء")], 
-[("•---- حذف الكيبورد -----•")]
+[("•---- لادانی دووگمەکان -----•")]
 ])
 
 mainSudoVIIM = ReplyKeyboardMarkup([
-[("•---- حذف الكيبورد -----•")],
+[("•---- لادانی دووگمەکان -----•")],
 [("◍ قسم الاحصائيات ◍")],
 [("الاحصائيات")],
 [("عرض المجموعات"),("عدد المجموعات"),("نسخه المجموعات"),("نسخه للكل")],
@@ -139,12 +139,12 @@ mainSudoVIIM = ReplyKeyboardMarkup([
 [("اضف قناة اشتراك اجباري"),("-"),("اضافه قناه المطور")],
 [("حذف قناه الاشتراك"),("-"),("حذف قناه المطور")],
 [("الغاء")], 
-[("•---- حذف الكيبورد -----•")]
+[("•---- لادانی دووگمەکان -----•")]
 ])
 
 
 main_dev_key = ReplyKeyboardMarkup([
-[("•---- حذف الكيبورد -----•")],
+[("•---- لادانی دووگمەکان -----•")],
 [("◍ قسم الاحصائيات ◍")],
 [("الاحصائيات")],
 [("عرض المجموعات"),("عدد المجموعات"),("نسخه المجموعات"),("نسخه للكل")],
@@ -426,7 +426,7 @@ async def close__(_,query:CallbackQuery):
 	else:
 		await query.answer("❎ فقط المطورين من لديهم الحق في القيام بهذا .")
 
-@app.on_message(filters.command("•---- حذف الكيبورد -----•","")&filters.private)
+@app.on_message(filters.command("•---- لادانی دووگمەکان -----•","")&filters.private)
 async def del_keyboard(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
@@ -434,8 +434,8 @@ async def del_keyboard(c:Client,m:Message):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
-		return await m.reply("**◍ تم حذف الكيبورد بنجاح  /start\n√**",reply_markup=ReplyKeyboardRemove())
-	return await m.reply("**◍ انت لست مطور في البوت \n√**")
+		return await m.reply("**◍ بە سەرکەوتوویی دووگمەکان لاچوون  /start\n√**",reply_markup=ReplyKeyboardRemove())
+	return await m.reply("**◍ تۆ گەشەپێدەر نیت \n√**")
 
 @app.on_message(filters.command("^نسخه الكل$","")&filters.private)
 async def __get_copy(c:Client,m:Message):
