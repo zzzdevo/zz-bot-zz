@@ -90,9 +90,9 @@ async def ihd(client: Client, message: Message):
 @app.on_message(command([f"v" ,"ڤیدیۆ", "ڤ"])
 )
 async def ihd(client: Client, message: Message):
-    rl = random.randint(9, 38)
-    url = f"https://t.me/mzzay/{rl}"
-    await client.send_video(message.chat.id, url, caption="**¦ @mzzay - کەناڵی ڤیدیۆ♥•**",
+    rl = random.randint(80, 136)
+    url = f"https://t.me/xv7amo/{rl}"
+    await client.send_video(message.chat.id, url, caption="**¦ @xv7amo - کەناڵی ڤیدیۆ♥•**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
