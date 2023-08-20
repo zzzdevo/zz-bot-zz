@@ -15,13 +15,13 @@ from pyrogram import filters
 
 from  config import *
 from strings import get_command
-from MukeshMusic import app
-from MukeshMusic.misc import HAPP, SUDOERS, XCB
-from MukeshMusic.utils.database import (get_active_chats,
+from AnonX import app
+from AnonX.misc import HAPP, SUDOERS, XCB
+from AnonX.utils.database import (get_active_chats,
                                        remove_active_chat,
                                        remove_active_video_chat)
-from MukeshMusic.utils.decorators.language import language
-from MukeshMusic.utils.pastebin import Anonbin
+from AnonX.utils.decorators.language import language
+from AnonX.utils.pastebin import Anonbin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
