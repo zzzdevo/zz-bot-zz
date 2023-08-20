@@ -124,24 +124,24 @@ async def yas(client, message):
         ),
     )
 @app.on_message(
-   command(["کەناڵ", "کەنال"])
-   
-)
-async def yas(client, message):
-    usr = await client.get_chat(xv7amo)
-    name = usr.first_name
-    photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - کەناڵی سەرچاوە 🧑🏻‍💻](t.me/xv7amo)**\n**جۆینی کەناڵی بۆت بکە بۆ بینینی بابەتی جیاوازتر♥**\n\n** بەستەری کەناڵ : https://t.me/{usr.username}**", 
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}")
-                ], 
-            ]
-        ),
-    )
+    command(["کەناڵ", "کەنال"])
 
+)
+async def channel(client, message):
+    u = await client.get_chat(SUPPORT_CHANNEL)
+    name = u.first_name
+    photo = await client.download_media(u.photo.big_file_id)
+    await message.reply_photo(photo,
+                              caption=f"**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - کەناڵی سەرچاوە 🧑🏻‍💻](t.me/MGIMT)**\n**جۆینی کەناڵی بۆت بکە بۆ بینینی بابەتی جیاوازتر♥**\n\n** بەستەری کەناڵ : https://t.me/{u.username}**",
+                              reply_markup=InlineKeyboardMarkup(
+                                  [
+                                      [
+                                          InlineKeyboardButton(
+                                              name, url=f"https://t.me/{usr.username}")
+                                      ],
+                                  ]
+                              ),
+                              )
 
 
 
