@@ -29,7 +29,7 @@ async def maintenance(client, message: Message):
     if state == "enable":
         if await is_maintenance() is False:
             await message.reply_text(
-                "ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ."
+                "**دۆخی چاککردنەوە پێشتر چالاککراوە**"
             )
         else:
             await maintenance_on()
