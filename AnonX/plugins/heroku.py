@@ -299,7 +299,7 @@ async def update_(client, message, _):
             try:
                 await app.send_message(
                     x,
-                    f"{config.MUSIC_BOT_NAME} ʜᴀs ᴊᴜsᴛ ʀᴇsᴛᴀʀᴛᴇᴅ ʜᴇʀsᴇʟғ ғᴏʀ ᴜᴩᴅᴀᴛɪɴɢ ᴛʜᴇ ʙᴏᴛ. sᴏʀʀʏ ғᴏʀ ᴛʜᴇ ɪssᴜᴇs.\n\nʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 15-20 sᴇᴄᴏɴᴅs.",
+                    f"{{config.MUSIC_BOT_NAME} بۆت نوێدەکرێتەوە و دووبارە دەست بە کارکردن دەکات. ببورە بۆ ئەوەی ناتوانی بۆت بەکاربھێنیت\n\nدەتوانیت دووبارە دەست بە پەخشکردن بکەیت دوای 30 چرکە",
                 )
                 await remove_active_chat(x)
                 await remove_active_video_chat(x)
@@ -321,7 +321,8 @@ async def restart_(_, message):
         try:
             await app.send_message(
                 x,
-                f"{config.MUSIC_BOT_NAME} ʜᴀs ᴊᴜsᴛ ʀᴇsᴛᴀʀᴛᴇᴅ ʜᴇʀsᴇʟғ ғᴏʀ ᴜᴩᴅᴀᴛɪɴɢ ᴛʜᴇ ʙᴏᴛ. sᴏʀʀʏ ғᴏʀ ᴛʜᴇ ɪssᴜᴇs.\n\nʏᴏᴜ ᴄᴀɴ sᴛᴀʀᴛ ᴩʟᴀʏɪɴɢ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 15-20 sᴇᴄᴏɴᴅs.",
+              
+                f"{config.MUSIC_BOT_NAME} بۆت نوێدەکرێتەوە و دووبارە دەست بە کارکردن دەکات. ببورە بۆ ئەوەی ناتوانی بۆت بەکاربھێنیت\n\nدەتوانیت دووبارە دەست بە پەخشکردن بکەیت دوای 30 چرکە", 
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
