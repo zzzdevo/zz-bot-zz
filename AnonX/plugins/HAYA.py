@@ -54,6 +54,9 @@ async def huhh(client: Client, message: Message):
 
 
 
+
+
+
 @app.on_message(
     command(["حەمە", "@VTVIT", "گەشەپێدەری 2"])
  
@@ -123,28 +126,24 @@ async def yas(client, message):
             ]
         ),
     )
-
-
-
 @app.on_message(
-    command(["کەناڵ", "کەنال"])
-
+   command(["کەناڵی بۆت"])
+   
 )
-async def respond(client: Client, message: Message):
-    chat = client.get_chat('t.me/MGIMT')
-    name = chat.first_name
-    photo = await app.download_media(chat.photo.big_file_id)
-    await message.reply_photo(photo,
-                              caption=f"**[ᯓ 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - کەناڵی سەرچاوە 🧑🏻‍💻](t.me/MGIMT)**\n**جۆینی کەناڵی بۆت بکە بۆ بینینی بابەتی جیاوازتر♥**\n\n** بەستەری کەناڵ : https://t.me/{chat.username}**",
-                              reply_markup=InlineKeyboardMarkup(
-                                  [
-                                      [
-                                          InlineKeyboardButton(
-                                              name, url=f"https://t.me/{usr.username}")
-                                      ],
-                                  ]
-                              ),
-                              )
+async def yas(client, message):
+    usr = await client.get_chat(SUPPORT_CHANNEL)
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - کەناڵی سەرچاوە 🧑🏻‍💻](t.me/MGIMT)**\n**جۆینی کەناڵی بۆت بکە بۆ بینینی بابەتی جیاوازتر♥**\n\n** بەستەری کەناڵ  : https://t.me/{usr.username}**", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ], 
+            ]
+        ),
+    )
 
 
 
