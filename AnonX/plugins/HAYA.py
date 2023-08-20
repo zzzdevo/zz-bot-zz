@@ -130,7 +130,7 @@ async def yas(client, message):
     command(["کەناڵ", "کەنال"])
 
 )
-def respond(client: Client, message: types.Message):
+async def respond(client: Client, message: types.Message):
     chat = client.get_chat('t.me/MGIMT')
     name = chat.first_name
     photo = await app.download_media(chat.photo.big_file_id)
