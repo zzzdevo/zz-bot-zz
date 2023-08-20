@@ -11,9 +11,9 @@ from AnonX.utils.decorators.language import language
 
 # Commands
 MAINTENANCE_COMMAND = get_command("MAINTENANCE_COMMAND")
+from config import OWNER_ID
 
-
-@app.on_message(filters.command(MAINTENANCE_COMMAND) & SUDOERS)
+@app.on_message(filters.command(MAINTENANCE_COMMAND) & filters.user(OWNER_ID))
 async def maintenance(client, message: Message):
     try:
         language = await get_lang(message.chat.id)
@@ -29,7 +29,7 @@ async def maintenance(client, message: Message):
     if state == "enable":
         if await is_maintenance() is False:
             await message.reply_text(
-                "**دۆخی چاککردنەوە پێشتر چالاککراوە**"
+                "ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ."
             )
         else:
             await maintenance_on()
@@ -40,7 +40,7 @@ async def maintenance(client, message: Message):
             await message.reply_text(_["maint_3"])
         else:
             await message.reply_text(
-                "**دۆخی چاککردنەوە تەواو کرا کەمێك چاوەڕێ بە**"
+                "ɪ ᴅᴏɴ'ᴛ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ᴇɴᴀʙʟᴇᴅ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ."
             )
     else:
         await message.reply_text(usage)
