@@ -42,7 +42,7 @@ async def huhh(client: Client, message: Message):
 @app.on_message(command([f"گۆرانی", "گۆرانیەکان", "go"])
 )
 async def voice(client: Client, message: Message):
-    rl = random.randint(1,28)
+    rl = random.randint(5,30)
     url = f"https://t.me/IQMUC/{rl}"
     await client.send_voice(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
@@ -92,7 +92,7 @@ async def voice(client: Client, message: Message):
 @app.on_message(command([f"ڤیدیۆ", "v", "ڤ"])
 )
 async def video(client: Client, message: Message):
-    rl = random.randint(1, 31)
+    rl = random.randint(5, 32)
     u = await client.get_messages("IQVIDE",rl)
     if u.video:
      await client.send_video(message.chat.id, u.video.file_id, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 ڤیدیۆ](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ @xv7amo - کەناڵی ڤیدیۆ♥️•**",
