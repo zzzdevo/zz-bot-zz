@@ -1,29 +1,20 @@
 import asyncio
 import time
 
-from pyrogram.types import *
-from pyrogram.errors import PeerIdInvalid
-from pyrogram import filters, Client
+from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-import requests
-import redis, re
-from pyrogram import *
-from config import (OWNER_ID ,
-		     USER_OWNER,
-	         MUSIC_BOT_NAME,
-	         SUPPORT_CHANNEL,
-	         BOT_TOKEN,
-	         BANNED_USERS)
+from config import BANNED_USERS
+from config import OWNER_ID
 from strings import get_command, get_string
-from AnonX import Telegram, YouTube, app
-from AnonX.misc import SUDOERS, _boot_
-from AnonX.plugins.playlist import del_plist_msg
-from AnonX.plugins.sudoers import sudoers_list
-from AnonX.utils.database import (add_served_chat,
+from MukeshMusic import Telegram, YouTube, app
+from MukeshMusic.misc import SUDOERS, _boot_
+from MukeshMusic.plugins.playlist import del_plist_msg
+from MukeshMusic.plugins.sudoers import sudoers_list
+from MukeshMusic.utils.database import (add_served_chat,
                                        add_served_user,
                                        get_served_chats,
                                        get_served_users,
@@ -31,9 +22,9 @@ from AnonX.utils.database import (add_served_chat,
                                        get_assistant, get_lang,
                                        get_userss, is_on_off,
                                        is_served_private_chat)
-from AnonX.utils.decorators.language import LanguageStart
-from AnonX.utils.formatters import get_readable_time
-from AnonX.utils.inline import (help_pannel, private_panel,
+from MukeshMusic.utils.decorators.language import LanguageStart
+from MukeshMusic.utils.formatters import get_readable_time
+from MukeshMusic.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 
 loop = asyncio.get_running_loop()
@@ -52,7 +43,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            C=await message.reply_sticker("-CAACAgIAAxkBAAICqGTiaSKg84J2TMKN06fbxlVu-CDnAAKxKwACx4NQSVgZHKBPzxglMAQ")
+            C=await message.reply_sticker("CAACAgUAAxkBAAIjKWR-1EsPwrxPsNN00xHhkJe03_aKAAJoCQACp7KAVT0HhFatIOAJLwQ")
             await C.delete()
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
@@ -315,10 +306,3 @@ async def welcome(client, message: Message):
             return
         except:
             return
-
-Owneruser = ReplyKeyboardMarkup([
-[("فەرمان"), ("سەرچاوە")], [("سەرۆک"), ("گەشەپێدەری 2"), ("/help")],
-[("گۆرانی"), ("ڤیدیۆ"), ("وێنە")],
-[("زکر"), ("تایبەتمەندی"), ("زیرەکی دەستکرد")],
-[("•---- لادانی دووگمەکان -----•")]
-], resize_keyboard=True)
