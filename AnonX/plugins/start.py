@@ -1,14 +1,23 @@
 import asyncio
 import time
-
-from pyrogram import filters
+import json
+from pyrogram.types import *
+from pyrogram.errors import PeerIdInvalid
+from pyrogram import filters, Client
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from youtubesearchpython.__future__ import VideosSearch
-
+from pyrogram.enums import ChatType, ParseMode
 import config
-from config import BANNED_USERS
-from config import OWNER_ID
+import requests
+import redis, re
+from pyrogram import *
+from config import (OWNER_ID ,
+		     USER_OWNER,
+	         MUSIC_BOT_NAME,
+	         SUPPORT_CHANNEL,
+	         BOT_TOKEN,
+	         BANNED_USERS)
 from strings import get_command, get_string
 from AnonX import Telegram, YouTube, app
 from AnonX.misc import SUDOERS, _boot_
