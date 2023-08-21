@@ -92,7 +92,7 @@ async def voice(client: Client, message: Message):
 @app.on_message(command([f"ڤیدیۆ", "v", "ڤ"])
 )
 async def video(client: Client, message: Message):
-    rl = random.randint(14, 25)
+    rl = random.randint(1, 31)
     u = await client.get_messages("IQVIDE",rl)
     if u.video:
      await client.send_video(message.chat.id, u.video.file_id, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 ڤیدیۆ](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ @xv7amo - کەناڵی ڤیدیۆ♥️•**",
