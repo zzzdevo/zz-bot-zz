@@ -1,13 +1,13 @@
 import asyncio
 import time
-import json
+
 from pyrogram.types import *
 from pyrogram.errors import PeerIdInvalid
 from pyrogram import filters, Client
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from youtubesearchpython.__future__ import VideosSearch
-from pyrogram.enums import ChatType, ParseMode
+
 import config
 import requests
 import redis, re
