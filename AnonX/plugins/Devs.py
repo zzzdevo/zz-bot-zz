@@ -42,7 +42,7 @@ async def huhh(client: Client, message: Message):
 @app.on_message(command([f"گۆرانی", "گۆرانیەکان", "go"])
 )
 async def voice(client: Client, message: Message):
-    rl = random.randint(10,47)
+    rl = random.randint(1,28)
     url = f"https://t.me/IQMUC/{rl}"
     await client.send_voice(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n** @IQMUC - کەناڵی گۆرانی♥•**",
     reply_markup=InlineKeyboardMarkup(
@@ -57,7 +57,7 @@ async def voice(client: Client, message: Message):
     
 @app.on_message(command(["وێنە","وێنەکان"]))
 async def ihd(client: Client, message: Message):
-    rs = random.randint(39,148)
+    rs = random.randint(1,148)
     url = f"https://t.me/GTTUTY/{rs}"
     await client.send_photo(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 وێنەکان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ وێنەکە دیاریکرا ♥•**",
     reply_markup=InlineKeyboardMarkup(
@@ -75,7 +75,7 @@ async def ihd(client: Client, message: Message):
     command(["ق"])
 )
 async def voice(client: Client, message: Message):
-    rl = random.randint(3, 104)
+    rl = random.randint(1, 102)
     url = f"https://t.me/IQQUR/{rl}"
     await client.send_voice(message.chat.id, url, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 قورئان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ قورئانی پیرۆز➧♥️\n@IQQUR - کەناڵی قورئان**",
     reply_markup=InlineKeyboardMarkup(
