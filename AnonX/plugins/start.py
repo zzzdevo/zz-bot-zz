@@ -164,8 +164,8 @@ async def start_comm(client, message: Message, _):
                     f"{message.from_user.mention}ضغط ستارت على البوت <code>تحقق من نفسه</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
             return
-        if name[0:3] == "inf":
-            m = await message.reply_text("دقيقه يقلبي وحانجيب البيانات")
+        if name[0:5] == "inf":
+            m = await message.reply_text("👾")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
