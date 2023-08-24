@@ -315,7 +315,7 @@ class Call(PyTgCalls):
                 )
             except Exception as e:
                 raise AssistantErr(
-                    "**هیچ تێلێکی چالاك نەدۆزرایەوە**\n\nهەوڵبدە تێل دابخەیت و بیکەیتەوە، ئەگەر کێشەکە بەردەوام بوو ئەوا یاریدەدەری بۆت باندکراوە باندەکەی لابدە♥**"
+                    "**هیچ تێلێکی چالاك نەدۆزرایەوە**\n\n**هەوڵبدە تێل دابخەیت و بیکەیتەوە، ئەگەر کێشەکە بەردەوام بوو ئەوا یاریدەدەری بۆت باندکراوە باندەکەی لابدە♥**"
                 )
         except AlreadyJoinedError:
             raise AssistantErr(
@@ -410,7 +410,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                img = await gen_thumb(videoid, user_id)
+                img = await get_thumb(videoid, user_id)
                 button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
@@ -472,7 +472,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_9"],
                     )
-                img = await gen_thumb(videoid, user_id)
+                img = await get_thumb(videoid, user_id)
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 run = await app.send_photo(
@@ -579,7 +579,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
                 else:
-                    img = await gen_thumb(videoid, user_id)
+                    img = await get_thumb(videoid, user_id)
                     button = stream_markup(_, videoid, chat_id)
                     run = await app.send_photo(
                         original_chat_id,
