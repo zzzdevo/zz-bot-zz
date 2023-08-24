@@ -1,10 +1,9 @@
-
 import time
 import asyncio
 from config import OWNER_ID
 from pyrogram import Client, filters
 from AnonX import app
-import time, random
+import random
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ParseMode, ChatMemberStatus
@@ -241,9 +240,9 @@ async def get_random_quote():
     return random.choice(i)
 
 
-async def send_random_quote(client, message):
+async def send_random_quote(bot):
     quote = get_random_quote()
-    client.send_message(id, quote)
+    bot.send_message(id, quote)
 
 
 while True:
