@@ -1,16 +1,18 @@
 import asyncio 
-from pyrogram import Client, filters, types
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
 from AnonX import app
 
 
 #Welcoem message
 WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**
-**•╭ئایدیت** : ❲ `{}` ❳ .
-**•╰ناوت** : ❲ {} ❳ .
-**•╭یوزەرت** : ❲ {} ❳ .
-**•╰بەروار** : ❲ {} ❳ .
-**•╰بایۆ** : ❲ {} ❳ . 
+**✧ ¦ ناوت** ← `{}`
+**✧ ¦ یوزەرت** ← {}
+**✧ ¦ ئایدیت** ← {}
+**✧ ¦ بەروار** ← {}
+
+**✧ ¦ بایۆ** ← {}  
 
 
 """
@@ -30,9 +32,9 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     new_memeber = await app.get_chat(user_id) # get member data
     # Welcome Message
     message = WELCOME_MESSAGE.format(
-        Message.from_user.id,
         Message.from_user.mention,
         Message.from_user.username,
+        Message.from_user.id,
         str(datetime.now()),
         new_memeber.bio)
     new_memeber_photo = None
@@ -47,7 +49,7 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     await asyncio.sleep(1.8) # sleep 1.8 sc
     # # delete join memeber message
     await app.delete_messages(chat_id, message_id) 
-    await asyncio.sleep(60) # seelp 60 sc
+    await asyncio.sleep(120) # seelp 60 sc
     # delete Welcome memeber message
     await app.delete_messages(chat_id , message_data.id)
 
