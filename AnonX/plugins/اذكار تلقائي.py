@@ -106,5 +106,5 @@ async def idjjdd(client, message):
 
     while True:
         ik = random.choice(i)
-        await message.reply_text(f"زکری ڕۆژانە ❤️\n \n: {ik}")
+        await message.reply_text(f"**زکری ڕۆژانە ❤️\n \n: {ik}**")
         await asyncio.sleep(300)
