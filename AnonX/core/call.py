@@ -34,7 +34,7 @@ from AnonX.utils.exceptions import AssistantErr
 from AnonX.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from AnonX.utils.stream.autoclear import auto_clean
-from AnonX.utils.thumbnails import gen_thumb
+from AnonX.utils.thumbnails import get_thumb
 
 autoend = {}
 counter = {}
