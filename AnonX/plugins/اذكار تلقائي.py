@@ -240,7 +240,7 @@ async def get_random_quote():
     return random.choice(i)
 
 
-async def send_random_quote(bot):
+async def send_random_quote():
     quote = get_random_quote()
     bot.send_message(id, quote)
 
