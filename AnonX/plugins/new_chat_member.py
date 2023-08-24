@@ -2,25 +2,20 @@ from pyrogram import Client, filters, types
 from datetime import datetime
 import asyncio 
 
-# Start Bot Client
-app = Client('bots',
-    bot_token='<API_KEY>',  # BOT_TOKN or API_KEY
-    api_id=123457678, # API_ID TELEGRAM ACCOUNT
-    api_hash='95f5f60466a64ttn7a34f297c734d0568') # API_HASH TELEGRAM ACCOUNT
 
 #Welcoem message
-WELCOME_MESSAGE = """ ↫ Welcome To From Group .
-    •╭ID        : ❲ @{} ❳ .
-    •╰NAMEE     : ❲ {} ❳ .
-    •╭USERNAEM  : ❲ {} ❳ .
-    •╰Date      : ❲ {} ❳ .
-    •╰Pio       : ❲ {} ❳ . 
+WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**
+**•╭ئایدیت** : ❲ `{}` ❳ .
+**•╰ناوت** : ❲ {} ❳ .
+**•╭یوزەرت** : ❲ {} ❳ .
+**•╰بەروار** : ❲ {} ❳ .
+**•╰بایۆ** : ❲ {} ❳ . 
 
 
 """
 
 # On /start From Private
-@app.on_message(filters.regex('/start') & filters.private)
+@app.on_message(filters.regex('/jstart') & filters.private)
 async def ON_START(_, Message: types.Message):
     chat_id, message_id, user_id = Message.chat.id, Message.id, Message.from_user.id
     await app.send_message(text='Welcome To Group Security Bot .', chat_id=chat_id)
@@ -35,7 +30,7 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     # Welcome Message
     message = WELCOME_MESSAGE.format(
         Message.from_user.id,
-        Message.from_user.first_name,
+        Message.from_user.mention,
         Message.from_user.username,
         str(datetime.now()),
         new_memeber.bio)
@@ -51,9 +46,7 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     await asyncio.sleep(1.8) # sleep 1.8 sc
     # # delete join memeber message
     await app.delete_messages(chat_id, message_id) 
-    await asyncio.sleep(8) # seelp 8 sc
+    await asyncio.sleep(60) # seelp 60 sc
     # delete Welcome memeber message
     await app.delete_messages(chat_id , message_data.id)
 
-
-asyncio.run(app.run())  # on start run bot.
