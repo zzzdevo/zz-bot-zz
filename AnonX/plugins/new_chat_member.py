@@ -1,6 +1,7 @@
+import asyncio 
 from pyrogram import Client, filters, types
 from datetime import datetime
-import asyncio 
+from AnonX import app
 
 
 #Welcoem message
