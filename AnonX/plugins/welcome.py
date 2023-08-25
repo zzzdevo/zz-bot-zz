@@ -26,7 +26,7 @@ async def ON_START(_, Message: types.Message):
 
 
 # On Join Group member .
-@app.on_chat_member_updated(filters.group & filters.new_chat_members)
+@app.on_chat_member_updated(filters.group)
 async def addtsrb(client, m):
     if m.new_chat_member:
      chat_id = m.chat.id
