@@ -31,7 +31,7 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     # Welcome Message
     message = WELCOME_MESSAGE.format(
         Message.from_user.mention,
-        message.from_user.username,
+        Message.from_user.username,
         Message.from_user.id,
         str(datetime.now()),
         new_memeber.bio)
