@@ -5,12 +5,11 @@ from AnonX import app
 
 
 #Welcoem message
-WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**
-**✧ ¦ ناوت** ← `{}`
-**✧ ¦ یوزەرت** ← {}
-**✧ ¦ ئایدیت** ← {}
+WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**\n
+**✧ ¦ ناوت** ← {}
+**✧ ¦ یوزەرت** ← @{}
+**✧ ¦ ئایدیت** ← `{}`
 **✧ ¦ بەروار** ← {}
-
 **✧ ¦ بایۆ** ← {}  
 
 
@@ -32,7 +31,7 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
     # Welcome Message
     message = WELCOME_MESSAGE.format(
         Message.from_user.mention,
-        Message.from_user.username,
+        message.from_user.username,
         Message.from_user.id,
         str(datetime.now()),
         new_memeber.bio)
