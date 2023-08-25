@@ -27,7 +27,7 @@ async def ON_START(_, Message: types.Message):
 # On Join Group member .
 @app.on_chat_member_updated(filters.group)
 async def addtsrb(client, message):
-    if m.new_chat_member:
+    if message.new_chat_member:
      chat_id, user_id = message.chat.id, message.from_user.id
      new_memeber = await app.get_chat(user_id)  # get member data
      # Welcome Message
