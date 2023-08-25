@@ -6,12 +6,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AnonX import app
 
 # Welcoem message
-WELCOME_MESSAGE = """ ↫ بەخێربێیت ئەزیزم بۆ گرووپ\n
-✧ ¦ ناوت ← {}
-✧ ¦ یوزەرت ← @{}
-✧ ¦ ئایدیت ← {}
-✧ ¦ بەروار ← {}
-✧ ¦ بایۆ ← {}  
+WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥️•**\n
+**✧ ¦ ناوت** ← {}
+**✧ ¦ یوزەرت** ← @{}
+**✧ ¦ ئایدیت** ← `{}`
+**✧ ¦ بەروار** ← {}
+**✧ ¦ بایۆ** ← {}  
 
 
 """
@@ -24,11 +24,13 @@ async def ON_START(_, Message: types.Message):
     await app.send_message(text='Welcome To Group Security Bot .', chat_id=chat_id)
 
 
+
 # On Join Group member .
 @app.on_chat_member_updated()
 async def addtsrb(client, m):
     if m.new_chat_member:
-     chat_id, user_id = m.chat.id, m.from_user.id
+     chat_id = m.chat.id
+     user_id = m.from_user.id
      new_memeber = await app.get_chat(m.from_user.id)  # get member data
      # Welcome Message
      message = WELCOME_MESSAGE.format(
