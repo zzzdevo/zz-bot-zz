@@ -1,13 +1,14 @@
 import asyncio 
 from pyrogram import Client, filters, types
 from datetime import datetime
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AnonX import app
 
 
 #Welcoem message
 WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**\n
 **✧ ¦ ناوت** ← {}
-**✧ ¦ یوزەرت** ← @{}
+**✧ ¦ یوزەرت** ← `@{}`
 **✧ ¦ ئایدیت** ← `{}`
 **✧ ¦ بەروار** ← {}
 **✧ ¦ بایۆ** ← {}  
@@ -41,9 +42,31 @@ async def ON_NEW_CHAT_MEMBER(_, Message: types.Message):
         new_memeber_photo = photo
     # send Welcome Message
     if new_memeber_photo != None:
-        message_data = await app.send_photo(photo=new_memeber_photo.file_id,chat_id=chat_id,caption=message, reply_to_message_id=message_id) 
+        message_data = await app.send_photo(photo=new_memeber_photo.file_id,chat_id=chat_id,caption=message, reply_to_message_id=message_id,reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
+                                         url=f"https://t.me/IQMCBOT?startgroup=true"),
+                ],
+
+            ]
+
+        ),
+
+        )
     else:
-        message_data = await app.send_message(text=message, chat_id=chat_id,reply_to_message_id=message_id)
+        message_data = await app.send_message(text=message, chat_id=chat_id,reply_to_message_id=message_id,reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
+                                         url=f"https://t.me/IQMCBOT?startgroup=true"),
+                ],
+
+            ]
+
+        ),
+
+        )
     await asyncio.sleep(1.8) # sleep 1.8 sc
     # # delete join memeber message
     await app.delete_messages(chat_id, message_id) 
