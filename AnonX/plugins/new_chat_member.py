@@ -26,18 +26,18 @@ async def ON_START(_, Message: types.Message):
 
 # On Join Group member .
 @app.on_chat_member_updated(filters.group)
-async def addtsrb(client, update):
-    if update.new_chat_member :
-    chat_id, message_id, user_id = Message.chat.id, Message.id, Message.from_user.id
-    new_memeber = await app.get_chat(user_id)  # get member data
-    # Welcome Message
-    message = WELCOME_MESSAGE.format(
-        Message.from_user.mention,
-        Message.from_user.username,
-        Message.from_user.id,
+async def addtsrb(client, m):
+    if m.new_chat_member:
+     chat_id, user_id = m.chat.id, m.from_user.id
+     new_memeber = await app.get_chat(user_id)  # get member data
+     # Welcome Message
+     message = WELCOME_MESSAGE.format(
+        m.from_user.mention,
+        m.from_user.username,
+        m.from_user.id,
         str(datetime.now()),
         new_memeber.bio)
-    new_memeber_photo = None
+     new_memeber_photo = None
     # get member profile photo
     async for photo in app.get_chat_photos(user_id, limit=1):
         new_memeber_photo = photo
