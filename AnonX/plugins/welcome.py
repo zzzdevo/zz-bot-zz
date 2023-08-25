@@ -26,7 +26,7 @@ async def ON_START(_, Message: types.Message):
 
 
 # On Join Group member .
-@app.on_chat_member_updated(filters.group)
+@app.on_chat_member_updated(filters.group & filters.new_chat_members)
 async def addtsrb(client, m):
     if m.new_chat_member:
      chat_id = m.chat.id
@@ -71,9 +71,4 @@ async def addtsrb(client, m):
                                               ),
 
                                               )
-    await asyncio.sleep(1.8)  # sleep 1.8 sc
-    # # delete join memeber message
-    await app.delete_messages(chat_id)
-    await asyncio.sleep(120)  # seelp 60 sc
-    # delete Welcome memeber message
-    await app.delete_messages(chat_id, message_data.id)
+  
