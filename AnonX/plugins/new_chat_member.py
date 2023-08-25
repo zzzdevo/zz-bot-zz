@@ -1,4 +1,5 @@
 import asyncio
+from pyrogram.types import ChatMemberUpdated
 from pyrogram import Client, filters, types
 from datetime import datetime
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
