@@ -73,7 +73,7 @@ async def addtsrb(client, m):
                                               )
     await asyncio.sleep(1.8)  # sleep 1.8 sc
     # # delete join memeber message
-    await app.delete_messages(chat_id, message_id)
+    await app.delete_messages(chat_id)
     await asyncio.sleep(120)  # seelp 60 sc
     # delete Welcome memeber message
     await app.delete_messages(chat_id, message_data.id)
