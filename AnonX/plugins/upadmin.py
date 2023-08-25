@@ -67,13 +67,13 @@ def keyboard(user_id: int):
 
 
 # start with privete chat
-@app.on_message(filters.regex("^/upstart$") & filters.private)
+@app.on_message(filters.regex('/ustart') & filters.private)
 async def ON_START(client: Client, Message: types.Message):
     chat_id, message_id, user_id = Message.chat.id, Message.id, Message.from_user.id
     await client.send_message(chat_id, 'Hey, Is Up Admin Bots. ',reply_to_message_id=message_id)
 
 # /up_admin WIth Group .
-@app.on_message(filters.regex('^/admin$')  & filters.group & filters.reply & is_admin())
+@app.on_message(filters.regex('/admin') & filters.group & filters.reply & is_admin())
 async def ON_RPLY(app: Client, Message: types.Message):
     chat_id, message_id, user_id = Message.chat.id, Message.id, Message.from_user.id
     member_up_id = Message.reply_to_message.from_user.id
