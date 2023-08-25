@@ -36,7 +36,7 @@ TAG_COMMAND_STOP : ["وەستانی تاگ"]
 
 
 # Admin Commands
-AUTH_COMMAND : ["auth", "ئەدمین", "admin"]
+AUTH_COMMAND : ["auth", "ئەدمین"]
 UNAUTH_COMMAND : ["unauth", "لادانی ڕێپێدان", "unadmin"]
 AUTHUSERS_COMMAND : ["authusers", "ڕێگەپێدراوەکان", "ئەدمینەکان"]
 PAUSE_COMMAND : ["pause", "cpause", "وسبە", "/pause", "/cpause", "وەستانی کاتی"]
