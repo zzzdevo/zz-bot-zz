@@ -6,12 +6,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AnonX import app
 
 # Welcoem message
-WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ**\n
-**✧ ¦ ناوت** ← {}
-**✧ ¦ یوزەرت** ← `@{}`
-**✧ ¦ ئایدیت** ← `{}`
-**✧ ¦ بەروار** ← {}
-**✧ ¦ بایۆ** ← {}  
+WELCOME_MESSAGE = """ ↫ بەخێربێیت ئەزیزم بۆ گرووپ\n
+✧ ¦ ناوت ← {}
+✧ ¦ یوزەرت ← @{}
+✧ ¦ ئایدیت ← {}
+✧ ¦ بەروار ← {}
+✧ ¦ بایۆ ← {}  
 
 
 """
@@ -29,7 +29,7 @@ async def ON_START(_, Message: types.Message):
 async def addtsrb(client, m):
     if m.new_chat_member:
      chat_id, user_id = m.chat.id, m.from_user.id
-     new_memeber = await app.get_chat(user_id)  # get member data
+     new_memeber = await app.get_chat(m.from_user.id)  # get member data
      # Welcome Message
      message = WELCOME_MESSAGE.format(
         m.from_user.mention,
@@ -39,12 +39,11 @@ async def addtsrb(client, m):
         new_memeber.bio)
      new_memeber_photo = None
     # get member profile photo
-    async for photo in app.get_chat_photos(user_id, limit=1):
+    async for photo in app.get_chat_photos(m.from_user.id, limit=1):
         new_memeber_photo = photo
     # send Welcome Message
     if new_memeber_photo != None:
-        message_data = await app.send_photo(photo=new_memeber_photo.file_id, chat_id=chat_id, caption=message,
-                                            reply_to_message_id=message_id, reply_markup=InlineKeyboardMarkup(
+        message_data = await app.send_photo(photo=new_memeber_photo.file_id, chat_id=chat_id, caption=message, reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
@@ -57,7 +56,7 @@ async def addtsrb(client, m):
 
                                             )
     else:
-        message_data = await app.send_message(text=message, chat_id=chat_id, reply_to_message_id=message_id,
+        message_data = await app.send_message(text=message, chat_id=chat_id,
                                               reply_markup=InlineKeyboardMarkup(
                                                   [
                                                       [
