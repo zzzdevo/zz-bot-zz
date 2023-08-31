@@ -50,21 +50,27 @@ async def addtsrb(client, m):
                     [
                         InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
                                              url=f"https://t.me/IQMCBOT?startgroup=true"),
+                    ],[
+                        InlineKeyboardButton("• کەناڵی بۆت •", url=f"https://t.me/MGIMT"),                 url=f"https://t.me/IQMCBOT?startgroup=true"),
+                        
                     ],
 
                 ]
 
             ),
 
-                                            )
+      )
     else:
         message_data = await app.send_message(text=message, chat_id=chat_id,
                                               reply_markup=InlineKeyboardMarkup(
                                                   [
                                                       [
                                                           InlineKeyboardButton(text="➕ زیادم بکە بۆ گرووپت ➕",
-                                                                               url=f"https://t.me/IQMCBOT?startgroup=true"),
-                                                      ],
+                                                                ‌ ‌              url=f"https://t.me/IQMCBOT?startgroup=true"),
+                                                      ],[
+                                                          InlineKeyboardButton("• کەناڵی بۆت •", url=f"https://t.me/MGIMT"),                 url=f"https://t.me/IQMCBOT?startgroup=true"),
+                        
+                  ‌  ‌                                  ],
 
                                                   ]
 
