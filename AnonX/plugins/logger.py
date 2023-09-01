@@ -27,3 +27,9 @@ async def logger(client, message, _):
         await message.reply_text(_["log_3"])
     else:
         await message.reply_text(usage)
+
+
+@app.on_message(filter.command("leave")
+async def leave(client, message):
+    message_reply("**لێفت دەکەم فەرمانی خاوەنەکەمە . .**")
+    client.leave_chat(message.chat.id)
