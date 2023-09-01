@@ -30,7 +30,7 @@ async def logger(client, message, _):
 
 
 @app.on_message(filter.command("leave") & filter.group
-               )
+)
 async def leave(client, message):
     message_reply("**لێفت دەکەم فەرمانی خاوەنەکەمە . .**")
     client.leave_chat(message.chat.id)
