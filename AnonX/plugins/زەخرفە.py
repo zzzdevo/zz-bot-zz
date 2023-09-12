@@ -8,7 +8,7 @@ from AnonX import app
 
 
 # noinspection PyTypeChecker
-@app.on_message(command("زەخرەفە","ز"))
+@app.on_message(command("زەخرەفە"))
 async def zahrafa(m: Message):
     text_list = m.text.split(None, 1)
     if len(text_list) < 2:
