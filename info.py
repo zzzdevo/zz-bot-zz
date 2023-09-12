@@ -2,8 +2,8 @@ from pyrogram import *
 from pyrogram.types import *
 
 
-log_chat = int(-1001848724837)
-token = "6168506976:AAE5ClnPovlfUUHpEcf8JMxo_YGE7hkBawU"
+log_chat = int(-1001906948158)
+token = "6357186923:AAEKydDxtzDe6C0u-F46QmCpabiodn8TOEA"
 
 Main_developer_keyboard = ReplyKeyboardMarkup([
 	[('تفعيل التواصل'),('تعطيل التواصل'),('حاله التواصل')],
