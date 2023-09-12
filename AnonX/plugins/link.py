@@ -5,7 +5,7 @@ from strings.filters import command
 from pyrogram.types import Message
 from AnonX import app
 
-@app.on_message(command(["بەستەر","/link"]) & ~filters.bot & ~filters.private)
+@app.on_message(command(["بەستەر","/link","لینک","لینك"]) & ~filters.bot & ~filters.private)
 async def invitelink(client, message):
     chid = message.chat.id
     try:
