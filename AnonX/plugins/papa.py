@@ -1,13 +1,3 @@
-###############################################
-##  CopyRight & Creator File And Programing  ##
-##                                           ##
-##     #######  ######  #####*     *##*      ##
-##     #  #  #  ###     #     *   *    *     ##
-##     #     #  ##      #     *   *    *     ##
-##     #     #  #####   #####*     *##*      ##
-##                                           ##
-###############################################
-
 import asyncio
 
 from strings import get_command
@@ -15,13 +5,12 @@ from strings.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from AnonX import app
-
 ################################
 ####
 ################################
 
 @app.on_message(
-    command(["كرتون"])
+    command(["پاپا"])
    
 )
 async def cartoon(c: Client, m: Message):
@@ -33,7 +22,7 @@ async def cartoon(c: Client, m: Message):
         [InlineKeyboardButton("مسلسلات كارتون 👼", callback_data="fmoslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("افلام كارتون 🍿", callback_data="fcartoon " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.reply_text("◍ أهلا بيك بقائمه افلام ومسلسلات الكارتون والانمي\n√", reply_markup=keyboard)
@@ -8042,8 +8031,3 @@ async def haker3(c: Client, m: CallbackQuery):
         return
     await m.message.delete()
     await m.message.reply_audio("https://t.me/UCartoon/455", reply_to_message_id=mid)
-#########################################################################################
-#########################################################################################
-#########################         # END masrahia AR #          ##########################
-#########################################################################################
-#########################################################################################
