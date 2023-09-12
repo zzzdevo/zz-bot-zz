@@ -19,7 +19,7 @@ async def quran(c: Client, m: Message):
         [InlineKeyboardButton("ماهر المعيقلى 📖", callback_data="maher " + str(m.from_user.id))] +
         [InlineKeyboardButton("خالد الجليل 📖", callback_data="galel " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.reply_text("◍ اهلا بك فى القرءان الكريم اختر احدى المقرئين\n√", reply_markup=keyboard)
 
@@ -43,7 +43,7 @@ async def quran2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("ماهر المعيقلى 📖", callback_data="maher " + str(m.from_user.id))] +
         [InlineKeyboardButton("خالد الجليل 📖", callback_data="galel " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اختر السوره\n√", reply_markup=keyboard, disable_web_page_preview=True)
 
@@ -113,7 +113,7 @@ async def fares(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="fares2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ فارس عباد\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -193,7 +193,7 @@ async def fares2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="fares " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ فارس عباد\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -1405,7 +1405,7 @@ async def naser(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="naser2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ناصر القطامي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -1485,7 +1485,7 @@ async def naser2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="naser " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ناصر القطامي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -2660,7 +2660,7 @@ async def eslam(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="eslam2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ اسلام صبحي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -2689,7 +2689,7 @@ async def eslam2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="eslam " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ اسلام صبحي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -3011,7 +3011,7 @@ async def abdelbaset(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="abdelbaset2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ عبدالباسط عبدالصمد\n√", reply_markup=keyboard,
                               disable_web_page_preview=True)
@@ -3090,7 +3090,7 @@ async def abdelbaset2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="abdelbaset " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ عبدالباسط عبدالصمد\n√", reply_markup=keyboard,
@@ -4303,7 +4303,7 @@ async def eldosary(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="eldosary2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ياسر الدوسري\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -4383,7 +4383,7 @@ async def eldosary2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="eldosary " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ياسر الدوسري\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -5595,7 +5595,7 @@ async def abkar(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="abkar2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ادريس ابكر\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -5675,7 +5675,7 @@ async def abkar2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="abkar " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ادريس ابكر\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -6887,7 +6887,7 @@ async def afasy(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="afasy2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقار ئمشاري العفاسي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -6966,7 +6966,7 @@ async def afasy2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="afasy " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقار ئمشاري العفاسي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -8177,7 +8177,7 @@ async def agamy(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="agamy2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ احمد بن علي العجمي\n√", reply_markup=keyboard,
@@ -8258,7 +8258,7 @@ async def agamy2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="agamy " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ احمد بن علي العجمي\n√", reply_markup=keyboard,
@@ -9471,7 +9471,7 @@ async def maher(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="maher2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ماهر المعيقلي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -9551,7 +9551,7 @@ async def maher2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="maher " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ ماهر المعيقلي\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -10762,7 +10762,7 @@ async def galel(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="galel2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))]
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ خالد عبدالجليل\n√", reply_markup=keyboard, disable_web_page_preview=True)
@@ -10842,7 +10842,7 @@ async def galel2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="galel " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="quran2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اختر سوره للقارئ خالد عبدالجيل\n√", reply_markup=keyboard, disable_web_page_preview=True)
