@@ -33,6 +33,7 @@ SONG_COMMAND : ["song", "داگرتن", "یوتوب"]
 LYRICS_COMMAND : ["lyrics", "وشە", "/lyrics"]
 TAG_COMMAND : ["tag", "تاگ", "Tag"]
 TAG_COMMAND_STOP : ["وەستانی تاگ"]
+AUTOEND_COMMAND : ["autoend", "دەرچوون"]
 
 
 # Admin Commands
