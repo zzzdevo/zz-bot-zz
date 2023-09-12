@@ -57,7 +57,7 @@ async def gak_owne(client: Client, message: Message):
                        
                     
                     
-@app.on_message(command(["گرووپ", "group"]) & filters.group & ~filters.edited)
+@app.on_message(command(["گرووپ", "group"]) & filters.group)
 async def ginnj(client: Client, message: Message):
     chat_idd = message.chat.id
     chat_name = message.chat.title
@@ -75,14 +75,14 @@ async def ginnj(client: Client, message: Message):
     )
     
 
-@app.on_message(command(["تحويل", "تحويل الصوره"]))
+@app.on_message(command(["گۆڕین","گۆڕینی ستیکەر"]))
 async def sticker_image(client: Client, message: Message):
     reply = message.reply_to_message
     if not reply:
-        return await message.reply("الرد على ملصق.")
+        return await message.reply("**ڕپلەی ستیکەر بکە**")
     if not reply.sticker:
-        return await message.reply("الرد على ملصق.")
-    m = await message.reply("يتم المعالجه..")
+        return await message.reply("**ڕپلەی ستیکەر بکە**")
+    m = await message.reply("**کەمێك چاوەڕێبە . .**")
     f = await reply.download(f"{reply.sticker.file_unique_id}.png")
     await gather(*[message.reply_photo(f),message.reply_document(f)])
     await m.delete()
