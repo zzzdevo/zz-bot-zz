@@ -42,7 +42,7 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"يرجى الانتظار الاعادة التشغيل {MUSIC_BOT_NAME} في الدردشه الخاصه بك."
+        f"**پێویستە کەمێك چاوەڕێ بکەیت تاوەکو دووبارە دەستپێدەکاتەوە {MUSIC_BOT_NAME} لە چاتی تایبەت بە بۆت**"
     )
     await asyncio.sleep(1)
     try:
@@ -62,7 +62,7 @@ async def restartbot(client, message: Message, _):
         except:
             pass
     return await mystic.edit_text(
-        f"تم اعادة التشغيل بنجاح {MUSIC_BOT_NAME}في دردشتك يمكنك بدء التشغيل..."
+        f"**بە سەرکەوتوویی دەستی پێکردەوە {MUSIC_BOT_NAME} دەتوانی ئێستا کاری پێبکەیت**"
     )
 
 
