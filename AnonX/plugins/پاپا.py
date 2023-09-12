@@ -51,7 +51,7 @@ async def cartoon2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("مسلسلات كارتون 👼", callback_data="fmoslsl " + str(m.from_user.id))],
         [InlineKeyboardButton("افلام كارتون 🍿", callback_data="fcartoon " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك بقائمه افلام ومسلسلات الكارتون والانمي\n√", reply_markup=keyboard)
@@ -71,7 +71,7 @@ async def anmie(c: Client, m: Message):
         [InlineKeyboardButton("هجوم العمالقه 🎉", callback_data="hgoom " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.reply_text("◍ اهلا بيك في قايمة الانمي\n√", reply_markup=keyboard)
@@ -91,7 +91,7 @@ async def anmie2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("هجوم العمالقه 🎉", callback_data="hgoom " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قايمة الانمي\n√", reply_markup=keyboard)
@@ -116,7 +116,7 @@ async def hinterx(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("الجزء السابع 7⃣", callback_data="hinterx7 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة اجزاء هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -152,7 +152,7 @@ async def hinterx1(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة الاولي من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
 
@@ -189,7 +189,7 @@ async def hinterx2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة التانيه من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -227,7 +227,7 @@ async def hinterx3(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة التالته من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -265,7 +265,7 @@ async def hinterx4(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx3 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx5 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة الرابعه من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -303,7 +303,7 @@ async def hinterx5(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx4 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx6 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة الخامسه من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -341,7 +341,7 @@ async def hinterx6(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx5 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hinterx7 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة السادسه من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -386,7 +386,7 @@ async def hinterx7(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx6 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في القايمة السابعه من #القناص هنتر اكس هنتر\n√", reply_markup=keyboard)
@@ -1894,7 +1894,7 @@ async def tokyo(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الموسم الرابع 4⃣", callback_data="tokyo4 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قايمة الانمي ل طوكيو غول\n√", reply_markup=keyboard)
@@ -1922,7 +1922,7 @@ async def tokyo1(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="tokyo2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم الاول ل طوكيو غول\n√", reply_markup=keyboard)
 
@@ -1950,7 +1950,7 @@ async def tokyo2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="tokyo1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="tokyo3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم التاني ل طوكيو غول\n√", reply_markup=keyboard)
 
@@ -1978,7 +1978,7 @@ async def tokyo3(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="tokyo2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="tokyo4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم التالت ل طوكيو غول\n√", reply_markup=keyboard)
 
@@ -2005,7 +2005,7 @@ async def tokyo4(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="tokyo3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم الرابع ل طوكيو غول\n√", reply_markup=keyboard)
 
@@ -2509,7 +2509,7 @@ async def hgoom(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الموسم الرابع", callback_data="hgoom5 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hinterx " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة الانمي ل هجوم العمالقه\n√", reply_markup=keyboard)
@@ -2550,7 +2550,7 @@ async def hgoom1(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("➡️ التالي", callback_data="hgoom2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم الاول ل هجوم العمالقه\n√", reply_markup=keyboard)
 
@@ -2579,7 +2579,7 @@ async def hgoom2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hgoom1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hgoom3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم التاني ل هجوم العمالقه\n√", reply_markup=keyboard)
 
@@ -2608,7 +2608,7 @@ async def hgoom3(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hgoom2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hgoom4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم التالت بارت 1 ل هجوم العمالقه\n√", reply_markup=keyboard)
 
@@ -2635,7 +2635,7 @@ async def hgoom4(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hgoom3 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="hgoom5 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم التالت بارت 2 ل هجوم العمالقه\n√", reply_markup=keyboard)
 
@@ -2664,7 +2664,7 @@ async def hgoom5(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="hgoom4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="anmie2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ اهلا بيك في الموسم الرابع ل هجوم العمالقه\n√", reply_markup=keyboard)
 
@@ -3411,7 +3411,7 @@ async def fmoslsl(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("السنافر 💙", callback_data="snafer " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات الكارتون\n√", reply_markup=keyboard)
@@ -3449,7 +3449,7 @@ async def tom(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الحلقه 20", callback_data="Xto20 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات توم و جيري\n√", reply_markup=keyboard)
 
@@ -3728,7 +3728,7 @@ async def spong1(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="spong2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم الاول\n√", reply_markup=keyboard)
 
@@ -3754,7 +3754,7 @@ async def spong2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="spong3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم التاني\n√", reply_markup=keyboard)
@@ -3789,7 +3789,7 @@ async def spong3(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="spong4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم التالت\n√", reply_markup=keyboard)
@@ -3833,7 +3833,7 @@ async def spong4(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong3 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="spong5 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم الرابع\n√", reply_markup=keyboard)
 
@@ -3864,7 +3864,7 @@ async def spong5(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong4 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="spong6 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم الخامس\n√", reply_markup=keyboard)
@@ -3900,7 +3900,7 @@ async def spong6(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="spong5 " + str(m.from_user.id))] +
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات سبونج بوب الموسم السادس\n√", reply_markup=keyboard)
@@ -5213,7 +5213,7 @@ async def dany(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الموسم التالت", callback_data="dany3 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات داني الشبح\n√", reply_markup=keyboard)
@@ -5245,7 +5245,7 @@ async def dany1(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="dany " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="dany2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات داني الشبح الموسم الاول\n√", reply_markup=keyboard)
 
@@ -5276,7 +5276,7 @@ async def dany2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="dany1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="dany3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات داني الشبح الموسم التاني\n√", reply_markup=keyboard)
@@ -5301,7 +5301,7 @@ async def dany3(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="dany2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة مسلسلات داني الشبح الموسم التالت\n√", reply_markup=keyboard)
@@ -5756,7 +5756,7 @@ async def ghmbol(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الحلقه 39", callback_data="Xgh39 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات غامبول المدهش\n√", reply_markup=keyboard)
 
@@ -6195,7 +6195,7 @@ async def oskar(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الحلقه 30", callback_data="Xosk30 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات اوسكار االشجاع\n√", reply_markup=keyboard)
 
@@ -6517,7 +6517,7 @@ async def temon(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الموسم التاني", callback_data="temon2 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات تيمون وبمومبا\n√", reply_markup=keyboard)
@@ -6555,7 +6555,7 @@ async def temon1(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="temon " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="temon2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات تيمون وبمومبا الموسم الاول\n√", reply_markup=keyboard)
 
@@ -6591,7 +6591,7 @@ async def temon2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="temon1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات تيمون وبمومبا الموسم التاني\n√", reply_markup=keyboard)
@@ -7017,7 +7017,7 @@ async def snafer(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ الموسم الرابع", callback_data="snafer4 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات السنافر\n√", reply_markup=keyboard)
@@ -7055,7 +7055,7 @@ async def snafer1(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="snafer " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="snafer2 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات السنافر الموسم الاول\n√", reply_markup=keyboard)
 
@@ -7092,7 +7092,7 @@ async def snafer2(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="snafer1 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="snafer3 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات السنافر الموسم التاني\n√", reply_markup=keyboard)
@@ -7125,7 +7125,7 @@ async def snafer3(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("رجوع ⬅️", callback_data="snafer2 " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="snafer4 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة حلقات السنافر الموسم الرابع\n√", reply_markup=keyboard)
@@ -7704,7 +7704,7 @@ async def fcartoon(c: Client, m: CallbackQuery):
         [InlineKeyboardButton("⌯ القائمة رقم 2", callback_data="Xfcartoon2 " + str(m.from_user.id))],
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة افلام الكارتون\n√", reply_markup=keyboard)
@@ -7734,7 +7734,7 @@ async def Xfcartoon1(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="fcartoon " + str(m.from_user.id))] +
         [InlineKeyboardButton("➡️ التالي", callback_data="Xfcartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة افلام الكارتون رقم 1\n√", reply_markup=keyboard)
@@ -7765,7 +7765,7 @@ async def Xfcartoon2(c: Client, m: CallbackQuery):
 
         [InlineKeyboardButton("رجوع ⬅️", callback_data="Xfcartoon1 " + str(m.from_user.id))],
         [InlineKeyboardButton("القائمه الرئيسيه ⏺", callback_data="cartoon2 " + str(m.from_user.id))],
-        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{get_bot_information()[1]}?startgroup=new")],
+        [InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url = f"https://t.me/IQMCBOT?startgroup=true")],
 
     ])
     await m.message.edit_text("◍ أهلا بيك في قايمة افلام الكارتون رقم 2\n√", reply_markup=keyboard)
