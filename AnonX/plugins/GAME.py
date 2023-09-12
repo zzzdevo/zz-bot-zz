@@ -12,9 +12,8 @@ GAME_MESSAGE = "ᥲ️ᖇꪀ᥆ρ. 🐰\n\n🐉¦ مرحبا بك عزيزي:\n�
 GAME_BUTTONS = [
     [ 
         InlineKeyboardButton ('العاب 3D', callback_data= 'GAME1'),
-        InlineKeyboardButton ('مميزات', callback_data= 'GAME2'),
         ],[
-        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/N_G_12")              
+        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/MGIMT")              
                  ],[
                 InlineKeyboardButton(
                         "𝗁᥆ꪔᥱ", callback_data="close"),
@@ -336,7 +335,7 @@ async def callback_query(client, CallbackQuery):
                         "°تجميع الالوان°" , url=f"http://t.me/awesomebot?game=Hextris"),
                 ],[        
                     InlineKeyboardButton (
-                        "°المجوهرات°" , url=f"http://t.me/gamee?game=DiamondRows"),
+                        "°ئەڵماسەکان°" , url=f"http://t.me/gamee?game=DiamondRows"),
                     InlineKeyboardButton (
                         "°ركل الكرة°" , url=f"http://t.me/gamee?game=KeepitUP"),
                 ],[        
@@ -346,9 +345,9 @@ async def callback_query(client, CallbackQuery):
                         "°2048°" , url=f"http://t.me/awesomebot?game=g2048"),
                 ],[        
                     InlineKeyboardButton (
-                        "°كرة السلة°" , url=f"http://t.me/gamee?game=BasketBoy"),
+                        "°باسکت بۆڵ°" , url=f"http://t.me/gamee?game=BasketBoy"),
                     InlineKeyboardButton (
-                        "°القط المجنون°" , url=f"http://t.me/gamee?game=CrazyCat"),
+                        "°پشیلە°" , url=f"http://t.me/gamee?game=CrazyCat"),
                 ],[
                     InlineKeyboardButton (
                         "𝗁᥆ꪔᥱ" , callback_data= 'GAME')
@@ -365,9 +364,8 @@ async def callback_query(client, CallbackQuery):
                RETURN_BUTTON = [
                     [ 
                       InlineKeyboardButton ('🕷¦العاب 3D', callback_data= 'GAME1'),
-                      InlineKeyboardButton ('🐰¦العاب', callback_data= 'GAME2')
-                      ],[
-        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/N_G_12")              
+                    ],[
+        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/MGIMT")              
                  ],[
                 InlineKeyboardButton(
                         "𝗁᥆ꪔᥱ", callback_data="close"),
