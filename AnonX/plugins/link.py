@@ -12,5 +12,5 @@ async def invitelink(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         return await message.reply_text("**سەرەتا بمکە ئەدمین**")
-    await message.reply_text(f"**بە سەرکەوتوویی بەستەری گرووپ دروست کرا :**\n {invitelink}")
+    await message.reply_text(f"**بە سەرکەوتوویی بەستەری گرووپ دروست کرا :**\n\n `{invitelink}`")
     
