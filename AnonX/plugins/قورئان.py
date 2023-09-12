@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from config import get_bot_information
+
 
 @Client.on_callback_query(filters.regex("^quran (\\d+)$"))
 async def quran(c: Client, m: Message):
