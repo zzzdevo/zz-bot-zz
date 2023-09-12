@@ -67,12 +67,12 @@ YTDOWNLOADER = 1
 LOG = 2
 LOG_FILE_NAME = "logs.txt"
 adminlist = {}
+bitch = {}
 lyrical = {}
 chatstats = {}
 userstats = {}
 clean = {}
 autoclean = []
-
 
 START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/a3352a2148f8ca63da280.jpg")
 
