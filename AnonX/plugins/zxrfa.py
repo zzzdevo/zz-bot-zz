@@ -1,13 +1,13 @@
+
 import random
 import re
-
+from config import MUSIC_BOT_NAME 
 from strings.filters import command
 from pyrogram import Client
 from pyrogram.types import Message
 from AnonX import app
 
-# noinspection PyTypeChecker
-@app.on_message(command("ز"))
+@app.on_message(command("زەخرەفە"))
 async def zahrafa(m: Message):
     text_list = m.text.split(None, 1)
     if len(text_list) < 2:
