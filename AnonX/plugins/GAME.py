@@ -360,7 +360,7 @@ async def callback_query(client, CallbackQuery):
               )
           elif CallbackQuery.data == "GAME":
                
-               RETURN_GAME = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
+               RETURN_GAME = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
 
                RETURN_BUTTON = [
                     [ 
