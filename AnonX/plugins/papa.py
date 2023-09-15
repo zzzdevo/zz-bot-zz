@@ -52,7 +52,7 @@ async def cartoon2(c: Client, m: CallbackQuery):
 @app.on_callback_query(filters.regex("^anmie (\\d+)$"))
 async def anmie(c: Client, m: Message):
     global mid
-    mid = m.message_id
+    mid = m.id
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
         [InlineKeyboardButton("هنتر اكس هنتر 🌝", callback_data="hinterx " + str(m.from_user.id))],
