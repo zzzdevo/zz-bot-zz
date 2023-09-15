@@ -15,7 +15,7 @@ from AnonX import app
 )
 async def cartoon(c: Client, m: Message):
     global mid
-    mid = m.message_id
+    mid = m.id
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
         [InlineKeyboardButton("انمي 🧚‍♀️", callback_data="anmie2 " + str(m.from_user.id))],
