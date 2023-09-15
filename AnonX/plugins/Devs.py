@@ -39,7 +39,7 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(command(["گۆرانی", "گۆرانیەکان", "go"]))
+@app.on_message(command(["گۆرانیەکان", "گۆرانی", "go"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,29)
     url = f"https://t.me/ZWZZ7/{rl}"
@@ -69,7 +69,22 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-                        
+
+@app.on_message(command(["وێنەی کچان","کچان"]))
+async def ihd(client: Client, message: Message):
+    rl = random.randint(1,45)
+    url = f"https://t.me/ZSZZW/{rl}"
+    await client.send_photo(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 کچان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ وێنەی کچان➧♥️\n@ZSZZW - کەناڵی وێنە**"
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
+    
 @app.on_message(
     command(["ق"])
 )
