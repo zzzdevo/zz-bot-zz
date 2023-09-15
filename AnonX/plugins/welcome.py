@@ -21,7 +21,7 @@ WELCOME_MESSAGE = """** ↫ بەخێربێیت ئەزیزم بۆ گرووپ♥�
 @app.on_message(filters.regex('/jstart') & filters.private)
 async def ON_START(_, Message: types.Message):
     chat_id, message_id, user_id = Message.chat.id, Message.id, Message.from_user.id
-    await app.send_message(text='Welcome To Group Security Bot .', chat_id=chat_id)
+    await app.send_message(text='Welcome To Group Security Bot .', chat_id=chat.id)
 
 
 # On Join Group member .
@@ -46,7 +46,7 @@ async def addtsrb(client, m):
     # send Welcome Message
     if new_memeber_photo != None:
         message_data = await app.send_photo(
-        photo=new_memeber_photo.file_id, chat_id=chat_id, caption=message,
+        photo=new_memeber_photo.file_id, chat_id=chat.id, caption=message,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -63,7 +63,7 @@ async def addtsrb(client, m):
            ),
         )
     else:
-        message_data = await app.send_message(text=message, chat_id=chat_id,
+        message_data = await app.send_message(text=message, chat_id=chat.id,
         reply_markup = InlineKeyboardMarkup(
             [
                 [
