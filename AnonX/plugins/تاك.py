@@ -17,7 +17,7 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 
 
 @app.on_message(command(["زانیاری گرووپ"]) & filters.group)
-async def hshs(client: Client, message:message):
+async def hshs(client: Client, message: Message):  
     usr = await client.get_users(message.reply_to_message.from_user.id)
     name = usr.first_name  #
     user_id = message.reply_to_message.from_user.id  #
