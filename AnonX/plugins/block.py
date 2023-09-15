@@ -98,7 +98,8 @@ async def sudoers_list(client, message: Message, _):
 
 @app.on_message(pyrogram.filters.forwarded)
 def gjgh(client, m):
-    global id
+    m.from_user = m.user.id
+    chat_id = m.chat.id
     su = app.get_chat_member(m.chat.id, m.from_user.id).status
     if str(su) == "ChatMemberStatus.MEMBER":
         m.delete()
