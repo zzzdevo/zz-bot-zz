@@ -8,15 +8,15 @@ from AnonX import app
 import re
 import sys
 
-GAME_MESSAGE = "ᥲ️ᖇꪀ᥆ρ. 🐰\n\n🐉¦ مرحبا بك عزيزي:\n🐉¦في قسم العاب ارنوب\n\nᥲ️ᖇꪀ᥆ρ. 🐰"
+GAME_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**"
 GAME_BUTTONS = [
     [ 
-        InlineKeyboardButton ('العاب 3D', callback_data= 'GAME1'),
+        InlineKeyboardButton ('߷ یاریەکان ߷', callback_data= 'GAME1'),
         ],[
-        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/MGIMT")              
+        InlineKeyboardButton ('⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌', url =f"https://t.me/MGIMT")              
                  ],[
                 InlineKeyboardButton(
-                        "𝗁᥆ꪔᥱ", callback_data="close"),
+                        "⟲ گـەڕانـەوە ⟳", callback_data="close"),
                ],
           ]
     
@@ -302,45 +302,45 @@ async def kaompj(client, message):
   
 
 @app.on_message(
-    command(["الالعاب","العاب","الالعاب. 🐰"])
+    command(["یاری","game"])
 
 )
 async def zohary(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/edf02e163b02d2751b87d.jpg",
-        caption= GAME_MESSAGE,
+        photo=f"https://telegra.ph/file/ccd73a1b8fe26a88b404a.jpg",
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**""",
         reply_markup=InlineKeyboardMarkup(GAME_BUTTONS)
     )  
 @app.on_callback_query()
 async def callback_query(client, CallbackQuery):
           if CallbackQuery.data == "GAME1":
             
-             GAME1_MESSAGE = "ᥲ️ᖇꪀ᥆ρ. 🐰\n\nمرحبا بك في قسم العاب 3D\n\n🐉"
+             GAME1_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
 
              GAME1_BUTTONS = [
                  [
                     InlineKeyboardButton(
-                        "°فلابي بيرد°", url=f"http://t.me/awesomebot?game=FlappyBird"), 
+                        "°باڵندە°", url=f"http://t.me/awesomebot?game=FlappyBird"), 
                     InlineKeyboardButton (
-                        "°تبديل النجوم°", url=f"http://t.me/gamee?game=Switchy"),
+                        "°گۆڕینی ئەستێرە°", url=f"http://t.me/gamee?game=Switchy"),
                 ],[
                     InlineKeyboardButton (
-                        "°موتسيكلات°" , url=f"http://t.me/gamee?game=motofx"),
+                        "°ماتۆڕ°" , url=f"http://t.me/gamee?game=motofx"),
                     InlineKeyboardButton (
-                        "°اطلاق النار°" , url=f"http://t.me/gamee?game=NeonBlaster"),
+                        "°تەقەکردن بە ئاگر°" , url=f"http://t.me/gamee?game=NeonBlaster"),
                 ],[
                     InlineKeyboardButton (
-                        "°كرة القدم°" , url=f"http://t.me/gamee?game=Footballstar"),
+                        "°تۆپی پێ°" , url=f"http://t.me/gamee?game=Footballstar"),
                     InlineKeyboardButton (
-                        "°تجميع الالوان°" , url=f"http://t.me/awesomebot?game=Hextris"),
+                        "°کۆکردنەوەی ڕەنگ°" , url=f"http://t.me/awesomebot?game=Hextris"),
                 ],[        
                     InlineKeyboardButton (
                         "°ئەڵماسەکان°" , url=f"http://t.me/gamee?game=DiamondRows"),
                     InlineKeyboardButton (
-                        "°ركل الكرة°" , url=f"http://t.me/gamee?game=KeepitUP"),
+                        "°لێدانی تۆپ°" , url=f"http://t.me/gamee?game=KeepitUP"),
                 ],[        
                     InlineKeyboardButton (
-                        "°بطولة السحق°" , url=f"http://t.me/gamee?game=SmashRoyale"),
+                        "°پاڵەوانێتی شکاندن°" , url=f"http://t.me/gamee?game=SmashRoyale"),
                     InlineKeyboardButton (
                         "°2048°" , url=f"http://t.me/awesomebot?game=g2048"),
                 ],[        
@@ -350,45 +350,7 @@ async def callback_query(client, CallbackQuery):
                         "°پشیلە°" , url=f"http://t.me/gamee?game=CrazyCat"),
                 ],[
                     InlineKeyboardButton (
-                        "𝗁᥆ꪔᥱ" , callback_data= 'GAME')
+                        "⟲ گـەڕانـەوە ⟳" , callback_data= 'GAME')
                   ],
              ]
-             await CallbackQuery.edit_message_text( 
-                 GAME1_MESSAGE ,
-                 reply_markup = InlineKeyboardMarkup(GAME1_BUTTONS) 
-              )
-          elif CallbackQuery.data == "GAME":
-               
-               RETURN_GAME = "ᥲ️ᖇꪀ᥆ρ. 🐰\n\n🐉¦مرحبا بك في قسم العاب cr\n🐉¦اختار ما تشاء من الالعاب مسليه وستمتع بها\n\nᥲ️ᖇꪀ᥆ρ. 🐰" 
-
-               RETURN_BUTTON = [
-                    [ 
-                      InlineKeyboardButton ('🕷¦العاب 3D', callback_data= 'GAME1'),
-                    ],[
-        InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/MGIMT")              
-                 ],[
-                InlineKeyboardButton(
-                        "𝗁᥆ꪔᥱ", callback_data="close"),
-               ],
-          ]
-     
-               await CallbackQuery.edit_message_text( 
-                 RETURN_GAME ,
-                 reply_markup = InlineKeyboardMarkup(RETURN_BUTTON) 
-                    )
-          elif CallbackQuery.data == "GAME2":
-               
-               SOURCE_GAME = "🐰\n\n العاب ارنوب\nكت\nتويت\nاسال\nصراحه\nانا مين\nبايو\nمين في الكول\nسورس\nزخرفه\nاذكار\nانصحني\nكتبات\nافلام\nغنيلي\nرفع\nذكاء\nنكته\nكشف\nايدي\nميديا\nتحويل ملصق\n🐰." 
-
-               SORGAM_BUTTON = [
-                    [ 
-                      InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/N_G_12")
-                      ],[
-                         InlineKeyboardButton ('𝗁᥆ꪔᥱ', callback_data= 'GAME')
-                    ]
-               ]    
-               await CallbackQuery.edit_message_text( 
-                 SOURCE_GAME ,
-                 reply_markup = InlineKeyboardMarkup(SORGAM_BUTTON) 
-                    )
     
