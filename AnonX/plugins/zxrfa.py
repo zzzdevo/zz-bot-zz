@@ -11,7 +11,7 @@ from AnonX import app
 async def zahrafa(c: Client, m: Message):
     text_list = m.text.split(None, 1)
     if len(text_list) < 2:
-        await m.reply_text("**◍ هەڵەیە دووبارە هەوڵبدەوە\n√**", reply_to_message_id=m.id)
+        await m.reply_text("**◍ هەڵەیە دووبارە هەوڵبدەوە\n\nبەم شێوازە بینووسە : `ز محمد` √**", reply_to_message_id=m.id)
         return
     text = text_list[1].split(None, 1)[1] if len(text_list[1].split()) > 1 else text_list[1]
     if len(text) > 20:
