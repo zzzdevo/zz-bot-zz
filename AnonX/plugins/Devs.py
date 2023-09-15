@@ -74,7 +74,7 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,45)
     url = f"https://t.me/ZSZZW/{rl}"
-    await client.send_photo(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 کچان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ وێنەی کچان➧♥️\n@ZSZZW - کەناڵی وێنە**"
+    await client.send_photo(message.chat.id,url,caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 کچان](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**¦ وێنەی کچان➧♥️\n@ZSZZW - کەناڵی وێنە**",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
