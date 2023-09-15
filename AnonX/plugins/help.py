@@ -2,8 +2,8 @@ from typing import Union
 
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
-
-from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
+import config
+from config import BANNED_USERS
 from strings import get_command, get_string, helpers
 from AnonX import app
 from AnonX.utils import help_pannel
@@ -34,7 +34,7 @@ async def helper_private(
         _ = get_string(language)
         keyboard = help_pannel(_, True)
         await update.edit_message_text(
-            _["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard
+            _["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard
         )
     else:
         try:
@@ -45,8 +45,8 @@ async def helper_private(
         _ = get_string(language)
         keyboard = help_pannel(_)
         await update.reply_photo(
-            photo=START_IMG_URL,
-            caption=_["help_1"].format(SUPPORT_CHAT),
+            config.START_IMG_URL,
+            caption=_["help_1"].format(SUPPORT_GROUP),
             reply_markup=keyboard,
         )
 
