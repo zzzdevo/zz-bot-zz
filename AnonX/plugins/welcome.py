@@ -46,7 +46,7 @@ async def addtsrb(client, m):
     # send Welcome Message
     if new_memeber_photo != None:
         message_data = await app.send_photo(
-        photo=new_memeber_photo.file_id, chat_id=chat.id, caption=message,
+        photo=new_memeber_photo.file_id, chat_id=chat_id, caption=message,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -63,7 +63,7 @@ async def addtsrb(client, m):
            ),
         )
     else:
-        message_data = await app.send_message(text=message, chat_id=chat.id,
+        message_data = await app.send_message(text=message, chat_id=chat_id,
         reply_markup = InlineKeyboardMarkup(
             [
                 [
