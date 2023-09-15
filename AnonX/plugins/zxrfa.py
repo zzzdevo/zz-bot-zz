@@ -7,15 +7,15 @@ from pyrogram import Client
 from pyrogram.types import Message
 from AnonX import app
 
-@app.on_message(command("زەخرەفە"))
-async def zahrafa(m: Message):
+@app.on_message(command("ز"))
+async def zahrafa(c: Client, m: Message):
     text_list = m.text.split(None, 1)
     if len(text_list) < 2:
-        await m.reply_text("**◍ هەڵەیە دووبارە هەوڵبدەوە\n√**", reply_to_message_id=m.message_id)
+        await m.reply_text("**◍ هەڵەیە دووبارە هەوڵبدەوە\n√**", reply_to_message_id=m.id)
         return
     text = text_list[1].split(None, 1)[1] if len(text_list[1].split()) > 1 else text_list[1]
     if len(text) > 20:
-        await m.reply_text("**◍ ناتوانم زیاتر لە 𝟐𝟎 پیت دروست بکەم، دووبارە هەوڵبدەوە\n√**", reply_to_message_id=m.message_id)
+        await m.reply_text("**◍ ناتوانم زیاتر لە 𝟐𝟎 پیت دروست بکەم، دووبارە هەوڵبدەوە\n√**", reply_to_message_id=m.id)
         return
 
     # هنا يتم تنفيذ زخرفة النص
@@ -23,7 +23,7 @@ async def zahrafa(m: Message):
 
     else:
         if re.match("\n", str(m.text)):
-            await m.reply_text("**◍ ناتوانم دەقێك بڕازێنمەوە ئەگەر دوو دێڕ بێت\n√**", reply_to_message_id=m.message_id)
+            await m.reply_text("**◍ ناتوانم دەقێك بڕازێنمەوە ئەگەر دوو دێڕ بێت\n√**", reply_to_message_id=m.id)
             return
     EmojeS = [
         ' 𓁻',
@@ -827,7 +827,7 @@ async def zahrafa(m: Message):
     zhrf9 = re.sub('m', '𝕄', zhrf9)
     zhrf9 = re.sub('M', '𝕄', zhrf9)
 
-    Text_Zhrfa = "1- `" + zhrf + random.choice(EmojeS) \
+    Text_Zhrfa = "♕ `" + zhrf + random.choice(EmojeS) \
                  + "`\n\n` " + zhrf2 + random.choice(EmojeS) \
                  + "`\n\n` " + zhrf3 + random.choice(EmojeS) \
                  + "•\n\n` " + zhrf4 + random.choice(EmojeS) \
@@ -837,5 +837,5 @@ async def zahrafa(m: Message):
                  + "`\n\n` " + zhrf8 + random.choice(Emoje) \
                  + "`\n\n` " + zhrf9 + random.choice(Emoje) \
                  + "`\n\n` " + zhrf5 + random.choice(Emoje)
-    Text_Zhrfa = Text_Zhrfa + "`\n\n دەست بدە لەناوەکە کۆپی دەبێت \n│ \n👾"
-    await m.reply_text(Text_Zhrfa, reply_to_message_id=m.message_id,parse_mode="Markdown")
+    Text_Zhrfa = Text_Zhrfa + "**\n\n دەست بدە لەناوەکە کۆپی دەبێت \n│ \n👾**"
+    await m.reply_text(Text_Zhrfa, reply_to_message_id=m.id)
