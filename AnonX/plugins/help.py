@@ -34,7 +34,7 @@ async def helper_private(
         _ = get_string(language)
         keyboard = help_pannel(_, True)
         await update.edit_message_text(
-            _["help_1"].format(SUPPORT_GROUP), reply_markup=keyboard
+            _["help_1"].format(config.SUPPORT_GROUP), reply_markup=keyboard
         )
     else:
         try:
@@ -46,7 +46,7 @@ async def helper_private(
         keyboard = help_pannel(_)
         await update.reply_photo(
             config.START_IMG_URL,
-            caption=_["help_1"].format(SUPPORT_GROUP),
+            caption=_["help_1"].format(config.SUPPORT_GROUP),
             reply_markup=keyboard,
         )
 
