@@ -8,7 +8,7 @@ from AnonX import app
 import re
 import sys
 
-GAME_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**"
+GAME_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**"
 GAME_BUTTONS = [
     [ 
         InlineKeyboardButton ('߷ یاریەکان ߷', callback_data= 'GAME1'),
@@ -308,14 +308,14 @@ async def kaompj(client, message):
 async def zohary(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/ccd73a1b8fe26a88b404a.jpg",
-        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**""",
+        caption=f"""**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n\n**⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌**""",
         reply_markup=InlineKeyboardMarkup(GAME_BUTTONS)
     )  
 @app.on_callback_query()
 async def callback_query(client, CallbackQuery):
           if CallbackQuery.data == "GAME1":
             
-             GAME1_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
+             GAME1_MESSAGE = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
 
              GAME1_BUTTONS = [
                  [
