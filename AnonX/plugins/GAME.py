@@ -354,3 +354,42 @@ async def callback_query(client, CallbackQuery):
                   ],
              ]
     
+             await CallbackQuery.edit_message_text( 
+                 GAME1_MESSAGE ,
+                 reply_markup = InlineKeyboardMarkup(GAME1_BUTTONS) 
+              )
+          elif CallbackQuery.data == "GAME":
+               
+               RETURN_GAME = "**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻 یاری](t.me/MGIMT)**\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n\n**👾¦ بەخێربێی ئەزیزم : {message.from_user.mention}**\n**👾¦ بۆ بەشی یاری سەرچاوەی زیرەك**\n**👾¦ یەکێك لەمانەی خوارەوە دابگرە**"
+
+               RETURN_BUTTON = [
+                    [ 
+                     InlineKeyboardButton ('߷ یاریەکان ߷', callback_data= 'GAME1'),
+        ],[
+        InlineKeyboardButton ('⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌', url =f"https://t.me/MGIMT")              
+                 ],[
+                InlineKeyboardButton(
+                        "⟲ گـەڕانـەوە ⟳", callback_data="close"),
+               ],
+          ]
+     
+               await CallbackQuery.edit_message_text( 
+                 RETURN_GAME ,
+                 reply_markup = InlineKeyboardMarkup(RETURN_BUTTON) 
+                    )
+          elif CallbackQuery.data == "GAME2":
+               
+               SOURCE_GAME = "🐰\n\n العاب ارنوب\nكت\nتويت\nاسال\nصراحه\nانا مين\nبايو\nمين في الكول\nسورس\nزخرفه\nاذكار\nانصحني\nكتبات\nافلام\nغنيلي\nرفع\nذكاء\nنكته\nكشف\nايدي\nميديا\nتحويل ملصق\n🐰." 
+
+               SORGAM_BUTTON = [
+                    [ 
+                      InlineKeyboardButton ('⌞ ᥉᥆υᖇᥴᥱ ᥲ️ᖇꪀ᥆ρ⌝', url =f"https://t.me/N_G_12")
+                      ],[
+                         InlineKeyboardButton ('𝗁᥆ꪔᥱ', callback_data= 'GAME')
+                    ]
+               ]    
+               await CallbackQuery.edit_message_text( 
+                 SOURCE_GAME ,
+                 reply_markup = InlineKeyboardMarkup(SORGAM_BUTTON) 
+                    )
+    
