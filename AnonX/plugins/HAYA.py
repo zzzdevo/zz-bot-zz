@@ -58,7 +58,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["حەمە", "@VTVIT", "گەشەپێدەری 2"])
+    command(["حەمە", "@VTVIT", "گەشەپێدەر"])
  
 )
 async def yas(client, message):
