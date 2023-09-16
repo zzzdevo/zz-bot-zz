@@ -16,26 +16,6 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 
 
 
-@app.on_message(command(["زانیاری", "زانیاری گرووپ"]) & filters.group) 
-async def hshs(client: Client, message: Message):      
-    usr = await client.get_users(message.reply_to_message.from_user.id)
-    name = usr.first_name#
-    user_id = message.reply_to_message.from_user.id#
-    chat_idd = message.chat.id#
-    chat_username = f"@{message.chat.username}" #
-    chat_name = message.chat.title#
-    username = f"@{message.reply_to_message.from_user.username}"#
-    async for photo in client.iter_profile_photos(message.reply_to_message.from_user.id, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""**[𝑺𝑶𝑼𝑹𝑪𝑬 𝑮𝑹𝑶𝑼𝑷⁩](https://t.me/MGIMT)\n\n🐉 ¦ ꪀᥲ️ꪔᥱ : {name}\n🤡 ¦ ᴜѕᴇ : {username}\n🔥 ¦ Ꭵَժ : `{user_id}`\n🗿 ¦ Ꭵժ ᥴ𝗁ᥲ️ƚ : `{chat_idd}`\n🐰 ¦ 𝚌𝚑𝚊𝚝 : {chat_name}\n🐊 ¦ ᘜᖇ᥆υρ : {chat_username} \n**""", 
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{message.reply_to_message.from_user.username}")
-                ],
-            ]
-        ),
-    )     
 
 @app.on_message(command(["سەرۆکی گرووپ"]) & filters.group)
 async def gak_owne(client: Client, message: Message):
