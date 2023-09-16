@@ -31,5 +31,5 @@ async def logger(client, message, _):
 
 @app.on_message(filters.command("leave") & filters.user(SUDOERS))
 async def leave(client, msg):
-  await msg_reply("**لێفت دەکەم فەرمانی خاوەنەکەمە . .**")
+    await msg_reply("**لێفت دەکەم فەرمانی خاوەنەکەمە . .**")
     await client.leave_chat(chat_id)
