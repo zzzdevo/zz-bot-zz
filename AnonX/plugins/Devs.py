@@ -42,7 +42,7 @@ async def huhh(client: Client, message: Message):
 @app.on_message(
     command(["گۆرانی"])
 )
-async def voice(client: Client, message: Message):
+async def music(client: Client, message: Message):
     rl = random.randint(1, 29)
     url = f"https://t.me/ZWZZ7/{rl}"
     await client.send_voice(message.chat.id, url, caption="**[⧉• 𝙎𝙊𝙐𝙍𝘾𝞝 𝙄𝙌 - 🧑🏻‍💻🖤 گۆرانی](t.me/MGIMT)**\n\n**••┉┉┉┉┉••🝢••┉┉┉┉┉••**\n**¦  گۆرانییەکانم➧♥️**\n**@IQMUC - کەناڵی گۆرانی**",
