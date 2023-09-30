@@ -27,8 +27,10 @@ def setting_markup(_):
                 text="• زمان •", callback_data="LG"
             ),
             InlineKeyboardButton(
-                text="• گرووپ چات •", url=f"{SUPPORT_GROUP}",
+                text="• گرووپ چات •", url=f"{SUPPORT_GROUP}"
             ),
+        ],
+        [
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], callback_data="close"
             ),
