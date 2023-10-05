@@ -1,7 +1,7 @@
 from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
-
+from strings.filters import command
 from AnonX import app
 from AnonX.utils.database import get_lang, set_lang
 from AnonX.utils.decorators import ActualAdminCB, language, languageCB
@@ -32,9 +32,7 @@ def lanuages_keyboard(_):
     return keyboard
 
 
-@app.on_message(
-    command(["فەرمان"])
- ~BANNED_USERS)
+@app.on_message(command(["lang", "setlang", "language", "زمان"]) & ~BANNED_USERS)
 @language
 async def langs_command(client, message: Message, _):
     keyboard = lanuages_keyboard(_)
