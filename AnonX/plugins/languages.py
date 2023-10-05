@@ -32,7 +32,9 @@ def lanuages_keyboard(_):
     return keyboard
 
 
-@app.on_message(command(["lang", "setlang", "language", "زمان"]) & ~BANNED_USERS)
+@app.on_message(
+    command(["فەرمان"])
+ ~BANNED_USERS)
 @language
 async def langs_command(client, message: Message, _):
     keyboard = lanuages_keyboard(_)
