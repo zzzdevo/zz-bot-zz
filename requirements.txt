@@ -2,6 +2,7 @@ aiofiles
 aiohttp
 asyncio
 dnspython
+unidecode
 ffmpeg-python
 gitpython
 hachoir
