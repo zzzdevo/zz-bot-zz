@@ -1,4 +1,5 @@
 from pyrogram import filters
+from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
@@ -18,10 +19,12 @@ from AnonX.utils.database import (add_nonadmin_chat,
                                        is_cleanmode_on,
                                        is_commanddelete_on,
                                        is_nonadmin_chat,
+                                       is_suggestion,
                                        remove_nonadmin_chat,
                                        save_audio_bitrate,
                                        save_video_bitrate,
-                                       set_playmode, set_playtype)
+                                       set_playmode, set_playtype,
+                                       suggestion_off, suggestion_on)
 from AnonX.utils.decorators.admins import ActualAdminCB
 from AnonX.utils.decorators.language import language, languageCB
 from AnonX.utils.inline.settings import (
@@ -37,7 +40,6 @@ SETTINGS_COMMAND = get_command("SETTINGS_COMMAND")
 @app.on_message(
     filters.command(SETTINGS_COMMAND)
     & filters.group
-  
     & ~BANNED_USERS
 )
 @language
@@ -79,7 +81,7 @@ async def settings_back_markup(
         await CallbackQuery.answer()
     except:
         pass
-    if CallbackQuery.message.chat.type == "private":
+    if CallbackQuery.message.chat.type == ChatType.PRIVATE:
         try:
             await app.resolve_peer(OWNER_ID[0])
             OWNER = OWNER_ID[0]
@@ -99,22 +101,30 @@ async def settings_back_markup(
 
 ## Audio and Video Quality
 async def gen_buttons_aud(_, aud):
-    if aud == "High":
-        buttons = audio_quality_markup(_, high=True)
-    elif aud == "Medium":
-        buttons = audio_quality_markup(_, medium=True)
-    elif aud == "Low":
-        buttons = audio_quality_markup(_, low=True)
+    if aud == "STUDIO":
+        buttons = audio_quality_markup(_, STUDIO=True)
+    elif aud == "HIGH":
+        buttons = audio_quality_markup(_, HIGH=True)
+    elif aud == "MEDIUM":
+        buttons = audio_quality_markup(_, MEDIUM=True)
+    elif aud == "LOW":
+        buttons = audio_quality_markup(_, LOW=True)
     return buttons
 
 
 async def gen_buttons_vid(_, aud):
-    if aud == "High":
-        buttons = video_quality_markup(_, high=True)
-    elif aud == "Medium":
-        buttons = video_quality_markup(_, medium=True)
-    elif aud == "Low":
-        buttons = video_quality_markup(_, low=True)
+    if aud == "UHD_4K":
+        buttons = video_quality_markup(_, UHD_4K=True)
+    elif aud == "QHD_2K":
+        buttons = video_quality_markup(_, QHD_2K=True)
+    elif aud == "FHD_1080p":
+        buttons = video_quality_markup(_, FHD_1080p=True)
+    elif aud == "HD_720p":
+        buttons = video_quality_markup(_, HD_720p=True)
+    elif aud == "SD_480p":
+        buttons = video_quality_markup(_, SD_480p=True)
+    elif aud == "SD_360p":
+        buttons = video_quality_markup(_, SD_360p=True)
     return buttons
 
 
@@ -123,7 +133,7 @@ async def gen_buttons_vid(_, aud):
 
 @app.on_callback_query(
     filters.regex(
-        pattern=r"^(SEARCHANSWER|PLAYMODEANSWER|PLAYTYPEANSWER|AUTHANSWER|CMANSWER|COMMANDANSWER|CM|AQ|VQ|PM|AU)$"
+        pattern=r"^(SEARCHANSWER|PLAYMODEANSWER|PLAYTYPEANSWER|AUTHANSWER|CMANSWER|COMMANDANSWER|SUGGANSWER|CM|AQ|VQ|PM|AU)$"
     )
     & ~BANNED_USERS
 )
@@ -173,6 +183,13 @@ async def without_Admin_rights(client, CallbackQuery, _):
             )
         except:
             return
+    if command == "SUGGANSWER":
+        try:
+            return await CallbackQuery.answer(
+                _["setting_16"], show_alert=True
+            )
+        except:
+            return
     if command == "CM":
         try:
             await CallbackQuery.answer(_["set_cb_5"], show_alert=True)
@@ -184,8 +201,11 @@ async def without_Admin_rights(client, CallbackQuery, _):
             cle = True
         if await is_commanddelete_on(CallbackQuery.message.chat.id):
             sta = True
+        sug = None
+        if await is_suggestion(CallbackQuery.message.chat.id):
+            sug = True
         buttons = cleanmode_settings_markup(
-            _, status=cle, dels=sta
+            _, status=cle, dels=sta, sug=sug
         )
     if command == "AQ":
         try:
@@ -248,7 +268,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
 
 
 @app.on_callback_query(
-    filters.regex(pattern=r"^(LQA|MQA|HQA|LQV|MQV|HQV)$")
+    filters.regex(pattern=r"^(LOW|MEDIUM|HIGH|STUDIO|SD_360p|SD_480p|HD_720p|FHD_1080p|QHD_2K|UHD_4K)$")
     & ~BANNED_USERS
 )
 @ActualAdminCB
@@ -258,32 +278,52 @@ async def aud_vid_cb(client, CallbackQuery, _):
         await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
     except:
         pass
-    if command == "LQA":
-        await save_audio_bitrate(CallbackQuery.message.chat.id, "Low")
-        buttons = audio_quality_markup(_, low=True)
-    if command == "MQA":
+    if command == "LOW":
+        await save_audio_bitrate(CallbackQuery.message.chat.id, "LOW")
+        buttons = audio_quality_markup(_, LOW=True)
+    if command == "MEDIUM":
         await save_audio_bitrate(
-            CallbackQuery.message.chat.id, "Medium"
+            CallbackQuery.message.chat.id, "MEDIUM"
         )
-        buttons = audio_quality_markup(_, medium=True)
-    if command == "HQA":
+        buttons = audio_quality_markup(_, MEDIUM=True)
+    if command == "HIGH":
         await save_audio_bitrate(
-            CallbackQuery.message.chat.id, "High"
+            CallbackQuery.message.chat.id, "HIGH"
         )
-        buttons = audio_quality_markup(_, high=True)
-    if command == "LQV":
-        await save_video_bitrate(CallbackQuery.message.chat.id, "Low")
-        buttons = video_quality_markup(_, low=True)
-    if command == "MQV":
+        buttons = audio_quality_markup(_, HIGH=True)
+    if command == "STUDIO":
+        await save_audio_bitrate(
+            CallbackQuery.message.chat.id, "STUDIO"
+        )
+        buttons = audio_quality_markup(_, STUDIO=True)
+    if command == "SD_360p":
+        await save_video_bitrate(CallbackQuery.message.chat.id, "SD_360p")
+        buttons = video_quality_markup(_, SD_360p=True)
+    if command == "SD_480p":
         await save_video_bitrate(
-            CallbackQuery.message.chat.id, "Medium"
+            CallbackQuery.message.chat.id, "SD_480p"
         )
-        buttons = video_quality_markup(_, medium=True)
-    if command == "HQV":
+        buttons = video_quality_markup(_, SD_480p=True)
+    if command == "HD_720p":
         await save_video_bitrate(
-            CallbackQuery.message.chat.id, "High"
+            CallbackQuery.message.chat.id, "HD_720p"
         )
-        buttons = video_quality_markup(_, high=True)
+        buttons = video_quality_markup(_, HD_720p=True)
+    if command == "FHD_1080p":
+        await save_video_bitrate(
+            CallbackQuery.message.chat.id, "FHD_1080p"
+        )
+        buttons = video_quality_markup(_, FHD_1080p=True)
+    if command == "QHD_2K":
+        await save_video_bitrate(
+            CallbackQuery.message.chat.id, "QHD_2K"
+        )
+        buttons = video_quality_markup(_, QHD_2K=True)
+    if command == "UHD_4K":
+        await save_video_bitrate(
+            CallbackQuery.message.chat.id, "UHD_4K"
+        )
+        buttons = video_quality_markup(_, UHD_4K=True)
     try:
         return await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
@@ -478,7 +518,7 @@ async def authusers_mar(client, CallbackQuery, _):
 
 @app.on_callback_query(
     filters.regex(
-        pattern=r"^(CLEANMODE|COMMANDELMODE)$"
+        pattern=r"^(CLEANMODE|COMMANDELMODE|SUGGESTIONCHANGE)$"
     )
     & ~BANNED_USERS
 )
@@ -493,6 +533,9 @@ async def cleanmode_mark(client, CallbackQuery, _):
         sta = None
         if await is_commanddelete_on(CallbackQuery.message.chat.id):
             sta = True
+        sug = None
+        if await is_suggestion(CallbackQuery.message.chat.id):
+            sug = True
         cle = None
         if await is_cleanmode_on(CallbackQuery.message.chat.id):
             await cleanmode_off(CallbackQuery.message.chat.id)
@@ -500,7 +543,7 @@ async def cleanmode_mark(client, CallbackQuery, _):
             await cleanmode_on(CallbackQuery.message.chat.id)
             cle = True
         buttons = cleanmode_settings_markup(
-            _, status=cle, dels=sta
+            _, status=cle, dels=sta, sug=sug
         )
         return await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
@@ -510,13 +553,32 @@ async def cleanmode_mark(client, CallbackQuery, _):
         sta = None
         if await is_cleanmode_on(CallbackQuery.message.chat.id):
             cle = True
+        sug = None
+        if await is_suggestion(CallbackQuery.message.chat.id):
+            sug = True
         if await is_commanddelete_on(CallbackQuery.message.chat.id):
             await commanddelete_off(CallbackQuery.message.chat.id)
         else:
             await commanddelete_on(CallbackQuery.message.chat.id)
             sta = True
         buttons = cleanmode_settings_markup(
-            _, status=cle, dels=sta
+            _, status=cle, dels=sta, sug=sug
+        )
+    if command == "SUGGESTIONCHANGE":
+        cle = None
+        sta = None
+        if await is_cleanmode_on(CallbackQuery.message.chat.id):
+            cle = True
+        if await is_commanddelete_on(CallbackQuery.message.chat.id):
+            sta = True
+        if await is_suggestion(CallbackQuery.message.chat.id):
+            await suggestion_off(CallbackQuery.message.chat.id)
+            sug = False
+        else:
+            await suggestion_on(CallbackQuery.message.chat.id)
+            sug = True
+        buttons = cleanmode_settings_markup(
+            _, status=cle, dels=sta, sug=sug
         )
     try:
         return await CallbackQuery.edit_message_reply_markup(
