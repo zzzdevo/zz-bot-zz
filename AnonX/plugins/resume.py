@@ -4,7 +4,7 @@ from strings.filters import command
 from config import BANNED_USERS
 from strings import get_command
 from AnonX import app
-from AnonX.core.call import Yukki
+from AnonX.core.call import Anon
 from AnonX.utils.database import is_music_playing, music_on
 from AnonX.utils.decorators import AdminRightsCheck
 
