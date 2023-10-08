@@ -13,7 +13,6 @@ from AnonX.utils.database import (delete_playlist, get_playlist,
                                        get_playlist_names,
                                        save_playlist)
 from AnonX.utils.decorators.language import language, languageCB
-from AnonX.utils.inline.play import close_keyboard
 from AnonX.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
@@ -46,7 +45,7 @@ async def check_playlist(client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await Anonbin(msg)
+    link = await Yukkibin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -213,9 +212,8 @@ async def add_playlist(client, CallbackQuery, _):
     await save_playlist(user_id, videoid, plist)
     try:
         title = (title[:30]).title()
-        return await CallbackQuery.message.reply_text(
-            text="❄ تم اضافة اغنيه لقائمة التشغيل.\n │\n └ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {0}".format(CallbackQuery.from_user.mention),
-            reply_markup=close_keyboard,
+        return await CallbackQuery.answer(
+            _["playlist_10"].format(title), show_alert=True
         )
     except:
         return
