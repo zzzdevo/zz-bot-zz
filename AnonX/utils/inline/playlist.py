@@ -1,5 +1,5 @@
 
-from Anonx import app
+from AnonX import app
 from config import SUPPORT_CHANNEL, SUPPORT_GROUP
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
