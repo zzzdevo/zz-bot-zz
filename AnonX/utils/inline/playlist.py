@@ -1,3 +1,6 @@
+
+from Anonx import app
+from config import SUPPORT_CHANNEL, SUPPORT_GROUP
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -5,16 +8,7 @@ def botplaylist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="کەسی",
-                callback_data="get_playlist_playmode",
-            ),
-            InlineKeyboardButton(
-                text="گشتی", callback_data="get_top_playlists"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="✯ داخستن ✯", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close",
             ),
         ],
     ]
@@ -25,28 +19,25 @@ def top_play_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="10 باشترین پەخش", callback_data="SERVERTOP"
+                text=_["PL_B_9"], callback_data="SERVERTOP global"
             )
         ],
         [
             InlineKeyboardButton(
-                text="کەسی", callback_data="SERVERTOP user"
+                text=_["PL_B_10"], callback_data="SERVERTOP chat"
             )
         ],
         [
             InlineKeyboardButton(
-                text="گشتی", callback_data="SERVERTOP global"
+                text=_["PL_B_11"], callback_data="SERVERTOP user"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["BACK_BUTTON"], callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="گرووپەکان", callback_data="SERVERTOP chat"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="گەڕانەوە", callback_data="get_playmarkup"
-            ),
-            InlineKeyboardButton(
-                text="✯ داخستن ✯", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
         ],
     ]
@@ -57,18 +48,18 @@ def get_playlist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="دەنگ", callback_data="play_playlist a"
+                text=_["P_B_1"], callback_data="play_playlist a"
             ),
             InlineKeyboardButton(
-                text="ڤیدیۆ", callback_data="play_playlist v"
+                text=_["P_B_2"], callback_data="play_playlist b"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="گەڕانەوە", callback_data="home_play"
+                text=_["BACK_BUTTON"], callback_data="home_play"
             ),
             InlineKeyboardButton(
-                text="✯ داخستن ✯", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
         ],
     ]
@@ -79,28 +70,25 @@ def top_play_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="10 باشترین لیستی پەخشکردن", callback_data="SERVERTOP"
+                text=_["PL_B_9"], callback_data="SERVERTOP Global"
             )
         ],
         [
             InlineKeyboardButton(
-                text="کەسی", callback_data="SERVERTOP Personal"
+                text=_["PL_B_10"], callback_data="SERVERTOP Group"
             )
         ],
         [
             InlineKeyboardButton(
-                text="گشتی", callback_data="SERVERTOP Global"
+                text=_["PL_B_11"], callback_data="SERVERTOP Personal"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["BACK_BUTTON"], callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="گرووپەکان", callback_data="SERVERTOP Group"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="گەڕانەوە", callback_data="get_playmarkup"
-            ),
-            InlineKeyboardButton(
-                text="✯ داخستن ✯", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
         ],
     ]
@@ -111,11 +99,11 @@ def failed_top_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="گەڕانەوە",
+                text=_["BACK_BUTTON"],
                 callback_data="get_top_playlists",
             ),
             InlineKeyboardButton(
-                text="✯ داخستن ✯", callback_data="close"
+                text=_["CLOSE_BUTTON"], callback_data="close"
             ),
         ],
     ]
@@ -127,17 +115,17 @@ def warning_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text="سڕینەوە",
+                    text=_["PL_B_7"],
                     callback_data="delete_whole_playlist",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="گەڕانەوە",
+                    text=_["BACK_BUTTON"],
                     callback_data="del_back_playlist",
                 ),
                 InlineKeyboardButton(
-                    text="✯ داخستن ✯",
+                    text=_["CLOSE_BUTTON"],
                     callback_data="close",
                 ),
             ],
@@ -151,7 +139,7 @@ def close_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text="✯ داخستن ✯",
+                    text=_["CLOSE_BUTTON"],
                     callback_data="close",
                 ),
             ]
