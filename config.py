@@ -23,6 +23,7 @@ USER_OWNER = getenv("USER_OWNER","IQ7amo")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/zzzdevo/zz-bot-zz")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
+GITHUB_REPO = getenv("GITHUB_REPO", "https://t.me/MGIMT")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MGIMT")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/IQSUPP")
 
