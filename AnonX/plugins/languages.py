@@ -2,15 +2,18 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 from strings.filters import command
+from config import BANNED_USERS
+from strings import get_command, get_string, languages_present
 from AnonX import app
 from AnonX.utils.database import get_lang, set_lang
-from AnonX.utils.decorators import ActualAdminCB, language, languageCB
-from config import BANNED_USERS
-from strings import get_string, languages_present
+from AnonX.utils.decorators import (ActualAdminCB, language,
+                                         languageCB)
+
+# Languages Available
 
 
 def lanuages_keyboard(_):
-    keyboard = InlineKeyboard(row_width=2)
+    keyboard = InlineKeyboard(row_width=3)
     keyboard.add(
         *[
             (
@@ -27,17 +30,25 @@ def lanuages_keyboard(_):
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
         ),
-        InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
+        InlineKeyboardButton(
+            text=_["CLOSE_BUTTON"], callback_data=f"close"
+        ),
     )
     return keyboard
 
 
-@app.on_message(command(["lang", "setlang", "language", "زمان"]) & ~BANNED_USERS)
+LANGUAGE_COMMAND = get_command("LANGUAGE_COMMAND")
+
+
+@app.on_message(
+    command(LANGUAGE_COMMAND)
+    & ~BANNED_USERS
+)
 @language
 async def langs_command(client, message: Message, _):
     keyboard = lanuages_keyboard(_)
     await message.reply_text(
-        _["lang_1"],
+        _["setting_1"].format(message.chat.title, message.chat.id),
         reply_markup=keyboard,
     )
 
@@ -50,25 +61,34 @@ async def lanuagecb(client, CallbackQuery, _):
     except:
         pass
     keyboard = lanuages_keyboard(_)
-    return await CallbackQuery.edit_message_reply_markup(reply_markup=keyboard)
+    return await CallbackQuery.edit_message_reply_markup(
+        reply_markup=keyboard
+    )
 
 
-@app.on_callback_query(filters.regex(r"languages:(.*?)") & ~BANNED_USERS)
+@app.on_callback_query(
+    filters.regex(r"languages:(.*?)") & ~BANNED_USERS
+)
 @ActualAdminCB
 async def language_markup(client, CallbackQuery, _):
     langauge = (CallbackQuery.data).split(":")[1]
     old = await get_lang(CallbackQuery.message.chat.id)
     if str(old) == str(langauge):
-        return await CallbackQuery.answer(_["lang_4"], show_alert=True)
+        return await CallbackQuery.answer(
+            "You're already on same language", show_alert=True
+        )
     try:
         _ = get_string(langauge)
-        await CallbackQuery.answer(_["lang_2"], show_alert=True)
+        await CallbackQuery.answer(
+            "Successfully changed your language.", show_alert=True
+        )
     except:
-        _ = get_string(old)
         return await CallbackQuery.answer(
-            _["lang_3"],
+            "Failed to change language or Language under update.",
             show_alert=True,
         )
     await set_lang(CallbackQuery.message.chat.id, langauge)
     keyboard = lanuages_keyboard(_)
-    return await CallbackQuery.edit_message_reply_markup(reply_markup=keyboard)
+    return await CallbackQuery.edit_message_reply_markup(
+        reply_markup=keyboard
+    )
