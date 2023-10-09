@@ -1,8 +1,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
-import config
-from config import SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import SUPPORT_CHANNEL, SUPPORT_GROUP, GITHUB_REPO
 from AnonX import app
 
 
