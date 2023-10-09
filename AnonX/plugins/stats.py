@@ -281,23 +281,23 @@ async def overall_stats(client, CallbackQuery, _):
     else:
         ass = "No"
     cm = config.CLEANMODE_DELETE_MINS
-    text = f"""**Bot's Stats and Information:**
+    text = f"""**ئامار و زانیارییەکان:**
 
-**Imported Modules:** {mod}
-**Served Chats:** {served_chats} 
-**Served Users:** {served_users} 
-**Blocked Users:** {blocked} 
-**Sudo Users:** {sudoers} 
+**فەرمان:** {mod}
+**گرووپەکان:** {served_chats} 
+**بەکارهێنەر:** {served_users} 
+**بلۆککراوەکان:** {blocked} 
+**گەشەپێدەر:** {sudoers} 
     
-**Total Queries:** {total_queries} 
-**Total Assistants:** {assistant}
-**Auto Leaving Assistant:** {ass}
-**Cleanmode duration:** {cm} Mins
+**کۆی گشتی ریزکراوەکان:** {total_queries} 
+**یاریدەدەر:** {assistant}
+**دەرچوونی خودکاری یاریدەدەر:** {ass}
+**ماوەی دۆخی پاککردنەوە:** {cm} Mins
 
-**Play Duration Limit:** {play_duration} Mins
-**Song Download Limit:** {song} Mins
-**Bot's Server Playlist Limit:** {playlist_limit}
-**Playlist Play Limit:** {fetch_playlist}"""
+**سنووری ماوەی پەخشکردن:** {play_duration} Mins
+**سنووری داگرتنی گۆرانی:** {song} Mins
+**سێرڤەری لیستی پەخشکردن:** {playlist_limit}
+**پەخشکردنی لیست:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(
