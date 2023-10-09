@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from Config import SUPPORT_IQ
+from config import SUPPORT_IQ
 from AnonX import app
 
 @app.on_message(filters.incoming & filters.private, group=-1)
