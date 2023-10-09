@@ -85,7 +85,7 @@ async def gen_thumb(videoid):
         )
         draw.text(
             (600, 150),
-            "NOW PLAYING",
+            "IQ PLAYING",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
