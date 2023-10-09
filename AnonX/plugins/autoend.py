@@ -18,12 +18,12 @@ async def auto_end_stream(client, message):
         return await message.reply_text(usage)
     state = message.text.split(None, 1)[1].strip()
     state = state.lower()
-    if state == "enable":
+    if state == "چالاک":
         await autoend_on()
         await message.reply_text(
             "**کۆتایی هات.\n\nدەرچووم چونکە کەسی لێ نەبوو**"
         )
-    elif state == "disable":
+    elif state == "ناچالاک":
         await autoend_off()
         await message.reply_text("**دەرچوونی خودکار ناچالاکە**")
     else:
