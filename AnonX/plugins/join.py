@@ -6,7 +6,7 @@ from config import SUPPORT_CHANNEL
 from AnonX import app
 
 
-@app.on_message(& filters.incoming & filters.private, group=-1)
+@app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
     if not SUPPORT_CHANNEL:  # Not compulsory
         return
