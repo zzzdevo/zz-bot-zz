@@ -1,21 +1,21 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from Config import MUST_JOIN
+from Config import SUPPORT_IQ
 from AnonX import app
 
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
-    if not MUST_JOIN:  # Not compulsory
+    if not SUPPORT_IQ:  # Not compulsory
         return
     try:
         try:
-            await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
+            await bot.get_chat_member(SUPPORT_IQ, msg.from_user.id)
         except UserNotParticipant:
-            if MUST_JOIN.isalpha():
-                link = "https://t.me/" + MUST_JOIN
+            if SUPPORT_IQ.isalpha():
+                link = "https://t.me/" + SUPPORT_IQ
             else:
-                chat_info = await bot.get_chat(MUST_JOIN)
+                chat_info = await bot.get_chat(SUPPORT_IQ)
                 link = chat_info.invite_link
             try:
                 await msg.reply(
@@ -29,4 +29,4 @@ async def must_join_channel(bot: Client, msg: Message):
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"I'm not admin in the MUST_JOIN chat : {MUST_JOIN} !")
+        print(f"I'm not admin in the MUST_JOIN chat : {SUPPORT_IQ} !")
