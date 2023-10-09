@@ -1,34 +1,32 @@
 from pyrogram import Client, filters
-from strings.filters import command
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from config import SUPPORT_CHANNEL
+from Config import MUST_JOIN
 from AnonX import app
-
 
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
-    if not SUPPORT_CHANNEL:  # Not compulsory
+    if not MUST_JOIN:  # Not compulsory
         return
     try:
         try:
-            await bot.get_chat_member(SUPPORT_CHANNEL, msg.from_user.id)
+            await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
         except UserNotParticipant:
-            if SUPPORT_CHANNEL.isalpha():
-                link = u"https://t.me/{SUPPORT_CHANNEL}"
+            if MUST_JOIN.isalpha():
+                link = "https://t.me/" + MUST_JOIN
             else:
-                chat_info = await bot.get_chat(SUPPORT_CHANNEL)
+                chat_info = await bot.get_chat(MUST_JOIN)
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"**︙ئەزیزم سەرەتا جۆینی کەناڵ بکە \n︙کە جۆینت کرد ستارت بنێرە : /start**",
+                    f"**🧑🏻‍💻︙ببوورە ئەزیزم تۆ جۆین نیت؛\n🔰︙سەرەتا پێویستە جۆینی کەناڵی بۆت ♥️؛\n👾︙بکەیت بۆ بەکارهێنانم جۆین بە ⚜️؛\n💎︙کەناڵی بۆت : [کەناڵی بۆت👾](t.me/MGIMT)\n\n👾︙کاتێ جۆینت کرد ستارت بکە /start , /help 📛!**",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton(f"{SUPPORT_CHANNEL}", url=link)]
+                        [InlineKeyboardButton("♥️ جۆینی کەناڵ بکە ♥️", url=link)]
                     ])
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"عليك رفع البوت آدمن في القناة أولاً ؟؟ : {SUPPORT_CHANNEL} !")
+        print(f"I'm not admin in the MUST_JOIN chat : {MUST_JOIN} !")
