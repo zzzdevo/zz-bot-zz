@@ -26,7 +26,7 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 GITHUB_REPO = getenv("GITHUB_REPO", "https://t.me/MGIMT")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MGIMT")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/IQSUPP")
-
+MUST_JOIN = getenv("MUST_JOIN", "@MGIMT")
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "9999999"))
