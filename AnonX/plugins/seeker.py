@@ -3,11 +3,11 @@ import asyncio
 from pyrogram.types import InlineKeyboardMarkup
 
 from strings import get_string
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import (get_active_chats, get_lang,
+from AnonX.misc import db
+from AnonX.utils.database import (get_active_chats, get_lang,
                                        is_music_playing)
-from YukkiMusic.utils.formatters import seconds_to_min
-from YukkiMusic.utils.inline import (stream_markup_timer,
+from AnonX.utils.formatters import seconds_to_min
+from AnonX.utils.inline import (stream_markup_timer,
                                      telegram_markup_timer)
 
 from AnonX.plugins.callback import wrong
