@@ -23,7 +23,7 @@ USER_OWNER = getenv("USER_OWNER","IQ7amo")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/zzzdevo/zz-bot-zz")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
-GITHUB_REPO = getenv("GITHUB_REPO", "https://t.me/MGIMT")
+GITHUB_REPO = getenv("GITHUB_REPO", None)
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MGIMT")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/IQSUPP")
 SUPPORT_IQ = getenv("SUPPORT_IQ", "@MGIMT")
@@ -55,6 +55,8 @@ CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "12"))
 
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
+######
+SET_CMDS = getenv("SET_CMDS", False)
 # https://www.gbmb.org/mb-to-bytes
 
 STRING1 = getenv("STRING_SESSION", None)
