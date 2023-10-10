@@ -18,7 +18,7 @@ from AnonX.utils.inline.play import (stream_markup, queue_markup,
 from AnonX.utils.inline.playlist import close_markup
 from AnonX.utils.pastebin import Anonbin
 from AnonX.utils.stream.queue import put_queue, put_queue_index
-from AnonX.utils.thumbnails import gen_thumb, gen_qthumb
+from AnonX.utils.thumbnails import gen_thumb
 
 
 async def stream(
